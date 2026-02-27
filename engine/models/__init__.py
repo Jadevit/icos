@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from .core import DamageType, ability_mod
-from .actions import AttackProfile
+from .actions import AttackProfile, ActionDeclaration
 from .actors import Combatant
 from .events import Event, EventType
 
@@ -13,4 +13,5 @@ __all__ = [
     "Combatant",
     "Event",
     "EventType",
+    "ActionDeclaration",
 ]

@@ -8,7 +8,6 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from .models import AttackProfile, Combatant
 
-
 JsonDict = Dict[str, Any]
 
 
@@ -34,12 +33,10 @@ class DbLoader:
     def _table_columns(self, conn: sqlite3.Connection, table: str) -> List[str]:
         cur = conn.cursor()
         cur.execute(f"PRAGMA table_info({table})")
-        # rows: cid, name, type, notnull, dflt_value, pk
         return [r[1] for r in cur.fetchall()]
 
     @staticmethod
     def _pick_json_col(cols: Sequence[str]) -> Optional[str]:
-        # Strong preference order
         preferred = ("json", "data", "payload", "blob")
         lower_map = {c.lower(): c for c in cols}
 
@@ -47,7 +44,6 @@ class DbLoader:
             if key in lower_map:
                 return lower_map[key]
 
-        # Fallback: contains json/data
         for c in cols:
             lc = c.lower()
             if "json" in lc or "data" in lc:
@@ -90,7 +86,7 @@ class DbLoader:
             api_index_col = self._find_col(cols, ("api_index", "index", "slug", "key", "name_index"))
             id_col = self._find_col(cols, ("id", "uid", "entity_id"))
 
-            score = 3  # json_col exists
+            score = 3  # has json/data col
             if endpoint_col:
                 score += 3
             if api_index_col:
@@ -149,7 +145,7 @@ class DbLoader:
                     f"{endpoint}:{api_index}",
                     f"/api/{endpoint}/{api_index}",
                     f"{endpoint}/{api_index}",
-                    api_index,  # sometimes id is just "goblin"
+                    api_index,
                 )
                 placeholders = ",".join("?" for _ in id_variants)
                 cur.execute(
@@ -186,7 +182,13 @@ class DbLoader:
 
         raise ValueError(f"Missing/invalid armor_class for {name!r}: {raw!r}")
 
-    def load_monster_combatant(self, api_index: str) -> Combatant:
+    def load_monster_combatant(
+        self,
+        api_index: str,
+        *,
+        team: str = "enemies",
+        instance_id: Optional[str] = None,
+    ) -> Combatant:
         raw = self.get_entity_json("monsters", api_index)
 
         name = str(raw["name"])
@@ -229,10 +231,13 @@ class DbLoader:
         if not attacks:
             raise ValueError(f"Monster {name!r} has no usable attacks in DB payload.")
 
-        idx = raw.get("index", api_index)
+        idx = str(raw.get("index", api_index))
+        cid = instance_id if instance_id is not None else f"{team}:{idx}"
+
         return Combatant(
-            id=f"monster:{idx}",
+            id=cid,
             name=name,
+            team=team,
             ac=ac,
             max_hp=max_hp,
             hp=max_hp,

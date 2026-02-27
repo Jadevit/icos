@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Set
 
 from .models import Combatant
 
@@ -13,7 +13,6 @@ class CombatState:
     round_num: int = 1
     turn_index: int = 0
     initiative_order: List[str] = field(default_factory=list)  # list of combatant ids
-    winner: Optional[str] = None
 
     def get(self, cid: str) -> Combatant:
         for c in self.combatants:
@@ -21,17 +20,19 @@ class CombatState:
                 return c
         raise KeyError(f"Combatant not found: {cid}")
 
-    def alive_ids(self) -> List[str]:
-        return [c.id for c in self.combatants if c.alive]
+    def alive_combatants(self) -> List[Combatant]:
+        return [c for c in self.combatants if c.alive]
+
+    def alive_teams(self) -> Set[str]:
+        return {c.team for c in self.combatants if c.alive}
 
     def is_over(self) -> bool:
-        alive = [c for c in self.combatants if c.alive]
-        return len(alive) <= 1
+        return len(self.alive_teams()) <= 1
 
-    def determine_winner(self) -> Optional[str]:
-        alive = [c for c in self.combatants if c.alive]
-        if len(alive) == 1:
-            return alive[0].id
+    def winner_team(self) -> Optional[str]:
+        teams = list(self.alive_teams())
+        if len(teams) == 1:
+            return teams[0]
         return None
 
     def advance_turn(self) -> None:

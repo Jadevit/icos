@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import List, Tuple
 
 from .dice import Dice
-from .models import AttackProfile, Combatant, Event
+from .models import ActionDeclaration, AttackProfile, Combatant, Event
 from .state import CombatState
 
 
@@ -33,21 +33,93 @@ class RulesEngine:
         order = [cid for _, _, cid, _ in rolls]
         return order, events
 
-    def resolve_basic_attack(
-        self,
-        state: CombatState,
-        attacker: Combatant,
-        defender: Combatant,
-    ) -> List[Event]:
+    def resolve_action(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
+        if action.type == "attack":
+            return self._resolve_attack(state, action)
+        if action.type == "defend":
+            return self._resolve_defend(state, action)
+        if action.type == "heal":
+            return self._resolve_heal(state, action)
+        if action.type == "wait":
+            return self._resolve_wait(state, action)
+        raise ValueError(f"Unsupported action type: {action.type!r}")
+
+    def _resolve_defend(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
+        actor = state.get(action.actor_id)
+        if not actor.alive:
+            return []
+        actor.flags.add("defending")
+        return [
+            Event(
+                type="turn_start",
+                actor=actor.id,
+                message=f"{actor.name} takes a defensive stance (attacks against them have disadvantage until their next turn).",
+                data={"flag_added": "defending"},
+            )
+        ]
+
+    def _resolve_heal(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
+        actor = state.get(action.actor_id)
+        if not actor.alive:
+            return []
+
+        # v1: simple healing dice, customizable via action.data if you want later
+        heal_dice = str(action.data.get("heal_dice", "1d8+2"))
+        roll = self.dice.roll(heal_dice)
+
+        before = actor.hp
+        actor.hp = min(actor.max_hp, actor.hp + roll.total)
+        healed = actor.hp - before
+
+        return [
+            Event(
+                type="damage",  # later you might add "heal" event type; keeping minimal now
+                actor=actor.id,
+                message=f"{actor.name} heals for {healed} (rolled {heal_dice} => {roll.total}). HP {before} -> {actor.hp}",
+                data={"heal": healed, "hp_before": before, "hp_after": actor.hp, "heal_dice": heal_dice},
+            )
+        ]
+
+    def _resolve_wait(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
+        actor = state.get(action.actor_id)
+        if not actor.alive:
+            return []
+        return [
+            Event(
+                type="turn_start",
+                actor=actor.id,
+                message=f"{actor.name} waits.",
+            )
+        ]
+
+    def _resolve_attack(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
         events: List[Event] = []
 
-        atk: AttackProfile = attacker.choose_basic_attack()
-        d20 = self.dice.d20()
+        attacker = state.get(action.actor_id)
+        if not attacker.alive:
+            return events
+
+        if not action.target_ids:
+            return events
+
+        defender = state.get(action.target_ids[0])
+        if not defender.alive:
+            return events
+
+        atk: AttackProfile = attacker.choose_attack(action.attack_index)
+
+        adv_state = "dis" if "defending" in defender.flags else "normal"
+        d20, underlying = self.dice.d20_with_adv_state(adv_state)
         total_to_hit = d20 + atk.attack_bonus
 
         attack_msg = (
-            f"{attacker.name} uses {atk.name}: " f"d20({d20}) + {atk.attack_bonus} = {total_to_hit} vs AC {defender.ac}"
+            f"{attacker.name} uses {atk.name}: "
+            f"d20({', '.join(map(str, underlying))}) -> {d20} + {atk.attack_bonus} = {total_to_hit} "
+            f"vs AC {defender.ac}"
         )
+        if adv_state == "dis":
+            attack_msg += " (DISADVANTAGE)"
+
         events.append(
             Event(
                 type="attack_roll",
@@ -55,10 +127,12 @@ class RulesEngine:
                 target=defender.id,
                 message=attack_msg,
                 data={
-                    "d20": d20,
+                    "underlying_d20": underlying,
+                    "chosen_d20": d20,
                     "attack_bonus": atk.attack_bonus,
                     "total": total_to_hit,
                     "target_ac": defender.ac,
+                    "adv_state": adv_state,
                 },
             )
         )
@@ -88,7 +162,6 @@ class RulesEngine:
             )
         )
 
-        # Damage: if crit, double the dice portion by rolling twice.
         if is_crit:
             dmg1 = self.dice.roll(atk.damage_dice)
             dmg2 = self.dice.roll(atk.damage_dice)

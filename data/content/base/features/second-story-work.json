@@ -1,0 +1,22 @@
+{
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/api/2014/classes/rogue"
+  },
+  "desc": [
+    "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
+    "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
+  ],
+  "index": "second-story-work",
+  "level": 3,
+  "name": "Second-Story Work",
+  "prerequisites": [],
+  "subclass": {
+    "index": "thief",
+    "name": "Thief",
+    "url": "/api/2014/subclasses/thief"
+  },
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/second-story-work"
+}

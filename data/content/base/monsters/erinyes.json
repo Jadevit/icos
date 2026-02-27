@@ -1,0 +1,248 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Longsword",
+              "count": 3,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Longbow",
+              "count": 3,
+              "option_type": "action",
+              "type": "ranged"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Longsword",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Longbow",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "ranged"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Longsword",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Longbow",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "ranged"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The erinyes makes three attacks",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d8+4",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d10+4",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        },
+        {
+          "damage_dice": "3d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage, or 9 (1d10 + 4) slashing damage if used with two hands, plus 13 (3d8) poison damage.",
+      "name": "Longsword"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "1d8+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "3d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +7 to hit, range 150/600 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 13 (3d8) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be poisoned. The poison lasts until it is removed by the lesser restoration spell or similar magic.",
+      "name": "Longbow"
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "plate-armor",
+          "name": "Plate Armor",
+          "url": "/api/2014/equipment/plate-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 12,
+  "charisma": 18,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 18,
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 16,
+  "forms": [],
+  "hit_dice": "18d8",
+  "hit_points": 153,
+  "hit_points_roll": "18d8+72",
+  "image": "/api/images/monsters/erinyes.png",
+  "index": "erinyes",
+  "intelligence": 14,
+  "languages": "Infernal, telepathy 120 ft.",
+  "legendary_actions": [],
+  "name": "Erinyes",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 8
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [
+    {
+      "desc": "The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon.",
+      "name": "Parry"
+    }
+  ],
+  "senses": {
+    "passive_perception": 12,
+    "truesight": "120 ft."
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The erinyes's weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).",
+      "name": "Hellish Weapons"
+    },
+    {
+      "damage": [],
+      "desc": "The erinyes has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "subtype": "devil",
+  "type": "fiend",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/erinyes",
+  "wisdom": 14,
+  "xp": 8400
+}

@@ -1,0 +1,222 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The dragon makes three attacks: one with its bite and two with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_dice": "2d10+6",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_dice": "2d6+6",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The dragon uses one of the following breath weapons.\nCold Breath. The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 17 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.\nParalyzing Breath. The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "name": "Breath Weapons",
+      "options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "damage": [
+                {
+                  "damage_dice": "12d8",
+                  "damage_type": {
+                    "index": "cold",
+                    "name": "Cold",
+                    "url": "/api/2014/damage-types/cold"
+                  }
+                }
+              ],
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "CON",
+                  "url": "/api/2014/ability-scores/con"
+                },
+                "dc_value": 17,
+                "success_type": "half"
+              },
+              "name": "Cold Breath",
+              "option_type": "breath"
+            },
+            {
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "CON",
+                  "url": "/api/2014/ability-scores/con"
+                },
+                "dc_value": 17,
+                "success_type": "none"
+              },
+              "name": "Paralyzing Breath",
+              "option_type": "breath"
+            }
+          ]
+        },
+        "type": "attack"
+      },
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 9,
+  "charisma": 19,
+  "condition_immunities": [],
+  "constitution": 21,
+  "damage_immunities": [
+    "cold"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "16d10",
+  "hit_points": 168,
+  "hit_points_roll": "16d10+80",
+  "image": "/api/images/monsters/young-silver-dragon.png",
+  "index": "young-silver-dragon",
+  "intelligence": 14,
+  "languages": "Common, Draconic",
+  "legendary_actions": [],
+  "name": "Young Silver Dragon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 9
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 18
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "fly": "80 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/young-silver-dragon",
+  "wisdom": 11,
+  "xp": 5000
+}

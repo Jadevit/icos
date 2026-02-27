@@ -1,0 +1,144 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Talons",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The roc makes two attacks: one with its beak and one with its talons.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "4d8+9",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 27 (4d8 + 9) piercing damage.",
+      "name": "Beak"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "4d6+9",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 23 (4d6 + 9) slashing damage, and the target is grappled (escape DC 19). Until this grapple ends, the target is restrained, and the roc can't use its talons on another target.",
+      "name": "Talons"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 11,
+  "charisma": 9,
+  "condition_immunities": [],
+  "constitution": 20,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "16d20",
+  "hit_points": 248,
+  "hit_points_roll": "16d20+80",
+  "image": "/api/images/monsters/roc.png",
+  "index": "roc",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Roc",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 9
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Gargantuan",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The roc has advantage on Wisdom (Perception) checks that rely on sight.",
+      "name": "Keen Sight"
+    }
+  ],
+  "speed": {
+    "fly": "120 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 28,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/roc",
+  "wisdom": 10,
+  "xp": 7200
+}

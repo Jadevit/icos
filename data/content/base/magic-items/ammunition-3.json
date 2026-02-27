@@ -1,0 +1,21 @@
+{
+  "desc": [
+    "Weapon (any ammunition), very rare",
+    "You have a +3 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
+  ],
+  "equipment_category": {
+    "index": "ammunition",
+    "name": "Ammunition",
+    "url": "/api/2014/equipment-categories/ammunition"
+  },
+  "image": "/api/images/magic-items/ammunition.png",
+  "index": "ammunition-3",
+  "name": "Ammunition, +3",
+  "rarity": {
+    "name": "Very Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/ammunition-3",
+  "variant": true,
+  "variants": []
+}

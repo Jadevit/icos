@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings."
+  ],
+  "index": "eldritch-invocation-gaze-of-two-minds",
+  "level": 2,
+  "name": "Eldritch Invocation: Gaze of Two Minds",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-gaze-of-two-minds"
+}

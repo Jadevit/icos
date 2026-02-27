@@ -1,0 +1,14 @@
+{
+  "ability_score": {
+    "index": "int",
+    "name": "INT",
+    "url": "/api/2014/ability-scores/int"
+  },
+  "desc": [
+    "Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults."
+  ],
+  "index": "religion",
+  "name": "Religion",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "url": "/api/2014/skills/religion"
+}

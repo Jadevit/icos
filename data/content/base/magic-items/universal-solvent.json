@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Wondrous item, legendary",
+    "This tube holds milky liquid with a strong alcohol smell. You can use an action to pour the contents of the tube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including sovereign glue."
+  ],
+  "equipment_category": {
+    "index": "wondrous-items",
+    "name": "Wondrous Items",
+    "url": "/api/2014/equipment-categories/wondrous-items"
+  },
+  "index": "universal-solvent",
+  "name": "Universal Solvent",
+  "rarity": {
+    "name": "Legendary"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/universal-solvent",
+  "variant": false,
+  "variants": []
+}

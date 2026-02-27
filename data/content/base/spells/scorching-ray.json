@@ -1,0 +1,62 @@
+{
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "V",
+    "S"
+  ],
+  "concentration": false,
+  "damage": {
+    "damage_at_slot_level": {
+      "2": "2d6"
+    },
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    }
+  },
+  "desc": [
+    "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.",
+    "Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage."
+  ],
+  "duration": "Instantaneous",
+  "higher_level": [
+    "When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
+  ],
+  "index": "scorching-ray",
+  "level": 2,
+  "name": "Scorching Ray",
+  "range": "120 feet",
+  "ritual": false,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/scorching-ray"
+}

@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "skill-deception",
+  "name": "Skill: Deception",
+  "races": [],
+  "reference": {
+    "index": "deception",
+    "name": "Deception",
+    "url": "/api/2014/skills/deception"
+  },
+  "type": "Skills",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/skill-deception"
+}

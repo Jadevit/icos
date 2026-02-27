@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/api/2014/classes/cleric"
+  },
+  "desc": [
+    "When you choose this domain at 1st level, you gain proficiency with heavy armor."
+  ],
+  "index": "bonus-proficiency",
+  "level": 1,
+  "name": "Bonus Proficiency",
+  "prerequisites": [],
+  "subclass": {
+    "index": "life",
+    "name": "Life",
+    "url": "/api/2014/subclasses/life"
+  },
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/bonus-proficiency"
+}

@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "flails",
+  "name": "Flails",
+  "races": [],
+  "reference": {
+    "index": "flail",
+    "name": "Flail",
+    "url": "/api/2014/equipment/flail"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/flails"
+}

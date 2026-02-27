@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+  ],
+  "index": "otherworldly-patron-improvement-3",
+  "level": 14,
+  "name": "Otherworldly Patron feature",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/otherworldly-patron-improvement-3"
+}

@@ -1,0 +1,138 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "name": "Club"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Acolytes are junior members of a clergy, usually answerable to a priest. They perform a variety of functions in a temple and are granted minor spellcasting power by their deities.",
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "2d8",
+  "hit_points": 9,
+  "hit_points_roll": "2d8",
+  "image": "/api/images/monsters/acolyte.png",
+  "index": "acolyte",
+  "intelligence": 10,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Acolyte",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-medicine",
+        "name": "Skill: Medicine",
+        "url": "/api/2014/proficiencies/skill-medicine"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:\n\n- Cantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (3 slots): bless, cure wounds, sanctuary",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "dc": 12,
+        "level": 1,
+        "modifier": 4,
+        "school": "cleric",
+        "slots": {
+          "1": 3
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Light",
+            "url": "/api/2014/spells/light"
+          },
+          {
+            "level": 0,
+            "name": "Sacred Flame",
+            "url": "/api/2014/spells/sacred-flame"
+          },
+          {
+            "level": 0,
+            "name": "Thaumaturgy",
+            "url": "/api/2014/spells/thaumaturgy"
+          },
+          {
+            "level": 1,
+            "name": "Bless",
+            "url": "/api/2014/spells/bless"
+          },
+          {
+            "level": 1,
+            "name": "Cure Wounds",
+            "url": "/api/2014/spells/cure-wounds"
+          },
+          {
+            "level": 1,
+            "name": "Sanctuary",
+            "url": "/api/2014/spells/sanctuary"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/acolyte",
+  "wisdom": 14,
+  "xp": 50
+}

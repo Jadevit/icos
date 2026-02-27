@@ -1,0 +1,97 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d8+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage, and the target is grappled (escape DC 12). The scorpion has two claws, each of which can grapple only one target.",
+      "name": "Claw"
+    },
+    {
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        },
+        {
+          "action_name": "Sting",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The scorpion makes three attacks: two with its claws and one with its sting.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d10+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Sting"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 15,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "7d10",
+  "hit_points": 52,
+  "hit_points_roll": "7d10+14",
+  "image": "/api/images/monsters/giant-scorpion.png",
+  "index": "giant-scorpion",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Scorpion",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 9
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-scorpion",
+  "wisdom": 9,
+  "xp": 700
+}

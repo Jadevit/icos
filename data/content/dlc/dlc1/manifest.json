@@ -1,0 +1,7 @@
+{
+  "type": "dlc",
+  "name": "dlc1",
+  "version": "0.1.0",
+  "bundle": "example_dlc.db",
+  "description": "Example DLC pack."
+}

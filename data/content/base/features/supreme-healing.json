@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/api/2014/classes/cleric"
+  },
+  "desc": [
+    "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d6 hit points to a creature, you restore 12."
+  ],
+  "index": "supreme-healing",
+  "level": 17,
+  "name": "Supreme Healing",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/supreme-healing"
+}

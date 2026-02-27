@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "chain-shirt",
+  "name": "Chain Shirt",
+  "races": [],
+  "reference": {
+    "index": "chain-shirt",
+    "name": "Chain Shirt",
+    "url": "/api/2014/equipment/chain-shirt"
+  },
+  "type": "Armor",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/chain-shirt"
+}

@@ -1,0 +1,96 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d6+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+      "name": "Hooves"
+    }
+  ],
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 13,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "7d10",
+  "hit_points": 59,
+  "hit_points_roll": "7d10+21",
+  "image": "/api/images/monsters/pegasus.png",
+  "index": "pegasus",
+  "intelligence": 10,
+  "languages": "understands Celestial, Common, Elvish, and Sylvan but can't speak",
+  "legendary_actions": [],
+  "name": "Pegasus",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 6
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 16
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "fly": "90 ft.",
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "type": "celestial",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/pegasus",
+  "wisdom": 15,
+  "xp": 450
+}

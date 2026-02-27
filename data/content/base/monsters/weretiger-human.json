@@ -1,0 +1,149 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Scimitar",
+              "count": 2,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Longbow",
+              "count": 2,
+              "option_type": "action",
+              "type": "ranged"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d6+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "name": "Scimitar"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d8+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+      "name": "Longbow"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 4,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [
+    {
+      "index": "weretiger-hybrid",
+      "name": "Weretiger, Hybrid Form",
+      "url": "/api/2014/monsters/weretiger-hybrid"
+    },
+    {
+      "index": "weretiger-tiger",
+      "name": "Weretiger, Tiger Form",
+      "url": "/api/2014/monsters/weretiger-tiger"
+    }
+  ],
+  "hit_dice": "16d8",
+  "hit_points": 120,
+  "hit_points_roll": "16d8+48",
+  "image": "/api/images/monsters/weretiger-human.png",
+  "index": "weretiger-human",
+  "intelligence": 10,
+  "languages": "Common",
+  "legendary_actions": [],
+  "name": "Weretiger, Human Form",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "name": "Shapechanger"
+    },
+    {
+      "damage": [],
+      "desc": "The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "subtype": "human",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/weretiger-human",
+  "wisdom": 13,
+  "xp": 1100
+}

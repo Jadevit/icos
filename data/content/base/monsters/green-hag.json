@@ -1,0 +1,165 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d8+4",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised.",
+      "name": "Illusory Appearance"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her.",
+      "name": "Invisible Passage"
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 14,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "11d8",
+  "hit_points": 82,
+  "hit_points_roll": "11d8+33",
+  "image": "/api/images/monsters/green-hag.png",
+  "index": "green-hag",
+  "intelligence": 13,
+  "languages": "Common, Draconic, Sylvan",
+  "legendary_actions": [],
+  "name": "Green Hag",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The hag can breathe air and water.",
+      "name": "Amphibious"
+    },
+    {
+      "damage": [],
+      "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components:\n\nAt will: dancing lights, minor illusion, vicious mockery",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 12,
+        "spells": [
+          {
+            "level": 0,
+            "name": "Dancing Lights",
+            "url": "/api/2014/spells/dancing-lights",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Minor Illusion",
+            "url": "/api/2014/spells/minor-illusion",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Vicious Mockery",
+            "url": "/api/2014/spells/vicious-mockery",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "damage": [],
+      "desc": "The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.",
+      "name": "Mimicry"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "type": "fey",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/green-hag",
+  "wisdom": 14,
+  "xp": 700
+}

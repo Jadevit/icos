@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "playing-card-set",
+  "name": "Playing Card Set",
+  "races": [],
+  "reference": {
+    "index": "playing-card-set",
+    "name": "Playing Card Set",
+    "url": "/api/2014/equipment/playing-card-set"
+  },
+  "type": "Gaming Sets",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/playing-card-set"
+}

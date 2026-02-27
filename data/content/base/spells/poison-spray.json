@@ -1,0 +1,70 @@
+{
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "components": [
+    "V",
+    "S"
+  ],
+  "concentration": false,
+  "damage": {
+    "damage_at_character_level": {
+      "1": "1d12",
+      "11": "3d12",
+      "17": "4d12",
+      "5": "2d12"
+    },
+    "damage_type": {
+      "index": "poison",
+      "name": "Poison",
+      "url": "/api/2014/damage-types/poison"
+    }
+  },
+  "dc": {
+    "dc_success": "none",
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    }
+  },
+  "desc": [
+    "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a constitution saving throw or take 1d12 poison damage.",
+    "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+  ],
+  "duration": "Instantaneous",
+  "higher_level": [],
+  "index": "poison-spray",
+  "level": 0,
+  "name": "Poison Spray",
+  "range": "10 feet",
+  "ritual": false,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration"
+  },
+  "subclasses": [],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/poison-spray"
+}

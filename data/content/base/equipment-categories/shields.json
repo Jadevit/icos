@@ -1,0 +1,13 @@
+{
+  "equipment": [
+    {
+      "index": "shield",
+      "name": "Shield",
+      "url": "/api/2014/equipment/shield"
+    }
+  ],
+  "index": "shields",
+  "name": "Shields",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "url": "/api/2014/equipment-categories/shields"
+}

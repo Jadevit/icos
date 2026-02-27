@@ -1,0 +1,56 @@
+{
+  "area_of_effect": {
+    "size": 20,
+    "type": "cylinder"
+  },
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": true,
+  "desc": [
+    "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels.",
+    "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast can make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it."
+  ],
+  "duration": "Up to 10 minutes",
+  "higher_level": [],
+  "index": "spike-growth",
+  "level": 2,
+  "material": "Seven sharp thorns or seven small twigs, each sharpened to a point.",
+  "name": "Spike Growth",
+  "range": "150 feet",
+  "ritual": false,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/spike-growth"
+}

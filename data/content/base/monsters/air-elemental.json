@@ -1,0 +1,141 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The elemental makes two slam attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "2d8+5",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) bludgeoning damage.",
+      "name": "Slam"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone.\nIf the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone.",
+      "name": "Whirlwind",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 4,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 5,
+  "charisma": 6,
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    },
+    {
+      "index": "unconscious",
+      "name": "Unconscious",
+      "url": "/api/2014/conditions/unconscious"
+    }
+  ],
+  "constitution": 14,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [
+    "lightning",
+    "thunder",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 20,
+  "forms": [],
+  "hit_dice": "12d10",
+  "hit_points": 90,
+  "hit_points_roll": "12d10+24",
+  "image": "/api/images/monsters/air-elemental.png",
+  "index": "air-elemental",
+  "intelligence": 6,
+  "languages": "Auran",
+  "legendary_actions": [],
+  "name": "Air Elemental",
+  "proficiencies": [],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.",
+      "name": "Air Form"
+    }
+  ],
+  "speed": {
+    "fly": "90 ft.",
+    "hover": true
+  },
+  "strength": 14,
+  "type": "elemental",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/air-elemental",
+  "wisdom": 10,
+  "xp": 1800
+}

@@ -1,0 +1,64 @@
+{
+  "area_of_effect": {
+    "size": 20,
+    "type": "sphere"
+  },
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": false,
+  "damage": {
+    "damage_at_slot_level": {
+      "1": "5d8"
+    }
+  },
+  "desc": [
+    "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).",
+    "Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
+    "Undead and creatures immune to being charmed aren't affected by this spell."
+  ],
+  "duration": "1 minute",
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
+  ],
+  "index": "sleep",
+  "level": 1,
+  "material": "A pinch of fine sand, rose petals, or a cricket.",
+  "name": "Sleep",
+  "range": "90 feet",
+  "ritual": false,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/sleep"
+}

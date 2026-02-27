@@ -1,0 +1,82 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_dice": "1d4-1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 6,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "1d6",
+  "hit_points": 3,
+  "hit_points_roll": "1d6",
+  "image": "/api/images/monsters/jackal.png",
+  "index": "jackal",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Jackal",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    },
+    {
+      "damage": [],
+      "desc": "The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "name": "Pack Tactics"
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 8,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/jackal",
+  "wisdom": 12,
+  "xp": 10
+}

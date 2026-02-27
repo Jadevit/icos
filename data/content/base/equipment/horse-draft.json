@@ -1,0 +1,25 @@
+{
+  "capacity": "540 lb.",
+  "contents": [],
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "mounts-and-vehicles",
+    "name": "Mounts and Vehicles",
+    "url": "/api/2014/equipment-categories/mounts-and-vehicles"
+  },
+  "index": "horse-draft",
+  "name": "Horse, draft",
+  "properties": [],
+  "special": [],
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/horse-draft",
+  "vehicle_category": "Mounts and Other Animals"
+}

@@ -1,0 +1,101 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d8+1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+      "name": "Rapier"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "breastplate",
+          "name": "Breastplate",
+          "url": "/api/2014/equipment/breastplate"
+        }
+      ],
+      "type": "armor",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 16,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble\u2019s statistics can also be used to represent **courtiers** who aren\u2019t of noble birth.",
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "2d8",
+  "hit_points": 9,
+  "hit_points_roll": "2d8",
+  "image": "/api/images/monsters/noble.png",
+  "index": "noble",
+  "intelligence": 12,
+  "languages": "any two languages",
+  "legendary_actions": [],
+  "name": "Noble",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [
+    {
+      "desc": "The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon.",
+      "name": "Parry"
+    }
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/noble",
+  "wisdom": 14,
+  "xp": 25
+}

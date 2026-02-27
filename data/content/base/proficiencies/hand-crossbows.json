@@ -1,0 +1,25 @@
+{
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/api/2014/classes/rogue"
+    }
+  ],
+  "index": "hand-crossbows",
+  "name": "Hand crossbows",
+  "races": [],
+  "reference": {
+    "index": "crossbow-hand",
+    "name": "Crossbow, hand",
+    "url": "/api/2014/equipment/crossbow-hand"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/hand-crossbows"
+}

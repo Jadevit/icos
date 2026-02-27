@@ -1,0 +1,127 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d6+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "4d8",
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 12,
+        "success_type": "none"
+      },
+      "desc": "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.",
+      "name": "Cold Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 8,
+  "condition_immunities": [],
+  "constitution": 14,
+  "damage_immunities": [
+    "cold"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "The arctic-dwelling winter wolf is as large as a dire wolf but has snow-white fur and pale blue eyes. Frost giants use these evil creatures as guards and hunting companions, putting the wolves\u2019 deadly breath weapon to use against their foes. Winter wolves communicate with one another using growls and barks, but they speak Common and Giant well enough to follow simple conversations.",
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "10d10",
+  "hit_points": 75,
+  "hit_points_roll": "10d10+20",
+  "image": "/api/images/monsters/winter-wolf.png",
+  "index": "winter-wolf",
+  "intelligence": 7,
+  "languages": "Common, Giant, Winter Wolf",
+  "legendary_actions": [],
+  "name": "Winter Wolf",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    },
+    {
+      "damage": [],
+      "desc": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "name": "Pack Tactics"
+    },
+    {
+      "damage": [],
+      "desc": "The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.",
+      "name": "Snow Camouflage"
+    }
+  ],
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 18,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/winter-wolf",
+  "wisdom": 12,
+  "xp": 700
+}

@@ -1,0 +1,26 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "When you cast eldritch blast, its range is 300 feet."
+  ],
+  "index": "eldritch-invocation-eldritch-spear",
+  "level": 2,
+  "name": "Eldritch Invocation: Eldritch Spear",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [
+    {
+      "spell": "/api/2014/spells/eldritch-blast",
+      "type": "spell"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-eldritch-spear"
+}

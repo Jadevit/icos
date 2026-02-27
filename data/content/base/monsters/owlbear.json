@@ -1,0 +1,112 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The owlbear makes two attacks: one with its beak and one with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "1d10+5",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 10 (1d10 + 5) piercing damage.",
+      "name": "Beak"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d8+5",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.",
+      "name": "Claws"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 17,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "7d10",
+  "hit_points": 59,
+  "hit_points_roll": "7d10+21",
+  "image": "/api/images/monsters/owlbear.png",
+  "index": "owlbear",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Owlbear",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell.",
+      "name": "Keen Sight and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/owlbear",
+  "wisdom": 12,
+  "xp": 700
+}

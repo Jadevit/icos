@@ -1,0 +1,78 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+      "name": "Talons"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "1d6",
+  "hit_points": 3,
+  "hit_points_roll": "1d6",
+  "image": "/api/images/monsters/eagle.png",
+  "index": "eagle",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Eagle",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+      "name": "Keen Sight"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 6,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/eagle",
+  "wisdom": 14,
+  "xp": 10
+}

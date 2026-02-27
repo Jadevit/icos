@@ -1,0 +1,116 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "4d4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 0 ft., one target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.",
+      "name": "Bites"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    },
+    {
+      "index": "stunned",
+      "name": "Stunned",
+      "url": "/api/2014/conditions/stunned"
+    }
+  ],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 22,
+  "hit_points_roll": "5d8",
+  "image": "/api/images/monsters/swarm-of-beetles.png",
+  "index": "swarm-of-beetles",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Swarm of Beetles",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 8
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.",
+      "name": "Swarm"
+    }
+  ],
+  "speed": {
+    "burrow": "5 ft.",
+    "climb": "20 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 3,
+  "type": "swarm of Tiny beasts",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/swarm-of-beetles",
+  "wisdom": 7,
+  "xp": 100
+}

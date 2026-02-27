@@ -1,0 +1,179 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d4+1",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        },
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "2d6",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 11,
+        "success_type": "half"
+      },
+      "desc": "The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.",
+      "name": "Fire Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 6,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 10,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 12,
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [
+    "cold"
+  ],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "5d6",
+  "hit_points": 22,
+  "hit_points_roll": "5d6+5",
+  "image": "/api/images/monsters/magma-mephit.png",
+  "index": "magma-mephit",
+  "intelligence": 7,
+  "languages": "Ignan, Terran",
+  "legendary_actions": [],
+  "name": "Magma Mephit",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [
+        {
+          "damage_dice": "2d6",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 11,
+        "success_type": "half"
+      },
+      "desc": "When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.",
+      "name": "Death Burst"
+    },
+    {
+      "damage": [],
+      "desc": "While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma.",
+      "name": "False Appearance"
+    },
+    {
+      "damage": [],
+      "desc": "The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma.",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 10,
+        "spells": [
+          {
+            "level": 2,
+            "name": "Heat Metal",
+            "url": "/api/2014/spells/heat-metal",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "fly": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "type": "elemental",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/magma-mephit",
+  "wisdom": 10,
+  "xp": 100
+}

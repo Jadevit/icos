@@ -1,0 +1,17 @@
+{
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/api/2014/classes/sorcerer"
+  },
+  "desc": [
+    "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+  ],
+  "index": "spellcasting-sorcerer",
+  "level": 1,
+  "name": "Spellcasting: Sorcerer",
+  "prerequisites": [],
+  "reference": "/api/2014/classes/sorcerer/spellcasting",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/spellcasting-sorcerer"
+}

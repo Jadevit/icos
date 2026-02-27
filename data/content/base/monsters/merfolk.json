@@ -1,0 +1,100 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d6",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d8",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.",
+      "name": "Spear"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 12,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "2d8",
+  "hit_points": 11,
+  "hit_points_roll": "2d8+2",
+  "image": "/api/images/monsters/merfolk.png",
+  "index": "merfolk",
+  "intelligence": 11,
+  "languages": "Aquan, Common",
+  "legendary_actions": [],
+  "name": "Merfolk",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The merfolk can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "swim": "40 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 10,
+  "subtype": "merfolk",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/merfolk",
+  "wisdom": 11,
+  "xp": 25
+}

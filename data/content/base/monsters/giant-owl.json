@@ -1,0 +1,92 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "2d6+1",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 8 (2d6 + 1) slashing damage.",
+      "name": "Talons"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 10,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "3d10",
+  "hit_points": 19,
+  "hit_points_roll": "3d10+3",
+  "image": "/api/images/monsters/giant-owl.png",
+  "index": "giant-owl",
+  "intelligence": 8,
+  "languages": "Giant Owl, understands Common, Elvish, and Sylvan but can't speak",
+  "legendary_actions": [],
+  "name": "Giant Owl",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 15
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
+      "name": "Flyby"
+    },
+    {
+      "damage": [],
+      "desc": "The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight.",
+      "name": "Keen Hearing and Sight"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "5 ft."
+  },
+  "strength": 13,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-owl",
+  "wisdom": 13,
+  "xp": 50
+}

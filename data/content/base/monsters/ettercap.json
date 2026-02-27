@@ -1,0 +1,159 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The ettercap makes two attacks: one with its bite and one with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 6 (1d8 + 2) piercing damage plus 4 (1d8) poison damage. The target must succeed on a DC 11 Constitution saving throw or be poisoned for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d4+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [],
+      "desc": "Ranged Weapon Attack: +4 to hit, range 30/60 ft., one Large or smaller creature. Hit: The creature is restrained by webbing. As an action, the restrained creature can make a DC 11 Strength check, escaping from the webbing on a success. The effect ends if the webbing is destroyed. The webbing has AC 10, 5 hit points, is vulnerable to fire damage and immune to bludgeoning damage.",
+      "name": "Web",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 8,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "8d8",
+  "hit_points": 44,
+  "hit_points_roll": "8d8+8",
+  "image": "/api/images/monsters/ettercap.png",
+  "index": "ettercap",
+  "intelligence": 7,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Ettercap",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-survival",
+        "name": "Skill: Survival",
+        "url": "/api/2014/proficiencies/skill-survival"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The ettercap can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "name": "Spider Climb"
+    },
+    {
+      "damage": [],
+      "desc": "While in contact with a web, the ettercap knows the exact location of any other creature in contact with the same web.",
+      "name": "Web Sense"
+    },
+    {
+      "damage": [],
+      "desc": "The ettercap ignores movement restrictions caused by webbing.",
+      "name": "Web Walker"
+    }
+  ],
+  "speed": {
+    "climb": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/ettercap",
+  "wisdom": 12,
+  "xp": 450
+}

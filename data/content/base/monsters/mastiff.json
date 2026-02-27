@@ -1,0 +1,78 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Mastiffs are impressive hounds prized by humanoids for their loyalty and keen senses. Mastiffs can be trained as guard dogs, hunting dogs, and war dogs. Halflings and other Small humanoids ride them as mounts.",
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "1d8",
+  "hit_points": 5,
+  "hit_points_roll": "1d8+1",
+  "image": "/api/images/monsters/mastiff.png",
+  "index": "mastiff",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Mastiff",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 13,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/mastiff",
+  "wisdom": 12,
+  "xp": 25
+}

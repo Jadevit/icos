@@ -1,0 +1,30 @@
+{
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "index": "quarterstaffs",
+  "name": "Quarterstaffs",
+  "races": [],
+  "reference": {
+    "index": "quarterstaff",
+    "name": "Quarterstaff",
+    "url": "/api/2014/equipment/quarterstaff"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/quarterstaffs"
+}

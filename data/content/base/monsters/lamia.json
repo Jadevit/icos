@@ -1,0 +1,250 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "items": [
+                {
+                  "action_name": "Claws",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Dagger",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Claws",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Intoxicating Touch",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "ability"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "2d10+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) slashing damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d4+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage.",
+      "name": "Dagger"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [],
+      "desc": "Melee Spell Attack: +5 to hit, reach 5 ft., one creature. Hit: The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.",
+      "name": "Intoxicating Touch"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 4,
+  "charisma": 16,
+  "condition_immunities": [],
+  "constitution": 15,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "13d10",
+  "hit_points": 97,
+  "hit_points_roll": "13d10+26",
+  "image": "/api/images/monsters/lamia.png",
+  "index": "lamia",
+  "intelligence": 14,
+  "languages": "Abyssal, Common",
+  "legendary_actions": [],
+  "name": "Lamia",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components. At will: disguise self (any humanoid form), major image 3/day each: charm person, mirror image, scrying, suggestion 1/day: geas",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 13,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Disguise Self",
+            "notes": "Any Humanoid Form",
+            "url": "/api/2014/spells/disguise-self",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Major Image",
+            "url": "/api/2014/spells/major-image",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Charm Person",
+            "url": "/api/2014/spells/charm-person",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Mirror Image",
+            "url": "/api/2014/spells/mirror-image",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Scrying",
+            "url": "/api/2014/spells/scrying",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Suggestion",
+            "url": "/api/2014/spells/suggestion",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Geas",
+            "url": "/api/2014/spells/geas",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/lamia",
+  "wisdom": 15,
+  "xp": 1100
+}

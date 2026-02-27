@@ -1,0 +1,64 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or take 10 (3d6) poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "1d6",
+  "hit_points": 4,
+  "hit_points_roll": "1d6+1",
+  "image": "/api/images/monsters/giant-centipede.png",
+  "index": "giant-centipede",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Centipede",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 8
+  },
+  "size": "Small",
+  "special_abilities": [],
+  "speed": {
+    "climb": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-centipede",
+  "wisdom": 7,
+  "xp": 50
+}

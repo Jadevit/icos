@@ -1,0 +1,113 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The griffon makes two attacks: one with its beak and one with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d8+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage.",
+      "name": "Beak"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d6+4",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
+      "name": "Claws"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 8,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "7d10",
+  "hit_points": 59,
+  "hit_points_roll": "7d10+21",
+  "image": "/api/images/monsters/griffon.png",
+  "index": "griffon",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Griffon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The griffon has advantage on Wisdom (Perception) checks that rely on sight.",
+      "name": "Keen Sight"
+    }
+  ],
+  "speed": {
+    "fly": "80 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/griffon",
+  "wisdom": 13,
+  "xp": 450
+}

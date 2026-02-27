@@ -1,0 +1,151 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The cloaker makes two attacks: one with its bite and one with its tail.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d6+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 10 (2d6 + 3) piercing damage, and if the target is Large or smaller, the cloaker attaches to it. If the cloaker has advantage against the target, the cloaker attaches to the target's head, and the target is blinded and unable to breathe while the cloaker is attached. While attached, the cloaker can make this attack only against the target and has advantage on the attack roll. The cloaker can detach itself by spending 5 feet of its movement. A creature, including the target, can take its action to detach the cloaker by succeeding on a DC 16 Strength check.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d8+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one creature. Hit: 7 (1d8 + 3) slashing damage.",
+      "name": "Tail"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 13,
+        "success_type": "none"
+      },
+      "desc": "Each creature within 60 feet of the cloaker that can hear its moan and that isn't an aberration must succeed on a DC 13 Wisdom saving throw or become frightened until the end of the cloaker's next turn. If a creature's saving throw is successful, the creature is immune to the cloaker's moan for the next 24 hours.",
+      "name": "Moan"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The cloaker magically creates three illusory duplicates of itself if it isn't in bright light. The duplicates move with it and mimic its actions, shifting position so as to make it impossible to track which cloaker is the real one. If the cloaker is ever in an area of bright light, the duplicates disappear.\nWhenever any creature targets the cloaker with an attack or a harmful spell while a duplicate remains, that creature rolls randomly to determine whether it targets the cloaker or one of the duplicates. A creature is unaffected by this magical effect if it can't see or if it relies on senses other than sight.\nA duplicate has the cloaker's AC and uses its saving throws. If an attack hits a duplicate, or if a duplicate fails a saving throw against an effect that deals damage, the duplicate disappears.",
+      "name": "Phantasms",
+      "usage": {
+        "rest_types": [
+          "short",
+          "long"
+        ],
+        "type": "recharge after rest"
+      }
+    }
+  ],
+  "alignment": "chaotic neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 8,
+  "charisma": 14,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "12d10",
+  "hit_points": 78,
+  "hit_points_roll": "12d10+12",
+  "image": "/api/images/monsters/cloaker.png",
+  "index": "cloaker",
+  "intelligence": 13,
+  "languages": "Deep Speech, Undercommon",
+  "legendary_actions": [],
+  "name": "Cloaker",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 11
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down). and that creature takes the other half.",
+      "name": "Damage Transfer"
+    },
+    {
+      "damage": [],
+      "desc": "While the cloaker remains motionless without its underside exposed, it is indistinguishable from a dark leather cloak.",
+      "name": "False Appearance"
+    },
+    {
+      "damage": [],
+      "desc": "While in bright light, the cloaker has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight.",
+      "name": "Light Sensitivity"
+    }
+  ],
+  "speed": {
+    "fly": "40 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "type": "aberration",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/cloaker",
+  "wisdom": 12,
+  "xp": 3900
+}

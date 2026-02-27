@@ -1,0 +1,19 @@
+{
+  "desc": "# Spellcasting\n\nMagic permeates fantasy gaming worlds and often appears in the form of a spell.\n\nThis chapter provides the rules for casting spells. Different character classes have distinctive ways of learning and preparing their spells, and monsters use spells in unique ways. Regardless of its source, a spell follows the rules here.\n",
+  "index": "spellcasting",
+  "name": "Spellcasting",
+  "subsections": [
+    {
+      "index": "what-is-a-spell",
+      "name": "What Is a Spell?",
+      "url": "/api/2014/rule-sections/what-is-a-spell"
+    },
+    {
+      "index": "casting-a-spell",
+      "name": "Casting a Spell",
+      "url": "/api/2014/rule-sections/casting-a-spell"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "url": "/api/2014/rules/spellcasting"
+}

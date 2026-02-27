@@ -1,0 +1,45 @@
+{
+  "category_range": "Simple Melee",
+  "contents": [],
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "slashing",
+      "name": "Slashing",
+      "url": "/api/2014/damage-types/slashing"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "sickle",
+  "name": "Sickle",
+  "properties": [
+    {
+      "index": "light",
+      "name": "Light",
+      "url": "/api/2014/weapon-properties/light"
+    },
+    {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/api/2014/weapon-properties/monk"
+    }
+  ],
+  "range": {
+    "normal": 5
+  },
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/sickle",
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "weight": 2
+}

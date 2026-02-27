@@ -1,0 +1,208 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "items": [
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Claws",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Tail",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The dragon turtle makes three attacks: one with its bite and two with its claws. It can make one tail attack in place of its two claw attacks.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "3d12+7",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 26 (3d12 + 7) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "2d8+7",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 16 (2d8 + 7) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "3d12+7",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 26 (3d12 + 7) bludgeoning damage. If the target is a creature, it must succeed on a DC 20 Strength saving throw or be pushed up to 10 feet away from the dragon turtle and knocked prone.",
+      "name": "Tail"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "15d6",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "CON",
+          "url": "/api/2014/ability-scores/con"
+        },
+        "dc_value": 18,
+        "success_type": "half"
+      },
+      "desc": "The dragon turtle exhales scalding steam in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 52 (15d6) fire damage on a failed save, or half as much damage on a successful one. Being underwater doesn't grant resistance against this damage.",
+      "name": "Steam Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "challenge_rating": 17,
+  "charisma": 12,
+  "condition_immunities": [],
+  "constitution": 20,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "fire"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "22d20",
+  "hit_points": 341,
+  "hit_points_roll": "22d20+110",
+  "image": "/api/images/monsters/dragon-turtle.png",
+  "index": "dragon-turtle",
+  "intelligence": 10,
+  "languages": "Aquan, Draconic",
+  "legendary_actions": [],
+  "name": "Dragon Turtle",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 11
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 7
+    }
+  ],
+  "proficiency_bonus": 6,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 11
+  },
+  "size": "Gargantuan",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The dragon turtle can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "swim": "40 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 25,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/dragon-turtle",
+  "wisdom": 12,
+  "xp": 18000
+}

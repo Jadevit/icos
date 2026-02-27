@@ -1,0 +1,164 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Shortsword"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+      "name": "Hand Crossbow"
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "chain-shirt",
+          "name": "Chain Shirt",
+          "url": "/api/2014/equipment/chain-shirt"
+        }
+      ],
+      "type": "armor",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 12,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "3d8",
+  "hit_points": 13,
+  "hit_points_roll": "3d8",
+  "image": "/api/images/monsters/drow.png",
+  "index": "drow",
+  "intelligence": 11,
+  "languages": "Elvish, Undercommon",
+  "legendary_actions": [],
+  "name": "Drow",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 2
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.",
+      "name": "Fey Ancestry"
+    },
+    {
+      "damage": [],
+      "desc": "The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 11,
+        "modifier": 0,
+        "spells": [
+          {
+            "level": 0,
+            "name": "Dancing Lights",
+            "url": "/api/2014/spells/dancing-lights",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Darkness",
+            "url": "/api/2014/spells/darkness",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Faerie Fire",
+            "url": "/api/2014/spells/faerie-fire",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "damage": [],
+      "desc": "While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "name": "Sunlight Sensitivity"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "subtype": "elf",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/drow",
+  "wisdom": 11,
+  "xp": 50
+}

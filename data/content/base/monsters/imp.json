@@ -1,0 +1,132 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d4+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Sting (Bite in Beast Form)"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The imp magically turns invisible until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it.",
+      "name": "Invisibility"
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 1,
+  "charisma": 14,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 13,
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 17,
+  "forms": [],
+  "hit_dice": "3d4",
+  "hit_points": 10,
+  "hit_points_roll": "3d4+3",
+  "image": "/api/images/monsters/imp.png",
+  "index": "imp",
+  "intelligence": 11,
+  "languages": "Infernal, Common",
+  "legendary_actions": [],
+  "name": "Imp",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 11
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "name": "Shapechanger"
+    },
+    {
+      "damage": [],
+      "desc": "Magical darkness doesn't impede the imp's darkvision.",
+      "name": "Devil's Sight"
+    },
+    {
+      "damage": [],
+      "desc": "The imp has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    }
+  ],
+  "speed": {
+    "fly": "40 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 6,
+  "subtype": "devil",
+  "type": "fiend",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/imp",
+  "wisdom": 12,
+  "xp": 200
+}

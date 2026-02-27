@@ -1,0 +1,281 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Longsword",
+              "count": 3,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Longbow",
+              "count": 3,
+              "option_type": "action",
+              "type": "ranged"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Longsword",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Longbow",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "ranged"
+                },
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The drider makes three attacks, either with its longsword or its longbow. It can replace one of those attacks with a bite attack.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "2d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage plus 9 (2d8) poison damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d8+3",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d10+3",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+      "name": "Longsword"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d8+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +6 to hit, range 150/600 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) poison damage.",
+      "name": "Longbow"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "challenge_rating": 6,
+  "charisma": 12,
+  "condition_immunities": [],
+  "constitution": 18,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 16,
+  "forms": [],
+  "hit_dice": "13d10",
+  "hit_points": 123,
+  "hit_points_roll": "13d10+52",
+  "image": "/api/images/monsters/drider.png",
+  "index": "drider",
+  "intelligence": 13,
+  "languages": "Elvish, Undercommon",
+  "legendary_actions": [],
+  "name": "Drider",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 9
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 15
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The drider has advantage on saving throws against being charmed, and magic can't put the drider to sleep.",
+      "name": "Fey Ancestry"
+    },
+    {
+      "damage": [],
+      "desc": "The drider's innate spellcasting ability is Wisdom (spell save DC 13). The drider can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 13,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Dancing Lights",
+            "url": "/api/2014/spells/dancing-lights",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Darkness",
+            "url": "/api/2014/spells/darkness",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Faerie Fire",
+            "url": "/api/2014/spells/faerie-fire",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "damage": [],
+      "desc": "The drider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "name": "Spider Climb"
+    },
+    {
+      "damage": [],
+      "desc": "While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "name": "Sunlight Sensitivity"
+    },
+    {
+      "damage": [],
+      "desc": "The drider ignores movement restrictions caused by webbing.",
+      "name": "Web Walker"
+    }
+  ],
+  "speed": {
+    "climb": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/drider",
+  "wisdom": 14,
+  "xp": 2300
+}

@@ -1,0 +1,79 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d6+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+      "name": "Hooves"
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "desc": "barding scraps",
+      "type": "armor",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 5,
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 15,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "3d10",
+  "hit_points": 22,
+  "hit_points_roll": "3d10+6",
+  "image": "/api/images/monsters/warhorse-skeleton.png",
+  "index": "warhorse-skeleton",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Warhorse Skeleton",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "type": "undead",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/warhorse-skeleton",
+  "wisdom": 8,
+  "xp": 100
+}

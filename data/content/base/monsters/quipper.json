@@ -1,0 +1,75 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 2,
+  "condition_immunities": [],
+  "constitution": 9,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "A quipper is a carnivorous fish with sharp teeth. Quippers can adapt to any aquatic environment, including cold subterranean lakes. They frequently gather in swarms; the statistics for a swarm of quippers appear later in this appendix.",
+  "dexterity": 16,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/quipper.png",
+  "index": "quipper",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Quipper",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+      "name": "Blood Frenzy"
+    },
+    {
+      "damage": [],
+      "desc": "The quipper can breathe only underwater.",
+      "name": "Water Breathing"
+    }
+  ],
+  "speed": {
+    "swim": "40 ft."
+  },
+  "strength": 2,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/quipper",
+  "wisdom": 7,
+  "xp": 10
+}

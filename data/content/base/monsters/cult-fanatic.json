@@ -1,0 +1,182 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Dagger",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The fanatic makes two melee attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+      "name": "Dagger"
+    }
+  ],
+  "alignment": "any non-good alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "leather-armor",
+          "name": "Leather Armor",
+          "url": "/api/2014/equipment/leather-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 14,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Fanatics are often part of a cult\u2019s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "6d8",
+  "hit_points": 22,
+  "hit_points_roll": "6d8-5",
+  "image": "/api/images/monsters/cult-fanatic.png",
+  "index": "cult-fanatic",
+  "intelligence": 10,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Cult Fanatic",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The fanatic has advantage on saving throws against being charmed or frightened.",
+      "name": "Dark Devotion"
+    },
+    {
+      "damage": [],
+      "desc": "The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:\n\nCantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (4 slots): command, inflict wounds, shield of faith\n- 2nd level (3 slots): hold person, spiritual weapon",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "dc": 11,
+        "level": 4,
+        "modifier": 3,
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Light",
+            "url": "/api/2014/spells/light"
+          },
+          {
+            "level": 0,
+            "name": "Sacred Flame",
+            "url": "/api/2014/spells/sacred-flame"
+          },
+          {
+            "level": 0,
+            "name": "Thaumaturgy",
+            "url": "/api/2014/spells/thaumaturgy"
+          },
+          {
+            "level": 1,
+            "name": "Command",
+            "url": "/api/2014/spells/command"
+          },
+          {
+            "level": 1,
+            "name": "Inflict Wounds",
+            "url": "/api/2014/spells/inflict-wounds"
+          },
+          {
+            "level": 1,
+            "name": "Shield of Faith",
+            "url": "/api/2014/spells/shield-of-faith"
+          },
+          {
+            "level": 2,
+            "name": "Hold Person",
+            "url": "/api/2014/spells/hold-person"
+          },
+          {
+            "level": 2,
+            "name": "Spiritual Weapon",
+            "url": "/api/2014/spells/spiritual-weapon"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/cult-fanatic",
+  "wisdom": 13,
+  "xp": 450
+}

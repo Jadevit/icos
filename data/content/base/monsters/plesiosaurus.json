@@ -1,0 +1,86 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "3d6+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 14 (3d6 + 4) piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "8d10",
+  "hit_points": 68,
+  "hit_points_roll": "8d10+24",
+  "image": "/api/images/monsters/plesiosaurus.png",
+  "index": "plesiosaurus",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Plesiosaurus",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The plesiosaurus can hold its breath for 1 hour.",
+      "name": "Hold Breath"
+    }
+  ],
+  "speed": {
+    "swim": "40 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 18,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/plesiosaurus",
+  "wisdom": 12,
+  "xp": 450
+}

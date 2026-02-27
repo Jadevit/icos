@@ -1,0 +1,7 @@
+{
+  "type": "mod",
+  "name": "example_mod",
+  "bundle": "example_mod.db",
+  "version": "0.1.0",
+  "description": "Example mod pack."
+}

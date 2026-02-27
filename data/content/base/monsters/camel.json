@@ -1,0 +1,62 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 14,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 8,
+  "forms": [],
+  "hit_dice": "2d10",
+  "hit_points": 15,
+  "hit_points_roll": "2d10+4",
+  "image": "/api/images/monsters/camel.png",
+  "index": "camel",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Camel",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/camel",
+  "wisdom": 8,
+  "xp": 25
+}

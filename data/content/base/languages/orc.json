@@ -1,0 +1,12 @@
+{
+  "desc": "Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+  "index": "orc",
+  "name": "Orc",
+  "script": "Dwarvish",
+  "type": "Standard",
+  "typical_speakers": [
+    "Orcs"
+  ],
+  "updated_at": "2025-10-24T20:42:13.303Z",
+  "url": "/api/2014/languages/orc"
+}

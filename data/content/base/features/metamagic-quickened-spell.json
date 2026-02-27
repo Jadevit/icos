@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/api/2014/classes/sorcerer"
+  },
+  "desc": [
+    "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting."
+  ],
+  "index": "metamagic-quickened-spell",
+  "level": 3,
+  "name": "Metamagic: Quickened Spell",
+  "parent": {
+    "index": "metamagic-1",
+    "name": "Metamagic",
+    "url": "/api/2014/features/metamagic-1"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/metamagic-quickened-spell"
+}

@@ -1,0 +1,85 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 8,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 16,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/weasel.png",
+  "index": "weasel",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Weasel",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 3,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/weasel",
+  "wisdom": 12,
+  "xp": 10
+}

@@ -1,0 +1,21 @@
+{
+  "desc": [
+    "Armor (light, medium, or heavy), rare",
+    "You have a +1 bonus to AC while wearing this armor."
+  ],
+  "equipment_category": {
+    "index": "armor",
+    "name": "Armor",
+    "url": "/api/2014/equipment-categories/armor"
+  },
+  "image": "/api/images/magic-items/armor.png",
+  "index": "armor-1",
+  "name": "Armor, +1",
+  "rarity": {
+    "name": "Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/armor-1",
+  "variant": true,
+  "variants": []
+}

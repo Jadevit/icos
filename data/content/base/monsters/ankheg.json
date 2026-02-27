@@ -1,0 +1,111 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "2d6+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        },
+        {
+          "damage_dice": "1d6",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage plus 3 (1d6) acid damage. If the target is a Large or smaller creature, it is grappled (escape DC 13). Until this grapple ends, the ankheg can bite only the grappled creature and has advantage on attack rolls to do so.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "3d6",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 13,
+        "success_type": "half"
+      },
+      "desc": "The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.",
+      "name": "Acid Spray",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 6,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    },
+    {
+      "condition": {
+        "index": "prone",
+        "name": "Prone",
+        "url": "/api/2014/conditions/prone"
+      },
+      "type": "condition",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 6,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 11,
+  "forms": [],
+  "hit_dice": "6d10",
+  "hit_points": 39,
+  "hit_points_roll": "6d10+6",
+  "image": "/api/images/monsters/ankheg.png",
+  "index": "ankheg",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Ankheg",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 11,
+    "tremorsense": "60 ft."
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "burrow": "10 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/ankheg",
+  "wisdom": 13,
+  "xp": 250
+}

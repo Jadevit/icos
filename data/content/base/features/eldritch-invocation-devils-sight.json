@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
+  ],
+  "index": "eldritch-invocation-devils-sight",
+  "level": 2,
+  "name": "Eldritch Invocation: Devil's Sight",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-devils-sight"
+}

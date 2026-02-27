@@ -1,0 +1,234 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "1d8+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [],
+      "desc": "Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Spit Poison"
+    }
+  ],
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 10,
+  "charisma": 18,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 16,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 18,
+  "forms": [],
+  "hit_dice": "15d10",
+  "hit_points": 127,
+  "hit_points_roll": "15d10+45",
+  "image": "/api/images/monsters/guardian-naga.png",
+  "index": "guardian-naga",
+  "intelligence": 16,
+  "languages": "Celestial, Common",
+  "legendary_actions": [],
+  "name": "Guardian Naga",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 8
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
+      "name": "Rejuvenation"
+    },
+    {
+      "damage": [],
+      "desc": "The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\n\n- Cantrips (at will): mending, sacred flame, thaumaturgy\n- 1st level (4 slots): command, cure wounds, shield of faith\n- 2nd level (3 slots): calm emotions, hold person\n- 3rd level (3 slots): bestow curse, clairvoyance\n- 4th level (3 slots): banishment, freedom of movement\n- 5th level (2 slots): flame strike, geas\n- 6th level (1 slot): true seeing",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V"
+        ],
+        "dc": 16,
+        "level": 11,
+        "modifier": 8,
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Mending",
+            "url": "/api/2014/spells/mending"
+          },
+          {
+            "level": 0,
+            "name": "Sacred Flame",
+            "url": "/api/2014/spells/sacred-flame"
+          },
+          {
+            "level": 0,
+            "name": "Thaumaturgy",
+            "url": "/api/2014/spells/thaumaturgy"
+          },
+          {
+            "level": 1,
+            "name": "Command",
+            "url": "/api/2014/spells/command"
+          },
+          {
+            "level": 1,
+            "name": "Cure Wounds",
+            "url": "/api/2014/spells/cure-wounds"
+          },
+          {
+            "level": 1,
+            "name": "Shield of Faith",
+            "url": "/api/2014/spells/shield-of-faith"
+          },
+          {
+            "level": 2,
+            "name": "Calm Emotions",
+            "url": "/api/2014/spells/calm-emotions"
+          },
+          {
+            "level": 2,
+            "name": "Hold Person",
+            "url": "/api/2014/spells/hold-person"
+          },
+          {
+            "level": 3,
+            "name": "Bestow Curse",
+            "url": "/api/2014/spells/bestow-curse"
+          },
+          {
+            "level": 3,
+            "name": "Clairvoyance",
+            "url": "/api/2014/spells/clairvoyance"
+          },
+          {
+            "level": 4,
+            "name": "Banishment",
+            "url": "/api/2014/spells/banishment"
+          },
+          {
+            "level": 4,
+            "name": "Freedom of Movement",
+            "url": "/api/2014/spells/freedom-of-movement"
+          },
+          {
+            "level": 5,
+            "name": "Flame Strike",
+            "url": "/api/2014/spells/flame-strike"
+          },
+          {
+            "level": 5,
+            "name": "Geas",
+            "url": "/api/2014/spells/geas"
+          },
+          {
+            "level": 6,
+            "name": "True Seeing",
+            "url": "/api/2014/spells/true-seeing"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/guardian-naga",
+  "wisdom": 19,
+  "xp": 5900
+}

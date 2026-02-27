@@ -1,0 +1,107 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+      "name": "Scimitar"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Shortbow"
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "leather-armor",
+          "name": "Leather Armor",
+          "url": "/api/2014/equipment/leather-armor"
+        },
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        }
+      ],
+      "type": "armor",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 8,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "2d6",
+  "hit_points": 7,
+  "hit_points_roll": "2d6",
+  "image": "/api/images/monsters/goblin.png",
+  "index": "goblin",
+  "intelligence": 10,
+  "languages": "Common, Goblin",
+  "legendary_actions": [],
+  "name": "Goblin",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 6
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns.",
+      "name": "Nimble Escape"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "subtype": "goblinoid",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/goblin",
+  "wisdom": 8,
+  "xp": 50
+}

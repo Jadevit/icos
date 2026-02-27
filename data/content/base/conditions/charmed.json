@@ -1,0 +1,10 @@
+{
+  "desc": [
+    "- A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.",
+    "- The charmer has advantage on any ability check to interact socially with the creature."
+  ],
+  "index": "charmed",
+  "name": "Charmed",
+  "updated_at": "2025-10-24T20:42:12.637Z",
+  "url": "/api/2014/conditions/charmed"
+}

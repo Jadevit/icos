@@ -1,0 +1,271 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The planetar makes two melee attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_dice": "4d6+7",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        },
+        {
+          "damage_dice": "5d8",
+          "damage_type": {
+            "index": "radiant",
+            "name": "Radiant",
+            "url": "/api/2014/damage-types/radiant"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 21 (4d6 + 7) slashing damage plus 22 (5d8) radiant damage.",
+      "name": "Greatsword"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The planetar touches another creature. The target magically regains 30 (6d8 + 3) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+      "name": "Healing Touch",
+      "usage": {
+        "times": 4,
+        "type": "per day"
+      }
+    }
+  ],
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "challenge_rating": 16,
+  "charisma": 25,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "constitution": 24,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 20,
+  "forms": [],
+  "hit_dice": "16d10",
+  "hit_points": 200,
+  "hit_points_roll": "16d10+112",
+  "image": "/api/images/monsters/planetar.png",
+  "index": "planetar",
+  "intelligence": 19,
+  "languages": "all, telepathy 120 ft.",
+  "legendary_actions": [],
+  "name": "Planetar",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 12
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 11
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 12
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 11
+    }
+  ],
+  "proficiency_bonus": 5,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 21,
+    "truesight": "120 ft."
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra 5d8 radiant damage (included in the attack).",
+      "name": "Angelic Weapons"
+    },
+    {
+      "damage": [],
+      "desc": "The planetar knows if it hears a lie.",
+      "name": "Divine Awareness"
+    },
+    {
+      "damage": [],
+      "desc": "The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, invisibility (self only)\n3/day each: blade barrier, dispel evil and good, flame strike, raise dead\n1/day each: commune, control weather, insect plague",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 20,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Detect Evil and Good",
+            "url": "/api/2014/spells/detect-evil-and-good",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Invisibility",
+            "notes": "Self Only",
+            "url": "/api/2014/spells/invisibility",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 6,
+            "name": "Blade Barrier",
+            "url": "/api/2014/spells/blade-barrier",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Dispel Evil and Good",
+            "url": "/api/2014/spells/dispel-evil-and-good",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Flame Strike",
+            "url": "/api/2014/spells/flame-strike",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Raise Dead",
+            "url": "/api/2014/spells/raise-dead",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Commune",
+            "url": "/api/2014/spells/commune",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 8,
+            "name": "Control Weather",
+            "url": "/api/2014/spells/control-weather",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Insect Plague",
+            "url": "/api/2014/spells/insect-plague",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "damage": [],
+      "desc": "The planetar has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    }
+  ],
+  "speed": {
+    "fly": "120 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 24,
+  "type": "celestial",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/planetar",
+  "wisdom": 22,
+  "xp": 15000
+}

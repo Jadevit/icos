@@ -1,0 +1,194 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The dragon makes three attacks: one with its bite and two with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d10+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage plus 4 (1d8) acid damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d6+4",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "11d8",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 14,
+        "success_type": "half"
+      },
+      "desc": "The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 (11d8) acid damage on a failed save, or half as much damage on a successful one.",
+      "name": "Acid Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 7,
+  "charisma": 15,
+  "condition_immunities": [],
+  "constitution": 17,
+  "damage_immunities": [
+    "acid"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "15d10",
+  "hit_points": 127,
+  "hit_points_roll": "15d10+45",
+  "image": "/api/images/monsters/young-black-dragon.png",
+  "index": "young-black-dragon",
+  "intelligence": 12,
+  "languages": "Common, Draconic",
+  "legendary_actions": [],
+  "name": "Young Black Dragon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 16
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The dragon can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "fly": "80 ft.",
+    "swim": "40 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/young-black-dragon",
+  "wisdom": 11,
+  "xp": 2900
+}

@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d4+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 6 (1d4 + 4) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 18,
+  "forms": [],
+  "hit_dice": "2d8",
+  "hit_points": 11,
+  "hit_points_roll": "2d8+2",
+  "image": "/api/images/monsters/giant-poisonous-snake.png",
+  "index": "giant-poisonous-snake",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Poisonous Snake",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [],
+  "speed": {
+    "swim": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-poisonous-snake",
+  "wisdom": 10,
+  "xp": 50
+}

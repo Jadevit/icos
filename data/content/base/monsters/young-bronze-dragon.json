@@ -1,0 +1,221 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The dragon makes three attacks: one with its bite and two with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "2d10+5",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "2d6+5",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The dragon uses one of the following breath weapons.\nLightning Breath. The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.\nRepulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 15 Strength saving throw. On a failed save, the creature is pushed 40 feet away from the dragon.",
+      "name": "Breath Weapons",
+      "options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "damage": [
+                {
+                  "damage_dice": "10d10",
+                  "damage_type": {
+                    "index": "lightning",
+                    "name": "Lightning",
+                    "url": "/api/2014/damage-types/lightning"
+                  }
+                }
+              ],
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 15,
+                "success_type": "half"
+              },
+              "name": "Lightning Breath",
+              "option_type": "breath"
+            },
+            {
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "STR",
+                  "url": "/api/2014/ability-scores/str"
+                },
+                "dc_value": 15,
+                "success_type": "none"
+              },
+              "name": "Repulsion Breath",
+              "option_type": "breath"
+            }
+          ]
+        },
+        "type": "attack"
+      },
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 8,
+  "charisma": 17,
+  "condition_immunities": [],
+  "constitution": 19,
+  "damage_immunities": [
+    "lightning"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "15d10",
+  "hit_points": 142,
+  "hit_points_roll": "15d10+60",
+  "image": "/api/images/monsters/young-bronze-dragon.png",
+  "index": "young-bronze-dragon",
+  "intelligence": 14,
+  "languages": "Common, Draconic",
+  "legendary_actions": [],
+  "name": "Young Bronze Dragon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 17
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The dragon can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "fly": "80 ft.",
+    "swim": "40 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/young-bronze-dragon",
+  "wisdom": 13,
+  "xp": 3900
+}

@@ -1,0 +1,131 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
+      "name": "Enlarge",
+      "usage": {
+        "rest_types": [
+          "short",
+          "long"
+        ],
+        "type": "recharge after rest"
+      }
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d8+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage, or 11 (2d8 + 2) piercing damage while enlarged.",
+      "name": "War Pick"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 9 (2d6 + 2) piercing damage while enlarged.",
+      "name": "Javelin"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.",
+      "name": "Invisibility",
+      "usage": {
+        "rest_types": [
+          "short",
+          "long"
+        ],
+        "type": "recharge after rest"
+      }
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "scale-mail",
+          "name": "Scale Mail",
+          "url": "/api/2014/equipment/scale-mail"
+        },
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        }
+      ],
+      "type": "armor",
+      "value": 16
+    }
+  ],
+  "challenge_rating": 1,
+  "charisma": 9,
+  "condition_immunities": [],
+  "constitution": 14,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "poison"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 11,
+  "forms": [],
+  "hit_dice": "4d8",
+  "hit_points": 26,
+  "hit_points_roll": "4d8+8",
+  "image": "/api/images/monsters/duergar.png",
+  "index": "duergar",
+  "intelligence": 11,
+  "languages": "Dwarvish, Undercommon",
+  "legendary_actions": [],
+  "name": "Duergar",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
+      "name": "Duergar Resilience"
+    },
+    {
+      "damage": [],
+      "desc": "While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "name": "Sunlight Sensitivity"
+    }
+  ],
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 14,
+  "subtype": "dwarf",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/duergar",
+  "wisdom": 10,
+  "xp": 200
+}

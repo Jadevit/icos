@@ -1,0 +1,132 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        },
+        {
+          "damage_dice": "2d6",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.",
+      "name": "Pseudopod"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 2,
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "deafened",
+      "name": "Deafened",
+      "url": "/api/2014/conditions/deafened"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    }
+  ],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 6,
+  "forms": [],
+  "hit_dice": "3d8",
+  "hit_points": 22,
+  "hit_points_roll": "3d8+9",
+  "image": "/api/images/monsters/gray-ooze.png",
+  "index": "gray-ooze",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Gray Ooze",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "passive_perception": 8
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The ooze can move through a space as narrow as 1 inch wide without squeezing.",
+      "name": "Amorphous"
+    },
+    {
+      "damage": [],
+      "desc": "Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.\nThe ooze can eat through 2-inch-thick, nonmagical metal in 1 round.",
+      "name": "Corrode Metal"
+    },
+    {
+      "damage": [],
+      "desc": "While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.",
+      "name": "False Appearance"
+    }
+  ],
+  "speed": {
+    "climb": "10 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 12,
+  "type": "ooze",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/gray-ooze",
+  "wisdom": 6,
+  "xp": 100
+}

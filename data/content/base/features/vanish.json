@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/api/2014/classes/ranger"
+  },
+  "desc": [
+    "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+  ],
+  "index": "vanish",
+  "level": 14,
+  "name": "Vanish",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/vanish"
+}

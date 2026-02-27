@@ -1,0 +1,109 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Fist",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The ape makes two fist attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_dice": "3d10+6",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 6) bludgeoning damage.",
+      "name": "Fist"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_dice": "7d6+6",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +9 to hit, range 50/100 ft., one target. Hit: 30 (7d6 + 6) bludgeoning damage.",
+      "name": "Rock"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 7,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 18,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "15d12",
+  "hit_points": 157,
+  "hit_points_roll": "15d12+60",
+  "image": "/api/images/monsters/giant-ape.png",
+  "index": "giant-ape",
+  "intelligence": 7,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Ape",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-athletics",
+        "name": "Skill: Athletics",
+        "url": "/api/2014/proficiencies/skill-athletics"
+      },
+      "value": 9
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Huge",
+  "special_abilities": [],
+  "speed": {
+    "climb": "40 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-ape",
+  "wisdom": 12,
+  "xp": 2900
+}

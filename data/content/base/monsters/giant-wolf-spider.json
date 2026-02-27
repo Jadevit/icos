@@ -1,0 +1,99 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 4,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Smaller than a giant spider, a giant wolf spider hunts prey across open ground or hides in a burrow or crevice, or in a hidden cavity beneath debris.",
+  "dexterity": 16,
+  "forms": [],
+  "hit_dice": "2d8",
+  "hit_points": 11,
+  "hit_points_roll": "2d8+2",
+  "image": "/api/images/monsters/giant-wolf-spider.png",
+  "index": "giant-wolf-spider",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Wolf Spider",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 7
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "name": "Spider Climb"
+    },
+    {
+      "damage": [],
+      "desc": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+      "name": "Web Sense"
+    },
+    {
+      "damage": [],
+      "desc": "The spider ignores movement restrictions caused by webbing.",
+      "name": "Web Walker"
+    }
+  ],
+  "speed": {
+    "climb": "40 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-wolf-spider",
+  "wisdom": 12,
+  "xp": 50
+}

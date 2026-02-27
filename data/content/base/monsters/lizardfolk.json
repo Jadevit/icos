@@ -1,0 +1,272 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "items": [
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Bite",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The lizardfolk makes two melee attacks, each one with a different weapon.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.",
+      "name": "Heavy Club"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Javelin"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Spiked Shield"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    },
+    {
+      "armor": [
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        }
+      ],
+      "type": "armor",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "4d8",
+  "hit_points": 22,
+  "hit_points_roll": "4d8+4",
+  "image": "/api/images/monsters/lizardfolk.png",
+  "index": "lizardfolk",
+  "intelligence": 7,
+  "languages": "Draconic",
+  "legendary_actions": [],
+  "name": "Lizardfolk",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-survival",
+        "name": "Skill: Survival",
+        "url": "/api/2014/proficiencies/skill-survival"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The lizardfolk can hold its breath for 15 minutes.",
+      "name": "Hold Breath"
+    }
+  ],
+  "speed": {
+    "swim": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "subtype": "lizardfolk",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/lizardfolk",
+  "wisdom": 12,
+  "xp": 100
+}

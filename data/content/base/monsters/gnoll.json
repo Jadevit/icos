@@ -1,0 +1,135 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d6+2",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d8+2",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+      "name": "Spear"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d8+1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+      "name": "Longbow"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "hide-armor",
+          "name": "Hide Armor",
+          "url": "/api/2014/equipment/hide-armor"
+        },
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        }
+      ],
+      "type": "armor",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 22,
+  "hit_points_roll": "5d8",
+  "image": "/api/images/monsters/gnoll.png",
+  "index": "gnoll",
+  "intelligence": 6,
+  "languages": "Gnoll",
+  "legendary_actions": [],
+  "name": "Gnoll",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.",
+      "name": "Rampage"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "subtype": "gnoll",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/gnoll",
+  "wisdom": 10,
+  "xp": 100
+}

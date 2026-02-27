@@ -1,0 +1,238 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Spear",
+              "count": 3,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Shield Bash",
+              "count": 3,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Spear",
+              "count": 2,
+              "option_type": "action",
+              "type": "ranged"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Spear",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Shield Bash",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Spear",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Shield Bash",
+                  "count": 2,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The gladiator makes three melee attacks or two ranged attacks.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "2d6+4",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "2d8+4",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack.",
+      "name": "Spear"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d4+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.",
+      "name": "Shield Bash"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "studded-leather-armor",
+          "name": "Studded Leather Armor",
+          "url": "/api/2014/equipment/studded-leather-armor"
+        },
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        }
+      ],
+      "type": "armor",
+      "value": 16
+    }
+  ],
+  "challenge_rating": 5,
+  "charisma": 15,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Gladiators battle for the entertainment of raucous crowds. Some gladiators are brutal pit fighters who treat each match as a life-or-death struggle, while others are professional duelists who command huge fees but rarely fight to the death.",
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "15d8",
+  "hit_points": 112,
+  "hit_points_roll": "15d8+45",
+  "image": "/api/images/monsters/gladiator.png",
+  "index": "gladiator",
+  "intelligence": 10,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Gladiator",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-str",
+        "name": "Saving Throw: STR",
+        "url": "/api/2014/proficiencies/saving-throw-str"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-athletics",
+        "name": "Skill: Athletics",
+        "url": "/api/2014/proficiencies/skill-athletics"
+      },
+      "value": 10
+    },
+    {
+      "proficiency": {
+        "index": "skill-intimidation",
+        "name": "Skill: Intimidation",
+        "url": "/api/2014/proficiencies/skill-intimidation"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [
+    {
+      "desc": "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.",
+      "name": "Parry"
+    }
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The gladiator has advantage on saving throws against being frightened.",
+      "name": "Brave"
+    },
+    {
+      "damage": [],
+      "desc": "A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).",
+      "name": "Brute"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/gladiator",
+  "wisdom": 12,
+  "xp": 1800
+}

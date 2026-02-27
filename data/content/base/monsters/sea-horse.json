@@ -1,0 +1,51 @@
+{
+  "actions": [],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 2,
+  "condition_immunities": [],
+  "constitution": 8,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/sea-horse.png",
+  "index": "sea-horse",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Sea Horse",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The sea horse can breathe only underwater.",
+      "name": "Water Breathing"
+    }
+  ],
+  "speed": {
+    "swim": "20 ft."
+  },
+  "strength": 1,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/sea-horse",
+  "wisdom": 10,
+  "xp": 0
+}

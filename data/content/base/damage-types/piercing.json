@@ -1,0 +1,9 @@
+{
+  "desc": [
+    "Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage."
+  ],
+  "index": "piercing",
+  "name": "Piercing",
+  "updated_at": "2025-10-24T20:42:12.729Z",
+  "url": "/api/2014/damage-types/piercing"
+}

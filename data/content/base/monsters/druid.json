@@ -1,0 +1,202 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d6",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "Bludgeoning",
+                  "url": "/api/2014/damage-types/bludgeoning"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d8",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "Bludgeoning",
+                  "url": "/api/2014/damage-types/bludgeoning"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d8+2",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "Bludgeoning",
+                  "url": "/api/2014/damage-types/bludgeoning"
+                },
+                "notes": "With shillelagh",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": " Melee Weapon Attack: +2 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, 4 (1d8) bludgeoning damage if wielded with two hands, or 6 (1d8 + 2) bludgeoning damage with shillelagh.",
+      "name": "Quarterstaff"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    },
+    {
+      "spell": {
+        "index": "barkskin",
+        "name": "Barkskin",
+        "url": "/api/2014/spells/barkskin"
+      },
+      "type": "spell",
+      "value": 16
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "**Druids** dwell in forests and other secluded wilderness locations, where they protect the natural world from monsters and the encroachment of civilization. Some are **tribal shamans** who heal the sick, pray to animal spirits, and provide spiritual guidance.",
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 27,
+  "hit_points_roll": "5d8+5",
+  "image": "/api/images/monsters/druid.png",
+  "index": "druid",
+  "intelligence": 12,
+  "languages": "Druidic plus any two languages",
+  "legendary_actions": [],
+  "name": "Druid",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-medicine",
+        "name": "Skill: Medicine",
+        "url": "/api/2014/proficiencies/skill-medicine"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-nature",
+        "name": "Skill: Nature",
+        "url": "/api/2014/proficiencies/skill-nature"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\n\n- Cantrips (at will): druidcraft, produce flame, shillelagh\n- 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave\n- 2nd level (3 slots): animal messenger, barkskin",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "dc": 12,
+        "level": 4,
+        "modifier": 4,
+        "school": "druid",
+        "slots": {
+          "1": 4,
+          "2": 3
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Druidcraft",
+            "url": "/api/2014/spells/druidcraft"
+          },
+          {
+            "level": 0,
+            "name": "Produce Flame",
+            "url": "/api/2014/spells/produce-flame"
+          },
+          {
+            "level": 0,
+            "name": "Shillelagh",
+            "url": "/api/2014/spells/shillelagh"
+          },
+          {
+            "level": 1,
+            "name": "Entangle",
+            "url": "/api/2014/spells/entangle"
+          },
+          {
+            "level": 1,
+            "name": "Longstrider",
+            "url": "/api/2014/spells/longstrider"
+          },
+          {
+            "level": 1,
+            "name": "Speak with Animals",
+            "url": "/api/2014/spells/speak-with-animals"
+          },
+          {
+            "level": 1,
+            "name": "Thunderwave",
+            "url": "/api/2014/spells/thunderwave"
+          },
+          {
+            "level": 2,
+            "name": "Animal Messenger",
+            "url": "/api/2014/spells/animal-messenger"
+          },
+          {
+            "level": 2,
+            "name": "Barkskin",
+            "url": "/api/2014/spells/barkskin"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/druid",
+  "wisdom": 15,
+  "xp": 450
+}

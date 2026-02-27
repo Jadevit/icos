@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Potion, common",
+    "When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors."
+  ],
+  "equipment_category": {
+    "index": "potion",
+    "name": "Potion",
+    "url": "/api/2014/equipment-categories/potion"
+  },
+  "index": "potion-of-climbing",
+  "name": "Potion of Climbing",
+  "rarity": {
+    "name": "Common"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/potion-of-climbing",
+  "variant": false,
+  "variants": []
+}

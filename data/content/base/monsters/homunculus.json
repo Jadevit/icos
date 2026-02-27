@@ -1,0 +1,83 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 7,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 11,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "2d4",
+  "hit_points": 5,
+  "hit_points_roll": "2d4",
+  "image": "/api/images/monsters/homunculus.png",
+  "index": "homunculus",
+  "intelligence": 10,
+  "languages": "understands the languages of its creator but can't speak",
+  "legendary_actions": [],
+  "name": "Homunculus",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.",
+      "name": "Telepathic Bond"
+    }
+  ],
+  "speed": {
+    "fly": "40 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 4,
+  "type": "construct",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/homunculus",
+  "wisdom": 10,
+  "xp": 10
+}

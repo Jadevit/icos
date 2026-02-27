@@ -1,0 +1,27 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "desc": [
+    "A simple and portable canvas shelter, a tent sleeps two."
+  ],
+  "equipment_category": {
+    "index": "adventuring-gear",
+    "name": "Adventuring Gear",
+    "url": "/api/2014/equipment-categories/adventuring-gear"
+  },
+  "gear_category": {
+    "index": "standard-gear",
+    "name": "Standard Gear",
+    "url": "/api/2014/equipment-categories/standard-gear"
+  },
+  "index": "tent-two-person",
+  "name": "Tent, two-person",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/tent-two-person",
+  "weight": 20
+}

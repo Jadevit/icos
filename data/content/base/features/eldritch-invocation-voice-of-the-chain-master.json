@@ -1,0 +1,27 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "You can communicate telepathically with your familiar and perceive through your familiar's senses as long as you are on the same plane of existence.",
+    "Additionally, while perceiving through your familiar's senses, you can also speak through your familiar in your own voice, even if your familiar is normally incapable of speech."
+  ],
+  "index": "eldritch-invocation-voice-of-the-chain-master",
+  "level": 2,
+  "name": "Eldritch Invocation: Voice of the Chain Master",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [
+    {
+      "feature": "/api/2014/features/pact-of-the-chain",
+      "type": "feature"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-voice-of-the-chain-master"
+}

@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/api/2014/classes/wizard"
+  },
+  "desc": [
+    "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
+  ],
+  "index": "evocation-savant",
+  "level": 2,
+  "name": "Evocation Savant",
+  "prerequisites": [],
+  "subclass": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/subclasses/evocation"
+  },
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/evocation-savant"
+}

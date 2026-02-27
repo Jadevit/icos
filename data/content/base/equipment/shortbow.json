@@ -1,0 +1,46 @@
+{
+  "category_range": "Simple Ranged",
+  "contents": [],
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "Piercing",
+      "url": "/api/2014/damage-types/piercing"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "shortbow",
+  "name": "Shortbow",
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "Ammunition",
+      "url": "/api/2014/weapon-properties/ammunition"
+    },
+    {
+      "index": "two-handed",
+      "name": "Two-Handed",
+      "url": "/api/2014/weapon-properties/two-handed"
+    }
+  ],
+  "range": {
+    "long": 320,
+    "normal": 80
+  },
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/shortbow",
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "weight": 2
+}

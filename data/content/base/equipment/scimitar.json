@@ -1,0 +1,45 @@
+{
+  "category_range": "Martial Melee",
+  "contents": [],
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "Slashing",
+      "url": "/api/2014/damage-types/slashing"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "scimitar",
+  "name": "Scimitar",
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "Finesse",
+      "url": "/api/2014/weapon-properties/finesse"
+    },
+    {
+      "index": "light",
+      "name": "Light",
+      "url": "/api/2014/weapon-properties/light"
+    }
+  ],
+  "range": {
+    "normal": 5
+  },
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/scimitar",
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "weight": 3
+}

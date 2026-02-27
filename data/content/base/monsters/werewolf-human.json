@@ -1,0 +1,130 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Spear",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form).",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d6+2",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "One handed",
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d8+2",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "notes": "Two handed",
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+      "name": "Spear"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 10,
+  "condition_immunities": [],
+  "constitution": 14,
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [
+    {
+      "index": "werewolf-hybrid",
+      "name": "Werewolf, Hybrid Form",
+      "url": "/api/2014/monsters/werewolf-hybrid"
+    },
+    {
+      "index": "werewolf-wolf",
+      "name": "Werewolf, Wolf Form",
+      "url": "/api/2014/monsters/werewolf-wolf"
+    }
+  ],
+  "hit_dice": "9d8",
+  "hit_points": 58,
+  "hit_points_roll": "9d8+18",
+  "image": "/api/images/monsters/werewolf-human.png",
+  "index": "werewolf-human",
+  "intelligence": 10,
+  "languages": "Common",
+  "legendary_actions": [],
+  "name": "Werewolf, Human Form",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "name": "Shapechanger"
+    },
+    {
+      "damage": [],
+      "desc": "The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "subtype": "human",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/werewolf-human",
+  "wisdom": 11,
+  "xp": 700
+}

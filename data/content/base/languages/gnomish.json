@@ -1,0 +1,12 @@
+{
+  "desc": "The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+  "index": "gnomish",
+  "name": "Gnomish",
+  "script": "Dwarvish",
+  "type": "Standard",
+  "typical_speakers": [
+    "Gnomes"
+  ],
+  "updated_at": "2025-10-24T20:42:13.303Z",
+  "url": "/api/2014/languages/gnomish"
+}

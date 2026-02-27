@@ -50,5 +50,6 @@ Thumbs.db
 .env
 .env.*
 
-# --- Utility Scripts ---
-scripts/
+# --- Generated DB bundles / codex ---
+data/**/*.db
+data/**/checksum.txt

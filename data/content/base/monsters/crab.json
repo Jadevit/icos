@@ -1,0 +1,79 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 bludgeoning damage.",
+      "name": "Claw"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 2,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 11,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 2,
+  "hit_points_roll": "1d4",
+  "image": "/api/images/monsters/crab.png",
+  "index": "crab",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Crab",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 9
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The crab can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "swim": "20 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 2,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/crab",
+  "wisdom": 8,
+  "xp": 10
+}

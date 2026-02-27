@@ -1,0 +1,249 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The rakshasa makes two claw attacks",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d6+2",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a remove curse spell or similar magic.",
+      "name": "Claw"
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "challenge_rating": 13,
+  "charisma": 20,
+  "condition_immunities": [],
+  "constitution": 18,
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [
+    "piercing from magic weapons wielded by good creatures"
+  ],
+  "dexterity": 17,
+  "forms": [],
+  "hit_dice": "13d8",
+  "hit_points": 110,
+  "hit_points_roll": "13d8+52",
+  "image": "/api/images/monsters/rakshasa.png",
+  "index": "rakshasa",
+  "intelligence": 13,
+  "languages": "Common, Infernal",
+  "legendary_actions": [],
+  "name": "Rakshasa",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      },
+      "value": 10
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 8
+    }
+  ],
+  "proficiency_bonus": 5,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.",
+      "name": "Limited Magic Immunity"
+    },
+    {
+      "damage": [],
+      "desc": "The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:\n\nAt will: detect thoughts, disguise self, mage hand, minor illusion\n3/day each: charm person, detect magic, invisibility, major image, suggestion\n1/day each: dominate person, fly, plane shift, true seeing",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 18,
+        "modifier": 10,
+        "spells": [
+          {
+            "level": 2,
+            "name": "Detect Thoughts",
+            "url": "/api/2014/spells/detect-thoughts",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Disguise Self",
+            "url": "/api/2014/spells/disguise-self",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Mage Hand",
+            "url": "/api/2014/spells/mage-hand",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Minor Illusion",
+            "url": "/api/2014/spells/minor-illusion",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Charm Person",
+            "url": "/api/2014/spells/charm-person",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Invisibility",
+            "url": "/api/2014/spells/invisibility",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Major Image",
+            "url": "/api/2014/spells/major-image",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Suggestion",
+            "url": "/api/2014/spells/suggestion",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Dominate Person",
+            "url": "/api/2014/spells/dominate-person",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Fly",
+            "url": "/api/2014/spells/fly",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 7,
+            "name": "Plane Shift",
+            "url": "/api/2014/spells/plane-shift",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 6,
+            "name": "True Seeing",
+            "url": "/api/2014/spells/true-seeing",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 14,
+  "type": "fiend",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/rakshasa",
+  "wisdom": 16,
+  "xp": 10000
+}

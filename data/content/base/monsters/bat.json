@@ -1,0 +1,75 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +0 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 4,
+  "condition_immunities": [],
+  "constitution": 8,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/bat.png",
+  "index": "bat",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Bat",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 11
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The bat can't use its blindsight while deafened.",
+      "name": "Echolocation"
+    },
+    {
+      "damage": [],
+      "desc": "The bat has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "name": "Keen Hearing"
+    }
+  ],
+  "speed": {
+    "fly": "30 ft.",
+    "walk": "5 ft."
+  },
+  "strength": 2,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/bat",
+  "wisdom": 12,
+  "xp": 10
+}

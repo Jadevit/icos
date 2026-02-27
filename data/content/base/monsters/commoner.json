@@ -1,0 +1,64 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "name": "Club"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 10,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Commoners include peasants, serfs, slaves, servants, pilgrims, merchants, artisans, and hermits.",
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "1d8",
+  "hit_points": 4,
+  "hit_points_roll": "1d8",
+  "image": "/api/images/monsters/commoner.png",
+  "index": "commoner",
+  "intelligence": 10,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Commoner",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/commoner",
+  "wisdom": 10,
+  "xp": 10
+}

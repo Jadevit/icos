@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_dice": "1d4-1",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage.",
+      "name": "Rake"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 6,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "piercing"
+  ],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "desc": "An awakened shrub is an ordinary shrub given sentience and mobility by the awaken spell or similar magic.",
+  "dexterity": 8,
+  "forms": [],
+  "hit_dice": "3d6",
+  "hit_points": 10,
+  "hit_points_roll": "3d6",
+  "image": "/api/images/monsters/awakened-shrub.png",
+  "index": "awakened-shrub",
+  "intelligence": 10,
+  "languages": "one language known by its creator",
+  "legendary_actions": [],
+  "name": "Awakened Shrub",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While the shrub remains motionless, it is indistinguishable from a normal shrub.",
+      "name": "False Appearance"
+    }
+  ],
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 3,
+  "type": "plant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/awakened-shrub",
+  "wisdom": 10,
+  "xp": 10
+}

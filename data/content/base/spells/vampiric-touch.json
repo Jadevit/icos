@@ -1,0 +1,63 @@
+{
+  "attack_type": "melee",
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "V",
+    "S"
+  ],
+  "concentration": true,
+  "damage": {
+    "damage_at_slot_level": {
+      "3": "3d6",
+      "4": "4d6",
+      "5": "5d6",
+      "6": "6d6",
+      "7": "7d6",
+      "8": "8d6",
+      "9": "9d6"
+    },
+    "damage_type": {
+      "index": "necrotic",
+      "name": "Necrotic",
+      "url": "/api/2014/damage-types/necrotic"
+    }
+  },
+  "desc": [
+    "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
+  ],
+  "duration": "Up to 1 minute",
+  "higher_level": [
+    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+  ],
+  "index": "vampiric-touch",
+  "level": 3,
+  "name": "Vampiric Touch",
+  "range": "Self",
+  "ritual": false,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/vampiric-touch"
+}

@@ -1,0 +1,27 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "desc": [
+    "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
+  ],
+  "equipment_category": {
+    "index": "adventuring-gear",
+    "name": "Adventuring Gear",
+    "url": "/api/2014/equipment-categories/adventuring-gear"
+  },
+  "gear_category": {
+    "index": "standard-gear",
+    "name": "Standard Gear",
+    "url": "/api/2014/equipment-categories/standard-gear"
+  },
+  "index": "spellbook",
+  "name": "Spellbook",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/spellbook",
+  "weight": 3
+}

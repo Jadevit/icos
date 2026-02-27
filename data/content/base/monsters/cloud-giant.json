@@ -1,0 +1,243 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Morningstar",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The giant makes two morningstar attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_dice": "3d8+8",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage.",
+      "name": "Morningstar"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_dice": "4d10+8",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage.",
+      "name": "Rock"
+    }
+  ],
+  "alignment": "neutral good (50%) or neutral evil (50%)",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 9,
+  "charisma": 16,
+  "condition_immunities": [],
+  "constitution": 22,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "16d12",
+  "hit_points": 200,
+  "hit_points_roll": "16d12+96",
+  "image": "/api/images/monsters/cloud-giant.png",
+  "index": "cloud-giant",
+  "intelligence": 12,
+  "languages": "Common, Giant",
+  "legendary_actions": [],
+  "name": "Cloud Giant",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 10
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 7
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 17
+  },
+  "size": "Huge",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The giant has advantage on Wisdom (Perception) checks that rely on smell.",
+      "name": "Keen Smell"
+    },
+    {
+      "damage": [],
+      "desc": "The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, fog cloud, light\n3/day each: feather fall, fly, misty step, telekinesis\n1/day each: control weather, gaseous form",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Fog Cloud",
+            "url": "/api/2014/spells/fog-cloud",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Light",
+            "url": "/api/2014/spells/light",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Feather Fall",
+            "url": "/api/2014/spells/feather-fall",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Fly",
+            "url": "/api/2014/spells/fly",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Misty Step",
+            "url": "/api/2014/spells/misty-step",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Telekinesis",
+            "url": "/api/2014/spells/telekinesis",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 8,
+            "name": "Control Weather",
+            "url": "/api/2014/spells/control-weather",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Gaseous Form",
+            "url": "/api/2014/spells/gaseous-form",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "type": "giant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/cloud-giant",
+  "wisdom": 16,
+  "xp": 5000
+}

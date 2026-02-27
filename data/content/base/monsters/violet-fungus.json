@@ -1,0 +1,98 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Rotting Touch",
+          "count": "1d4",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The fungus makes 1d4 Rotting Touch attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "necrotic",
+            "name": "Necrotic",
+            "url": "/api/2014/damage-types/necrotic"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage.",
+      "name": "Rotting Touch"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 5
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 1,
+  "forms": [],
+  "hit_dice": "4d8",
+  "hit_points": 18,
+  "hit_points_roll": "4d8",
+  "image": "/api/images/monsters/violet-fungus.png",
+  "index": "violet-fungus",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Violet Fungus",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.",
+      "name": "False Appearance"
+    }
+  ],
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 3,
+  "type": "plant",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/violet-fungus",
+  "wisdom": 3,
+  "xp": 50
+}

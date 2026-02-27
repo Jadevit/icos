@@ -1,0 +1,86 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d8+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.",
+      "name": "Morningstar"
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 5,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 18,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 6,
+  "forms": [],
+  "hit_dice": "9d10",
+  "hit_points": 85,
+  "hit_points_roll": "9d10+36",
+  "image": "/api/images/monsters/ogre-zombie.png",
+  "index": "ogre-zombie",
+  "intelligence": 3,
+  "languages": "understands Common and Giant but can't speak",
+  "legendary_actions": [],
+  "name": "Ogre Zombie",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 0
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+      "name": "Undead Fortitude"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "type": "undead",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/ogre-zombie",
+  "wisdom": 6,
+  "xp": 450
+}

@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/api/2014/classes/fighter"
+  },
+  "desc": [
+    "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+  ],
+  "index": "fighter-fighting-style-two-weapon-fighting",
+  "level": 1,
+  "name": "Fighting Style: Two-Weapon Fighting",
+  "parent": {
+    "index": "fighter-fighting-style",
+    "name": "Fighting Style",
+    "url": "/api/2014/features/fighter-fighting-style"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/fighter-fighting-style-two-weapon-fighting"
+}

@@ -1,0 +1,295 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "name": "Dagger"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    },
+    {
+      "spell": {
+        "index": "mage-armor",
+        "name": "Mage Armor",
+        "url": "/api/2014/spells/mage-armor"
+      },
+      "type": "spell",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 12,
+  "charisma": 16,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "damage from spells",
+    "bludgeoning, piercing, and slashing from nonmagical attacks (from stoneskin)"
+  ],
+  "damage_vulnerabilities": [],
+  "desc": "Archmages are powerful (and usually quite old) spellcasters dedicated to the study of the arcane arts. Benevolent ones counsel kings and queens, while evil ones rule as tyrants and pursue lichdom. Those who are neither good nor evil sequester themselves in remote towers to practice their magic without interruption. \n\nAn archmage typically has one or more apprentice mages, and an archmage\u2019s abode has numerous magical wards and guardians to discourage interlopers.",
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "18d8",
+  "hit_points": 99,
+  "hit_points_roll": "18d8+18",
+  "image": "/api/images/monsters/archmage.png",
+  "index": "archmage",
+  "intelligence": 20,
+  "languages": "any six languages",
+  "legendary_actions": [],
+  "name": "Archmage",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      },
+      "value": 9
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      },
+      "value": 13
+    },
+    {
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      },
+      "value": 13
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The archmage has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:\n\n- Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp\n- 1st level (4 slots): detect magic, identify, mage armor*, magic missile\n- 2nd level (3 slots): detect thoughts, mirror image, misty step\n- 3rd level (3 slots): counterspell, fly, lightning bolt\n- 4th level (3 slots): banishment, fire shield, stoneskin*\n- 5th level (3 slots): cone of cold, scrying, wall of force\n- 6th level (1 slot): globe of invulnerability\n- 7th level (1 slot): teleport\n- 8th level (1 slot): mind blank*\n- 9th level (1 slot): time stop\n* The archmage casts these spells on itself before combat.",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "int",
+          "name": "INT",
+          "url": "/api/2014/ability-scores/int"
+        },
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "dc": 17,
+        "level": 18,
+        "modifier": 9,
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        },
+        "spells": [
+          {
+            "level": 1,
+            "name": "Disguise Self",
+            "url": "/api/2014/spells/disguise-self",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Invisibility",
+            "url": "/api/2014/spells/invisibility",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 0,
+            "name": "Fire Bolt",
+            "url": "/api/2014/spells/fire-bolt"
+          },
+          {
+            "level": 0,
+            "name": "Light",
+            "url": "/api/2014/spells/light"
+          },
+          {
+            "level": 0,
+            "name": "Mage Hand",
+            "url": "/api/2014/spells/mage-hand"
+          },
+          {
+            "level": 0,
+            "name": "Prestidigitation",
+            "url": "/api/2014/spells/prestidigitation"
+          },
+          {
+            "level": 0,
+            "name": "Shocking Grasp",
+            "url": "/api/2014/spells/shocking-grasp"
+          },
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic"
+          },
+          {
+            "level": 1,
+            "name": "Identify",
+            "url": "/api/2014/spells/identify"
+          },
+          {
+            "level": 1,
+            "name": "Mage Armor",
+            "notes": "Cast on self before combat",
+            "url": "/api/2014/spells/mage-armor"
+          },
+          {
+            "level": 1,
+            "name": "Magic Missile",
+            "url": "/api/2014/spells/magic-missile"
+          },
+          {
+            "level": 2,
+            "name": "Detect Thoughts",
+            "url": "/api/2014/spells/detect-thoughts"
+          },
+          {
+            "level": 2,
+            "name": "Mirror Image",
+            "url": "/api/2014/spells/mirror-image"
+          },
+          {
+            "level": 2,
+            "name": "Misty Step",
+            "url": "/api/2014/spells/misty-step"
+          },
+          {
+            "level": 3,
+            "name": "Counterspell",
+            "url": "/api/2014/spells/counterspell"
+          },
+          {
+            "level": 3,
+            "name": "Fly",
+            "url": "/api/2014/spells/fly"
+          },
+          {
+            "level": 3,
+            "name": "Lightning Bolt",
+            "url": "/api/2014/spells/lightning-bolt"
+          },
+          {
+            "level": 4,
+            "name": "Banishment",
+            "url": "/api/2014/spells/banishment"
+          },
+          {
+            "level": 4,
+            "name": "Fire Shield",
+            "url": "/api/2014/spells/fire-shield"
+          },
+          {
+            "level": 4,
+            "name": "Stoneskin",
+            "notes": "Cast on self before combat",
+            "url": "/api/2014/spells/stoneskin"
+          },
+          {
+            "level": 5,
+            "name": "Cone of Cold",
+            "url": "/api/2014/spells/cone-of-cold"
+          },
+          {
+            "level": 5,
+            "name": "Scrying",
+            "url": "/api/2014/spells/scrying"
+          },
+          {
+            "level": 5,
+            "name": "Wall of Force",
+            "url": "/api/2014/spells/wall-of-force"
+          },
+          {
+            "level": 6,
+            "name": "Globe of Invulnerability",
+            "url": "/api/2014/spells/globe-of-invulnerability"
+          },
+          {
+            "level": 7,
+            "name": "Teleport",
+            "url": "/api/2014/spells/teleport"
+          },
+          {
+            "level": 8,
+            "name": "Mind Blank",
+            "notes": "Cast on self before combat",
+            "url": "/api/2014/spells/mind-blank"
+          },
+          {
+            "level": 9,
+            "name": "Time Stop",
+            "url": "/api/2014/spells/time-stop"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/archmage",
+  "wisdom": 15,
+  "xp": 8400
+}

@@ -1,0 +1,163 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        },
+        {
+          "damage_dice": "1d4",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) slashing damage plus 2 (1d4) fire damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 10,
+        "success_type": "half"
+      },
+      "desc": "The mephit exhales a 15-foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.",
+      "name": "Steam Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 6,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 12,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 10,
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 11,
+  "forms": [],
+  "hit_dice": "6d6",
+  "hit_points": 21,
+  "hit_points_roll": "6d6",
+  "image": "/api/images/monsters/steam-mephit.png",
+  "index": "steam-mephit",
+  "intelligence": 11,
+  "languages": "Aquan, Ignan",
+  "legendary_actions": [],
+  "name": "Steam Mephit",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [
+        {
+          "damage_dice": "1d8",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "desc": "When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.",
+      "name": "Death Burst"
+    },
+    {
+      "damage": [],
+      "desc": "The mephit can innately cast blur, requiring no material components. Its innate spellcasting ability is Charisma.",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 11,
+        "spells": [
+          {
+            "level": 2,
+            "name": "Blur",
+            "url": "/api/2014/spells/blur",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "fly": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "type": "elemental",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/steam-mephit",
+  "wisdom": 10,
+  "xp": 50
+}

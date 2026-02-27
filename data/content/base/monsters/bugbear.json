@@ -1,0 +1,120 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d8+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 11 (2d8 + 2) piercing damage.",
+      "name": "Morningstar"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.",
+      "name": "Javelin"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "shield",
+          "name": "Shield",
+          "url": "/api/2014/equipment/shield"
+        },
+        {
+          "index": "hide-armor",
+          "name": "Hide Armor",
+          "url": "/api/2014/equipment/hide-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 16
+    }
+  ],
+  "challenge_rating": 1,
+  "charisma": 9,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 27,
+  "hit_points_roll": "5d8+5",
+  "image": "/api/images/monsters/bugbear.png",
+  "index": "bugbear",
+  "intelligence": 8,
+  "languages": "Common, Goblin",
+  "legendary_actions": [],
+  "name": "Bugbear",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-survival",
+        "name": "Skill: Survival",
+        "url": "/api/2014/proficiencies/skill-survival"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).",
+      "name": "Brute"
+    },
+    {
+      "damage": [],
+      "desc": "If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.",
+      "name": "Surprise Attack"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "subtype": "goblinoid",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/bugbear",
+  "wisdom": 11,
+  "xp": 200
+}

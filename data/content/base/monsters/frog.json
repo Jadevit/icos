@@ -1,0 +1,76 @@
+{
+  "actions": [],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 8,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "A frog has no effective attacks. It feeds on small insects and typically dwells near water, in trees, or underground. The frog\u2019s statistics can also be used to represent a toad.",
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/frog.png",
+  "index": "frog",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Frog",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 1
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 3
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 11
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The frog can breathe air and water",
+      "name": "Amphibious"
+    },
+    {
+      "damage": [],
+      "desc": "The frog's long jump is up to 10 ft. and its high jump is up to 5 ft., with or without a running start.",
+      "name": "Standing Leap"
+    }
+  ],
+  "speed": {
+    "swim": "20 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 1,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/frog",
+  "wisdom": 8,
+  "xp": 0
+}

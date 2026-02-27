@@ -1,0 +1,84 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "name": "Beak"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Taking its name from its crimson feathers and aggressive nature, the blood hawk fearlessly attacks almost any animal, stabbing it with its daggerlike beak. Blood hawks flock together in large numbers, attacking as a pack to take down prey.",
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "2d6",
+  "hit_points": 7,
+  "hit_points_roll": "2d6",
+  "image": "/api/images/monsters/blood-hawk.png",
+  "index": "blood-hawk",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Blood Hawk",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+      "name": "Keen Sight"
+    },
+    {
+      "damage": [],
+      "desc": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "name": "Pack Tactics"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 6,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/blood-hawk",
+  "wisdom": 14,
+  "xp": 25
+}

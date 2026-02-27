@@ -1,0 +1,53 @@
+{
+  "casting_time": "1 minute",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "S",
+    "M"
+  ],
+  "concentration": false,
+  "desc": [
+    "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
+    "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
+    "Should the spell be dispelled, the original script and the illusion both disappear.",
+    "A creature with truesight can read the hidden message."
+  ],
+  "duration": "10 days",
+  "higher_level": [],
+  "index": "illusory-script",
+  "level": 1,
+  "material": "A lead-based ink worth at least 10gp, which this spell consumes.",
+  "name": "Illusory Script",
+  "range": "Touch",
+  "ritual": true,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/illusory-script"
+}

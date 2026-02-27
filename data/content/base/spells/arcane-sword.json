@@ -1,0 +1,52 @@
+{
+  "attack_type": "melee",
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": true,
+  "damage": {
+    "damage_at_slot_level": {
+      "7": "3d10"
+    },
+    "damage_type": {
+      "index": "force",
+      "name": "Force",
+      "url": "/api/2014/damage-types/force"
+    }
+  },
+  "desc": [
+    "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
+    "When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
+  ],
+  "duration": "Up to 1 minute",
+  "higher_level": [],
+  "index": "arcane-sword",
+  "level": 7,
+  "material": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp.",
+  "name": "Arcane Sword",
+  "range": "60 feet",
+  "ritual": false,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation"
+  },
+  "subclasses": [],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/arcane-sword"
+}

@@ -1,0 +1,7 @@
+{
+  "enabled": [
+    { "path": "data/content/base" },
+    { "path": "data/content/dlc/dlc1" },
+    { "path": "data/content/mods/example_mod" }
+  ]
+}

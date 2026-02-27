@@ -1,0 +1,40 @@
+{
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    }
+  ],
+  "index": "saving-throw-cha",
+  "name": "Saving Throw: CHA",
+  "races": [],
+  "reference": {
+    "index": "cha",
+    "name": "CHA",
+    "url": "/api/2014/ability-scores/cha"
+  },
+  "type": "Saving Throws",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/saving-throw-cha"
+}

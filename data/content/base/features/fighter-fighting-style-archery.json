@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/api/2014/classes/fighter"
+  },
+  "desc": [
+    "You gain a +2 bonus to attack rolls you make with ranged weapons."
+  ],
+  "index": "fighter-fighting-style-archery",
+  "level": 1,
+  "name": "Fighting Style: Archery",
+  "parent": {
+    "index": "fighter-fighting-style",
+    "name": "Fighting Style",
+    "url": "/api/2014/features/fighter-fighting-style"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/fighter-fighting-style-archery"
+}

@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Potion, very rare",
+    "When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). The potion's yellow fluid is streaked with black and swirls on its own."
+  ],
+  "equipment_category": {
+    "index": "potion",
+    "name": "Potion",
+    "url": "/api/2014/equipment-categories/potion"
+  },
+  "index": "potion-of-speed",
+  "name": "Potion of Speed",
+  "rarity": {
+    "name": "Very Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/potion-of-speed",
+  "variant": false,
+  "variants": []
+}

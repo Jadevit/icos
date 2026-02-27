@@ -1,0 +1,14 @@
+{
+  "ability_score": {
+    "index": "dex",
+    "name": "DEX",
+    "url": "/api/2014/ability-scores/dex"
+  },
+  "desc": [
+    "Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard."
+  ],
+  "index": "stealth",
+  "name": "Stealth",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "url": "/api/2014/skills/stealth"
+}

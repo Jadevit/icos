@@ -1,0 +1,76 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d12+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.",
+      "name": "Greataxe"
+    }
+  ],
+  "alignment": "any chaotic alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "hide-armor",
+          "name": "Hide Armor",
+          "url": "/api/2014/equipment/hide-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 9,
+  "condition_immunities": [],
+  "constitution": 17,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "9d8",
+  "hit_points": 67,
+  "hit_points_roll": "9d8+27",
+  "image": "/api/images/monsters/berserker.png",
+  "index": "berserker",
+  "intelligence": 9,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Berserker",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.",
+      "name": "Reckless"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/berserker",
+  "wisdom": 11,
+  "xp": 450
+}

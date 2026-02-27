@@ -1,0 +1,80 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        },
+        {
+          "damage_dice": "3d4",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 1 piercing damage plus 7 (3d4) poison damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "A flying snake is a brightly colored, winged serpent found in remote jungles. Tribespeople and cultists sometimes domesticate flying snakes to serve as messengers that deliver scrolls wrapped in their coils.",
+  "dexterity": 18,
+  "forms": [],
+  "hit_dice": "2d4",
+  "hit_points": 5,
+  "hit_points_roll": "2d4",
+  "image": "/api/images/monsters/flying-snake.png",
+  "index": "flying-snake",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Flying Snake",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 11
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
+      "name": "Flyby"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "swim": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 4,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/flying-snake",
+  "wisdom": 12,
+  "xp": 25
+}

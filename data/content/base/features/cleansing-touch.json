@@ -1,0 +1,17 @@
+{
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/api/2014/classes/paladin"
+  },
+  "desc": [
+    "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.",
+    "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
+  ],
+  "index": "cleansing-touch",
+  "level": 14,
+  "name": "Cleansing Touch",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/cleansing-touch"
+}

@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/api/2014/classes/paladin"
+  },
+  "desc": [
+    "Beginning at 15th level, you are always under the effects of a protection from evil and good spell."
+  ],
+  "index": "purity-of-spirit",
+  "level": 15,
+  "name": "Purity of Spirit",
+  "prerequisites": [],
+  "subclass": {
+    "index": "devotion",
+    "name": "Devotion",
+    "url": "/api/2014/subclasses/devotion"
+  },
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/purity-of-spirit"
+}

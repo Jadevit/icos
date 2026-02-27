@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "hide-armor",
+  "name": "Hide Armor",
+  "races": [],
+  "reference": {
+    "index": "hide-armor",
+    "name": "Hide Armor",
+    "url": "/api/2014/equipment/hide-armor"
+  },
+  "type": "Armor",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/hide-armor"
+}

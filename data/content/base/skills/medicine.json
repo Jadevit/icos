@@ -1,0 +1,14 @@
+{
+  "ability_score": {
+    "index": "wis",
+    "name": "WIS",
+    "url": "/api/2014/ability-scores/wis"
+  },
+  "desc": [
+    "A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness."
+  ],
+  "index": "medicine",
+  "name": "Medicine",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "url": "/api/2014/skills/medicine"
+}

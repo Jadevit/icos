@@ -1,0 +1,149 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The golem makes two slam attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "2d10+5",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw or have its hit point maximum reduced by an amount equal to the damage taken. The target dies if this attack reduces its hit point maximum to 0. The reduction lasts until removed by the greater restoration spell or other magic.",
+      "name": "Slam"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "Until the end of its next turn, the golem magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action.",
+      "name": "Haste",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 9,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 18,
+  "damage_immunities": [
+    "acid",
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 9,
+  "forms": [],
+  "hit_dice": "14d10",
+  "hit_points": 133,
+  "hit_points_roll": "14d10+56",
+  "image": "/api/images/monsters/clay-golem.png",
+  "index": "clay-golem",
+  "intelligence": 3,
+  "languages": "understands the languages of its creator but can't speak",
+  "legendary_actions": [],
+  "name": "Clay Golem",
+  "proficiencies": [],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "Whenever the golem is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt.",
+      "name": "Acid Absorption"
+    },
+    {
+      "damage": [],
+      "desc": "Whenever the golem starts its turn with 60 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.",
+      "name": "Berserk"
+    },
+    {
+      "damage": [],
+      "desc": "The golem is immune to any spell or effect that would alter its form.",
+      "name": "Immutable Form"
+    },
+    {
+      "damage": [],
+      "desc": "The golem has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The golem's weapon attacks are magical.",
+      "name": "Magic Weapons"
+    }
+  ],
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 20,
+  "type": "construct",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/clay-golem",
+  "wisdom": 8,
+  "xp": 5000
+}

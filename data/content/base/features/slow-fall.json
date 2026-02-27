@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/api/2014/classes/monk"
+  },
+  "desc": [
+    "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
+  ],
+  "index": "slow-fall",
+  "level": 4,
+  "name": "Slow Fall",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/slow-fall"
+}

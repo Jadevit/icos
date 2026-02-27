@@ -1,0 +1,7 @@
+{
+  "type": "base",
+  "name": "base",
+  "bundle": "base.db",
+  "version": "0.1.0",
+  "description": "Core content pack (canonical baseline)."
+}

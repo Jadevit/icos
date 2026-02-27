@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/api/2014/classes/monk"
+  },
+  "desc": [
+    "At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water."
+  ],
+  "index": "monk-timeless-body",
+  "level": 15,
+  "name": "Timeless Body",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/monk-timeless-body"
+}

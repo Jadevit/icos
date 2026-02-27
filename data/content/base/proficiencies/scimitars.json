@@ -1,0 +1,20 @@
+{
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "index": "scimitars",
+  "name": "Scimitars",
+  "races": [],
+  "reference": {
+    "index": "scimitar",
+    "name": "Scimitar",
+    "url": "/api/2014/equipment/scimitar"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/scimitars"
+}

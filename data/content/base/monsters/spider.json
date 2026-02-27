@@ -1,0 +1,89 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 2,
+  "condition_immunities": [],
+  "constitution": 8,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "1d4",
+  "hit_points": 1,
+  "hit_points_roll": "1d4-1",
+  "image": "/api/images/monsters/spider.png",
+  "index": "spider",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Spider",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 12
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "name": "Spider Climb"
+    },
+    {
+      "damage": [],
+      "desc": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+      "name": "Web Sense"
+    },
+    {
+      "damage": [],
+      "desc": "The spider ignores movement restrictions caused by webbing.",
+      "name": "Web Walker"
+    }
+  ],
+  "speed": {
+    "climb": "20 ft.",
+    "walk": "20 ft."
+  },
+  "strength": 2,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/spider",
+  "wisdom": 10,
+  "xp": 10
+}

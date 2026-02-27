@@ -1,0 +1,18 @@
+{
+  "desc": [
+    "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  ],
+  "index": "dwarven-resilience",
+  "name": "Dwarven Resilience",
+  "proficiencies": [],
+  "races": [
+    {
+      "index": "dwarf",
+      "name": "Dwarf",
+      "url": "/api/2014/races/dwarf"
+    }
+  ],
+  "subraces": [],
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "url": "/api/2014/traits/dwarven-resilience"
+}

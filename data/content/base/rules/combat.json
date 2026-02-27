@@ -1,0 +1,49 @@
+{
+  "desc": "# Combat\n",
+  "index": "combat",
+  "name": "Combat",
+  "subsections": [
+    {
+      "index": "the-order-of-combat",
+      "name": "The Order of Combat",
+      "url": "/api/2014/rule-sections/the-order-of-combat"
+    },
+    {
+      "index": "movement-and-position",
+      "name": "Movement and Position",
+      "url": "/api/2014/rule-sections/movement-and-position"
+    },
+    {
+      "index": "actions-in-combat",
+      "name": "Actions in Combat",
+      "url": "/api/2014/rule-sections/actions-in-combat"
+    },
+    {
+      "index": "making-an-attack",
+      "name": "Making an Attack",
+      "url": "/api/2014/rule-sections/making-an-attack"
+    },
+    {
+      "index": "cover",
+      "name": "Cover",
+      "url": "/api/2014/rule-sections/cover"
+    },
+    {
+      "index": "damage-and-healing",
+      "name": "Damage and Healing",
+      "url": "/api/2014/rule-sections/damage-and-healing"
+    },
+    {
+      "index": "mounted-combat",
+      "name": "Mounted Combat",
+      "url": "/api/2014/rule-sections/mounted-combat"
+    },
+    {
+      "index": "underwater-combat",
+      "name": "Underwater Combat",
+      "url": "/api/2014/rule-sections/underwater-combat"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "url": "/api/2014/rules/combat"
+}

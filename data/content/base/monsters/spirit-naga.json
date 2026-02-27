@@ -1,0 +1,208 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "1d6+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 7 (1d6 + 4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 8,
+  "charisma": 16,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 14,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 17,
+  "forms": [],
+  "hit_dice": "10d10",
+  "hit_points": 75,
+  "hit_points_roll": "10d10+20",
+  "image": "/api/images/monsters/spirit-naga.png",
+  "index": "spirit-naga",
+  "intelligence": 16,
+  "languages": "Abyssal, Common",
+  "legendary_actions": [],
+  "name": "Spirit Naga",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 6
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
+      "name": "Rejuvenation"
+    },
+    {
+      "damage": [],
+      "desc": "The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:\n\n- Cantrips (at will): mage hand, minor illusion, ray of frost\n- 1st level (4 slots): charm person, detect magic, sleep\n- 2nd level (3 slots): detect thoughts, hold person\n- 3rd level (3 slots): lightning bolt, water breathing\n- 4th level (3 slots): blight, dimension door\n- 5th level (2 slots): dominate person",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "int",
+          "name": "INT",
+          "url": "/api/2014/ability-scores/int"
+        },
+        "components_required": [
+          "V"
+        ],
+        "dc": 14,
+        "level": 10,
+        "modifier": 6,
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Mage Hand",
+            "url": "/api/2014/spells/mage-hand"
+          },
+          {
+            "level": 0,
+            "name": "Minor Illusion",
+            "url": "/api/2014/spells/minor-illusion"
+          },
+          {
+            "level": 0,
+            "name": "Ray of Frost",
+            "url": "/api/2014/spells/ray-of-frost"
+          },
+          {
+            "level": 1,
+            "name": "Charm Person",
+            "url": "/api/2014/spells/charm-person"
+          },
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic"
+          },
+          {
+            "level": 1,
+            "name": "Sleep",
+            "url": "/api/2014/spells/sleep"
+          },
+          {
+            "level": 2,
+            "name": "Detect Thoughts",
+            "url": "/api/2014/spells/detect-thoughts"
+          },
+          {
+            "level": 2,
+            "name": "Hold Person",
+            "url": "/api/2014/spells/hold-person"
+          },
+          {
+            "level": 3,
+            "name": "Lightning Bolt",
+            "url": "/api/2014/spells/lightning-bolt"
+          },
+          {
+            "level": 3,
+            "name": "Water Breathing",
+            "url": "/api/2014/spells/water-breathing"
+          },
+          {
+            "level": 4,
+            "name": "Blight",
+            "url": "/api/2014/spells/blight"
+          },
+          {
+            "level": 4,
+            "name": "Dimension Door",
+            "url": "/api/2014/spells/dimension-door"
+          },
+          {
+            "level": 5,
+            "name": "Dominate Person",
+            "url": "/api/2014/spells/dominate-person"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/spirit-naga",
+  "wisdom": 15,
+  "xp": 3900
+}

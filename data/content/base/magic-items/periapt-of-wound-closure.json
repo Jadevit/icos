@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores."
+  ],
+  "equipment_category": {
+    "index": "wondrous-items",
+    "name": "Wondrous Items",
+    "url": "/api/2014/equipment-categories/wondrous-items"
+  },
+  "index": "periapt-of-wound-closure",
+  "name": "Periapt of Wound Closure",
+  "rarity": {
+    "name": "Uncommon"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/periapt-of-wound-closure",
+  "variant": false,
+  "variants": []
+}

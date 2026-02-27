@@ -1,0 +1,19 @@
+{
+  "desc": "# Appendix\n",
+  "index": "appendix",
+  "name": "Appendix",
+  "subsections": [
+    {
+      "index": "fantasy-historical-pantheons",
+      "name": "Fantasy-Historical Pantheons",
+      "url": "/api/2014/rule-sections/fantasy-historical-pantheons"
+    },
+    {
+      "index": "the-planes-of-existence",
+      "name": "The Planes of Existence",
+      "url": "/api/2014/rule-sections/the-planes-of-existence"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "url": "/api/2014/rules/appendix"
+}

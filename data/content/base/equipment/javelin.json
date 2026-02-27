@@ -1,0 +1,49 @@
+{
+  "category_range": "Simple Melee",
+  "contents": [],
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "Piercing",
+      "url": "/api/2014/damage-types/piercing"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "javelin",
+  "name": "Javelin",
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "Thrown",
+      "url": "/api/2014/weapon-properties/thrown"
+    },
+    {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/api/2014/weapon-properties/monk"
+    }
+  ],
+  "range": {
+    "normal": 5
+  },
+  "special": [],
+  "throw_range": {
+    "long": 120,
+    "normal": 30
+  },
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/javelin",
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "weight": 2
+}

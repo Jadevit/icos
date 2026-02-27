@@ -1,0 +1,124 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d6+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        },
+        {
+          "damage_dice": "1d6",
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.",
+      "name": "Pseudopod"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    }
+  ],
+  "constitution": 14,
+  "damage_immunities": [
+    "lightning",
+    "slashing"
+  ],
+  "damage_resistances": [
+    "acid"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 6,
+  "forms": [],
+  "hit_dice": "6d10",
+  "hit_points": 45,
+  "hit_points_roll": "6d10+12",
+  "image": "/api/images/monsters/ochre-jelly.png",
+  "index": "ochre-jelly",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Ochre Jelly",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [
+    {
+      "desc": "When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.",
+      "name": "Split"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "passive_perception": 8
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The jelly can move through a space as narrow as 1 inch wide without squeezing.",
+      "name": "Amorphous"
+    },
+    {
+      "damage": [],
+      "desc": "The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "name": "Spider Climb"
+    }
+  ],
+  "speed": {
+    "climb": "10 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 15,
+  "type": "ooze",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/ochre-jelly",
+  "wisdom": 6,
+  "xp": 450
+}

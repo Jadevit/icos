@@ -1,0 +1,17 @@
+{
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/api/2014/classes/wizard"
+  },
+  "desc": [
+    "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+  ],
+  "index": "spellcasting-wizard",
+  "level": 1,
+  "name": "Spellcasting: Wizard",
+  "prerequisites": [],
+  "reference": "/api/2014/classes/wizard/spellcasting",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/spellcasting-wizard"
+}

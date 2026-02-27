@@ -1,0 +1,26 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "You can see the true form of any shapechanger or creature concealed by illusion or transmutation magic while the creature is within 30 feet of you and within line of sight."
+  ],
+  "index": "eldritch-invocation-witch-sight",
+  "level": 15,
+  "name": "Eldritch Invocation: Witch Sight",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [
+    {
+      "level": 15,
+      "type": "level"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-witch-sight"
+}

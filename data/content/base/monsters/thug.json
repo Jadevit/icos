@@ -1,0 +1,115 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Mace",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The thug makes two melee attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) bludgeoning damage.",
+      "name": "Mace"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d10",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +2 to hit, range 100/400 ft., one target. Hit: 5 (1d10) piercing damage.",
+      "name": "Heavy Crossbow"
+    }
+  ],
+  "alignment": "any non-good alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "leather-armor",
+          "name": "Leather Armor",
+          "url": "/api/2014/equipment/leather-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 14,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Thugs are ruthless enforcers skilled at intimidation and violence. They work for money and have few scruples.",
+  "dexterity": 11,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 32,
+  "hit_points_roll": "5d8+10",
+  "image": "/api/images/monsters/thug.png",
+  "index": "thug",
+  "intelligence": 10,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Thug",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-intimidation",
+        "name": "Skill: Intimidation",
+        "url": "/api/2014/proficiencies/skill-intimidation"
+      },
+      "value": 2
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The thug has advantage on an attack roll against a creature if at least one of the thug's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "name": "Pack Tactics"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/thug",
+  "wisdom": 10,
+  "xp": 100
+}

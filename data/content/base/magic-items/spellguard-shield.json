@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Armor (shield), very rare (requires attunement)",
+    "While holding this shield, you have advantage on saving throws against spells and other magical effects, and spell attacks have disadvantage against you."
+  ],
+  "equipment_category": {
+    "index": "armor",
+    "name": "Armor",
+    "url": "/api/2014/equipment-categories/armor"
+  },
+  "index": "spellguard-shield",
+  "name": "Spellguard Shield",
+  "rarity": {
+    "name": "Very Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/spellguard-shield",
+  "variant": false,
+  "variants": []
+}

@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "greataxes",
+  "name": "Greataxes",
+  "races": [],
+  "reference": {
+    "index": "greataxe",
+    "name": "Greataxe",
+    "url": "/api/2014/equipment/greataxe"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/greataxes"
+}

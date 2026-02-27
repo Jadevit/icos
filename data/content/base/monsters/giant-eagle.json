@@ -1,0 +1,113 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Talons",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The eagle makes two attacks: one with its beak and one with its talons.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "1d6+3",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+      "name": "Beak"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "2d6+3",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+      "name": "Talons"
+    }
+  ],
+  "alignment": "neutral good",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 1,
+  "charisma": 10,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "A giant eagle is a noble creature that speaks its own language and understands speech in the Common tongue. A mated pair of giant eagles typically has up to four eggs or young in their nest (treat the young as normal eagles).",
+  "dexterity": 17,
+  "forms": [],
+  "hit_dice": "4d10",
+  "hit_points": 26,
+  "hit_points_roll": "4d10+4",
+  "image": "/api/images/monsters/giant-eagle.png",
+  "index": "giant-eagle",
+  "intelligence": 8,
+  "languages": "Giant Eagle, understands Common and Auran but can't speak",
+  "legendary_actions": [],
+  "name": "Giant Eagle",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+      "name": "Keen Sight"
+    }
+  ],
+  "speed": {
+    "fly": "80 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 16,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-eagle",
+  "wisdom": 14,
+  "xp": 200
+}

@@ -1,0 +1,210 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Slam",
+              "count": 2,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Sword",
+              "count": 2,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "items": [
+                {
+                  "action_name": "Slam",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                },
+                {
+                  "action_name": "Sword",
+                  "count": 1,
+                  "option_type": "action",
+                  "type": "melee"
+                }
+              ],
+              "option_type": "multiple"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The golem makes two melee attacks.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "3d8+7",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 20 (3d8 + 7) bludgeoning damage.",
+      "name": "Slam"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_dice": "3d10+7",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 23 (3d10 + 7) slashing damage.",
+      "name": "Sword"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "10d8",
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "CON",
+          "url": "/api/2014/ability-scores/con"
+        },
+        "dc_value": 19,
+        "success_type": "half"
+      },
+      "desc": "The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "name": "Poison Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "challenge_rating": 16,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 20,
+  "damage_immunities": [
+    "fire",
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 9,
+  "forms": [],
+  "hit_dice": "20d10",
+  "hit_points": 210,
+  "hit_points_roll": "20d10+100",
+  "image": "/api/images/monsters/iron-golem.png",
+  "index": "iron-golem",
+  "intelligence": 3,
+  "languages": "understands the languages of its creator but can't speak",
+  "legendary_actions": [],
+  "name": "Iron Golem",
+  "proficiencies": [],
+  "proficiency_bonus": 5,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 10
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.",
+      "name": "Fire Absorption"
+    },
+    {
+      "damage": [],
+      "desc": "The golem is immune to any spell or effect that would alter its form.",
+      "name": "Immutable Form"
+    },
+    {
+      "damage": [],
+      "desc": "The golem has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The golem's weapon attacks are magical.",
+      "name": "Magic Weapons"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 24,
+  "type": "construct",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/iron-golem",
+  "wisdom": 11,
+  "xp": 15000
+}

@@ -1,0 +1,79 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, and the target is grappled (escape DC 11). The crab has two claws, each of which can grapple only one target.",
+      "name": "Claw"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 0.125,
+  "charisma": 3,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "3d8",
+  "hit_points": 13,
+  "hit_points_roll": "3d8",
+  "image": "/api/images/monsters/giant-crab.png",
+  "index": "giant-crab",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Crab",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 9
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The crab can breathe air and water.",
+      "name": "Amphibious"
+    }
+  ],
+  "speed": {
+    "swim": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-crab",
+  "wisdom": 9,
+  "xp": 25
+}

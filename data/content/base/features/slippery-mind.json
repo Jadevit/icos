@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/api/2014/classes/rogue"
+  },
+  "desc": [
+    "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws."
+  ],
+  "index": "slippery-mind",
+  "level": 15,
+  "name": "Slippery Mind",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/slippery-mind"
+}

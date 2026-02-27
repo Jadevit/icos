@@ -1,0 +1,180 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_dice": "1d6",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage.",
+      "name": "Mace"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "chain-shirt",
+          "name": "Chain Shirt",
+          "url": "/api/2014/equipment/chain-shirt"
+        }
+      ],
+      "type": "armor",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 13,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Priests bring the teachings of their gods to the common folk. They are the spiritual leaders of temples and shrines and often hold positions of influence in their communities. Evil priests might work openly under a tyrant, or they might be the leaders of religious sects hidden in the shadows of good society, overseeing depraved rites.\n\nA priest typically has one or more acolytes to help with religious ceremonies and other sacred duties.",
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "5d8",
+  "hit_points": 27,
+  "hit_points_roll": "5d8+5",
+  "image": "/api/images/monsters/priest.png",
+  "index": "priest",
+  "intelligence": 13,
+  "languages": "any two languages",
+  "legendary_actions": [],
+  "name": "Priest",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-medicine",
+        "name": "Skill: Medicine",
+        "url": "/api/2014/proficiencies/skill-medicine"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
+      "name": "Divine Eminence"
+    },
+    {
+      "damage": [],
+      "desc": "The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\n\n- Cantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (4 slots): cure wounds, guiding bolt, sanctuary\n- 2nd level (3 slots): lesser restoration, spiritual weapon\n- 3rd level (2 slots): dispel magic, spirit guardians",
+      "name": "Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "dc": 13,
+        "level": 5,
+        "modifier": 5,
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 2
+        },
+        "spells": [
+          {
+            "level": 0,
+            "name": "Light",
+            "url": "/api/2014/spells/light"
+          },
+          {
+            "level": 0,
+            "name": "Sacred Flame",
+            "url": "/api/2014/spells/sacred-flame"
+          },
+          {
+            "level": 0,
+            "name": "Thaumaturgy",
+            "url": "/api/2014/spells/thaumaturgy"
+          },
+          {
+            "level": 1,
+            "name": "Cure Wounds",
+            "url": "/api/2014/spells/cure-wounds"
+          },
+          {
+            "level": 1,
+            "name": "Guiding Bolt",
+            "url": "/api/2014/spells/guiding-bolt"
+          },
+          {
+            "level": 1,
+            "name": "Sanctuary",
+            "url": "/api/2014/spells/sanctuary"
+          },
+          {
+            "level": 2,
+            "name": "Lesser Restoration",
+            "url": "/api/2014/spells/lesser-restoration"
+          },
+          {
+            "level": 2,
+            "name": "Spiritual Weapon",
+            "url": "/api/2014/spells/spiritual-weapon"
+          },
+          {
+            "level": 3,
+            "name": "Dispel Magic",
+            "url": "/api/2014/spells/dispel-magic"
+          },
+          {
+            "level": 3,
+            "name": "Spirit Guardians",
+            "url": "/api/2014/spells/spirit-guardians"
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 10,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/priest",
+  "wisdom": 16,
+  "xp": 450
+}

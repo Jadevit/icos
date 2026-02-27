@@ -1,0 +1,5 @@
+# Load order (top = lowest priority, bottom = highest priority)
+# base should almost always be first.
+base
+dlc/dlc1
+mods/example_mod

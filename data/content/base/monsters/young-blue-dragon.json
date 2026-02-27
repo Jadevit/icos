@@ -1,0 +1,188 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The dragon makes three attacks: one with its bite and two with its claws.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_dice": "2d10+5",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        },
+        {
+          "damage_dice": "1d10",
+          "damage_type": {
+            "index": "lightning",
+            "name": "Lightning",
+            "url": "/api/2014/damage-types/lightning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage plus 5 (1d10) lightning damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_dice": "2d6+5",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "damage": [
+        {
+          "damage_dice": "10d10",
+          "damage_type": {
+            "index": "lightning",
+            "name": "Lightning",
+            "url": "/api/2014/damage-types/lightning"
+          }
+        }
+      ],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 16,
+        "success_type": "half"
+      },
+      "desc": "The dragon exhales lightning in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.",
+      "name": "Lightning Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 5,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "challenge_rating": 9,
+  "charisma": 17,
+  "condition_immunities": [],
+  "constitution": 19,
+  "damage_immunities": [
+    "lightning"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [],
+  "hit_dice": "16d10",
+  "hit_points": 152,
+  "hit_points_roll": "16d10+64",
+  "image": "/api/images/monsters/young-blue-dragon.png",
+  "index": "young-blue-dragon",
+  "intelligence": 14,
+  "languages": "Common, Draconic",
+  "legendary_actions": [],
+  "name": "Young Blue Dragon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 9
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 19
+  },
+  "size": "Large",
+  "special_abilities": [],
+  "speed": {
+    "burrow": "20 ft.",
+    "fly": "80 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/young-blue-dragon",
+  "wisdom": 13,
+  "xp": 5000
+}

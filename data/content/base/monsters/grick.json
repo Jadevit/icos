@@ -1,0 +1,106 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Tentacles",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The grick makes one attack with its tentacles. If that attack hits, the grick can make one beak attack against the same target.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "2d6+2",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage.",
+      "name": "Tentacles"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Beak"
+    }
+  ],
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "challenge_rating": 2,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "6d8",
+  "hit_points": 27,
+  "hit_points_roll": "6d8",
+  "image": "/api/images/monsters/grick.png",
+  "index": "grick",
+  "intelligence": 3,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Grick",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+      "name": "Stone Camouflage"
+    }
+  ],
+  "speed": {
+    "climb": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/grick",
+  "wisdom": 14,
+  "xp": 450
+}

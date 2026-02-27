@@ -1,0 +1,17 @@
+{
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/api/2014/classes/paladin"
+  },
+  "desc": [
+    "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious.",
+    "At 18th level, the range of this aura increases to 30 feet."
+  ],
+  "index": "aura-of-courage",
+  "level": 10,
+  "name": "Aura of Courage",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/aura-of-courage"
+}

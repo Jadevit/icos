@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Wondrous item, rare",
+    "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they increase the creature's walking speed by 30 feet."
+  ],
+  "equipment_category": {
+    "index": "wondrous-items",
+    "name": "Wondrous Items",
+    "url": "/api/2014/equipment-categories/wondrous-items"
+  },
+  "index": "horseshoes-of-speed",
+  "name": "Horseshoes of Speed",
+  "rarity": {
+    "name": "Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/horseshoes-of-speed",
+  "variant": false,
+  "variants": []
+}

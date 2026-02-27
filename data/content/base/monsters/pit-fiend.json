@@ -1,0 +1,260 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Mace",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The pit fiend makes four attacks: one with its bite, one with its claw, one with its mace, and one with its tail.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_dice": "4d6+8",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +14 to hit, reach 5 ft., one target. Hit: 22 (4d6 + 8) piercing damage. The target must succeed on a DC 21 Constitution saving throw or become poisoned. While poisoned in this way, the target can't regain hit points, and it takes 21 (6d6) poison damage at the start of each of its turns. The poisoned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_dice": "2d8+8",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 17 (2d8 + 8) slashing damage.",
+      "name": "Claw"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_dice": "2d6+8",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) bludgeoning damage plus 21 (6d6) fire damage.",
+      "name": "Mace"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_dice": "3d10+8",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 24 (3d10 + 8) bludgeoning damage.",
+      "name": "Tail"
+    }
+  ],
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "challenge_rating": 20,
+  "charisma": 24,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 24,
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_vulnerabilities": [],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "24d10",
+  "hit_points": 300,
+  "hit_points_roll": "24d10+168",
+  "image": "/api/images/monsters/pit-fiend.png",
+  "index": "pit-fiend",
+  "intelligence": 22,
+  "languages": "Infernal, telepathy 120 ft.",
+  "legendary_actions": [],
+  "name": "Pit Fiend",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 8
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      },
+      "value": 13
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 10
+    }
+  ],
+  "proficiency_bonus": 6,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 14,
+    "truesight": "120 ft."
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 21,
+        "success_type": "none"
+      },
+      "desc": "Any creature hostile to the pit fiend that starts its turn within 20 feet of the pit fiend must make a DC 21 Wisdom saving throw, unless the pit fiend is incapacitated. On a failed save, the creature is frightened until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the pit fiend's Fear Aura for the next 24 hours.",
+      "name": "Fear Aura"
+    },
+    {
+      "damage": [],
+      "desc": "The pit fiend has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The pit fiend's weapon attacks are magical.",
+      "name": "Magic Weapons"
+    },
+    {
+      "damage": [],
+      "desc": "The pit fiend's spellcasting ability is Charisma (spell save DC 21). The pit fiend can innately cast the following spells, requiring no material components:\nAt will: detect magic, fireball\n3/day each: hold monster, wall of fire",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 21,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Fireball",
+            "url": "/api/2014/spells/fireball",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Hold Monster",
+            "url": "/api/2014/spells/hold-monster",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 4,
+            "name": "Wall of Fire",
+            "url": "/api/2014/spells/wall-of-fire",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 26,
+  "subtype": "devil",
+  "type": "fiend",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/pit-fiend",
+  "wisdom": 18,
+  "xp": 25000
+}

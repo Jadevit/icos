@@ -1,0 +1,114 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the target falls unconscious for the same duration, or until it takes damage or another creature uses an action to shake it awake.",
+      "name": "Sting"
+    }
+  ],
+  "alignment": "neutral good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 10,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "2d4",
+  "hit_points": 7,
+  "hit_points_roll": "2d4+2",
+  "image": "/api/images/monsters/pseudodragon.png",
+  "index": "pseudodragon",
+  "intelligence": 10,
+  "languages": "understands Common and Draconic but can't speak",
+  "legendary_actions": [],
+  "name": "Pseudodragon",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "size": "Tiny",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.",
+      "name": "Keen Senses"
+    },
+    {
+      "damage": [],
+      "desc": "The pseudodragon has advantage on saving throws against spells and other magical effects.",
+      "name": "Magic Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 ft. of it that can understand a language.",
+      "name": "Limited Telepathy"
+    }
+  ],
+  "speed": {
+    "fly": "60 ft.",
+    "walk": "15 ft."
+  },
+  "strength": 6,
+  "type": "dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/pseudodragon",
+  "wisdom": 12,
+  "xp": 50
+}

@@ -1,0 +1,154 @@
+{
+  "actions": [
+    {
+      "action_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "action_name": "Shortsword",
+              "count": 2,
+              "option_type": "action",
+              "type": "melee"
+            },
+            {
+              "action_name": "Longbow",
+              "count": 2,
+              "option_type": "action",
+              "type": "ranged"
+            }
+          ]
+        },
+        "type": "action"
+      },
+      "actions": [],
+      "damage": [],
+      "desc": "The scout makes two melee attacks or two ranged attacks.",
+      "multiattack_type": "action_options",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d6+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "name": "Shortsword"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d8+2",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+      "name": "Longbow"
+    }
+  ],
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "armor": [
+        {
+          "index": "leather-armor",
+          "name": "Leather Armor",
+          "url": "/api/2014/equipment/leather-armor"
+        }
+      ],
+      "type": "armor",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Scouts are skilled hunters and trackers who offer their services for a fee. Most hunt wild game, but a few work as bounty hunters, serve as guides, or provide military reconnaissance.",
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "3d8",
+  "hit_points": 16,
+  "hit_points_roll": "3d8+3",
+  "image": "/api/images/monsters/scout.png",
+  "index": "scout",
+  "intelligence": 11,
+  "languages": "any one language (usually Common)",
+  "legendary_actions": [],
+  "name": "Scout",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-nature",
+        "name": "Skill: Nature",
+        "url": "/api/2014/proficiencies/skill-nature"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 5
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "skill-survival",
+        "name": "Skill: Survival",
+        "url": "/api/2014/proficiencies/skill-survival"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.",
+      "name": "Keen Hearing and Sight"
+    }
+  ],
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "subtype": "any race",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/scout",
+  "wisdom": 13,
+  "xp": 100
+}

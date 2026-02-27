@@ -1,0 +1,73 @@
+{
+  "actions": [],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 5
+    }
+  ],
+  "challenge_rating": 0,
+  "charisma": 1,
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "constitution": 10,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 1,
+  "forms": [],
+  "hit_dice": "3d8",
+  "hit_points": 13,
+  "hit_points_roll": "3d8",
+  "image": "/api/images/monsters/shrieker.png",
+  "index": "shrieker",
+  "intelligence": 1,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Shrieker",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [
+    {
+      "desc": "When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward",
+      "name": "Shriek"
+    }
+  ],
+  "senses": {
+    "blindsight": "30 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.",
+      "name": "False Appearance"
+    }
+  ],
+  "speed": {
+    "walk": "0 ft."
+  },
+  "strength": 1,
+  "type": "plant",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/shrieker",
+  "wisdom": 3,
+  "xp": 10
+}

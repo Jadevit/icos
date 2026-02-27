@@ -1,0 +1,155 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_dice": "1d4+2",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage.",
+      "name": "Claws"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "desc": "The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "name": "Blinding Breath",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 6,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 10,
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "constitution": 10,
+  "damage_immunities": [
+    "poison"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "dexterity": 14,
+  "forms": [],
+  "hit_dice": "5d6",
+  "hit_points": 17,
+  "hit_points_roll": "5d6",
+  "image": "/api/images/monsters/dust-mephit.png",
+  "index": "dust-mephit",
+  "intelligence": 9,
+  "languages": "Auran, Terran",
+  "legendary_actions": [],
+  "name": "Dust Mephit",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 2
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "size": "Small",
+  "special_abilities": [
+    {
+      "damage": [],
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "CON",
+          "url": "/api/2014/ability-scores/con"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "desc": "When the mephit dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
+      "name": "Death Burst"
+    },
+    {
+      "damage": [],
+      "desc": "The mephit can innately cast sleep, requiring no material components. Its innate spellcasting ability is Charisma.",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 10,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Sleep",
+            "url": "/api/2014/spells/sleep",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "fly": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "type": "elemental",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/dust-mephit",
+  "wisdom": 11,
+  "xp": 100
+}

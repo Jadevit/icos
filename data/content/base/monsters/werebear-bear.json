@@ -1,0 +1,126 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d10+4",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) piercing damage. If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with werebear lycanthropy.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d8+4",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+      "name": "Claw"
+    }
+  ],
+  "alignment": "neutral good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 5,
+  "charisma": 12,
+  "condition_immunities": [],
+  "constitution": 17,
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 10,
+  "forms": [
+    {
+      "index": "werebear-human",
+      "name": "Werebear, Human Form",
+      "url": "/api/2014/monsters/werebear-human"
+    },
+    {
+      "index": "werebear-hybrid",
+      "name": "Werebear, Hybrid Form",
+      "url": "/api/2014/monsters/werebear-hybrid"
+    }
+  ],
+  "hit_dice": "18d8",
+  "hit_points": 135,
+  "hit_points_roll": "18d8+54",
+  "image": "/api/images/monsters/werebear-bear.png",
+  "index": "werebear-bear",
+  "intelligence": 11,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Werebear, Bear Form",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 7
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 17
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "name": "Shapechanger"
+    },
+    {
+      "damage": [],
+      "desc": "The werebear has advantage on Wisdom (Perception) checks that rely on smell.",
+      "name": "Keen Smell"
+    }
+  ],
+  "speed": {
+    "climb": "30 ft.",
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "subtype": "human",
+  "type": "humanoid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/werebear-bear",
+  "wisdom": 12,
+  "xp": 1800
+}

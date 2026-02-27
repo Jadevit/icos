@@ -1,0 +1,97 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage.",
+      "name": "Bite"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 ft. to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.",
+      "name": "Teleport",
+      "usage": {
+        "dice": "1d6",
+        "min_value": 4,
+        "type": "recharge on roll"
+      }
+    }
+  ],
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.25,
+  "charisma": 11,
+  "condition_immunities": [],
+  "constitution": 12,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "A blink dog takes its name from its ability to blink in and out of existence, a talent it uses to aid its attacks and to avoid harm.",
+  "dexterity": 17,
+  "forms": [],
+  "hit_dice": "4d8",
+  "hit_points": 22,
+  "hit_points_roll": "4d8+4",
+  "image": "/api/images/monsters/blink-dog.png",
+  "index": "blink-dog",
+  "intelligence": 10,
+  "languages": "Blink Dog, understands Sylvan but can't speak it",
+  "legendary_actions": [],
+  "name": "Blink Dog",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 3
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "size": "Medium",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "name": "Keen Hearing and Smell"
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "type": "fey",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/blink-dog",
+  "wisdom": 13,
+  "xp": 50
+}

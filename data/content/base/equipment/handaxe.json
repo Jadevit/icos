@@ -1,0 +1,54 @@
+{
+  "category_range": "Simple Melee",
+  "contents": [],
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "Slashing",
+      "url": "/api/2014/damage-types/slashing"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "handaxe",
+  "name": "Handaxe",
+  "properties": [
+    {
+      "index": "light",
+      "name": "Light",
+      "url": "/api/2014/weapon-properties/light"
+    },
+    {
+      "index": "thrown",
+      "name": "Thrown",
+      "url": "/api/2014/weapon-properties/thrown"
+    },
+    {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/api/2014/weapon-properties/monk"
+    }
+  ],
+  "range": {
+    "normal": 5
+  },
+  "special": [],
+  "throw_range": {
+    "long": 60,
+    "normal": 20
+  },
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/handaxe",
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "weight": 2
+}

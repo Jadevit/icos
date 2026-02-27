@@ -1,0 +1,117 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Battleaxe",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Morningstar",
+          "count": "1",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The ettin makes two attacks: one with its battleaxe and one with its morningstar.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d8+5",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.",
+      "name": "Battleaxe"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_dice": "2d8+5",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage.",
+      "name": "Morningstar"
+    }
+  ],
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "challenge_rating": 4,
+  "charisma": 8,
+  "condition_immunities": [],
+  "constitution": 17,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 8,
+  "forms": [],
+  "hit_dice": "10d10",
+  "hit_points": 85,
+  "hit_points_roll": "10d10+30",
+  "image": "/api/images/monsters/ettin.png",
+  "index": "ettin",
+  "intelligence": 6,
+  "languages": "Giant, Orc",
+  "legendary_actions": [],
+  "name": "Ettin",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The ettin has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.",
+      "name": "Two Heads"
+    },
+    {
+      "damage": [],
+      "desc": "When one of the ettin's heads is asleep, its other head is awake.",
+      "name": "Wakeful"
+    }
+  ],
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "type": "giant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/ettin",
+  "wisdom": 10,
+  "xp": 1100
+}

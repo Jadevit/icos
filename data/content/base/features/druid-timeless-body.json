@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/api/2014/classes/druid"
+  },
+  "desc": [
+    "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+  ],
+  "index": "druid-timeless-body",
+  "level": 18,
+  "name": "Timeless Body",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/druid-timeless-body"
+}

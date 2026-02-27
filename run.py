@@ -34,7 +34,7 @@ def prompt_cli(state, actor: Combatant, legal: List[ActionDeclaration]) -> Actio
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--db", default="data/ref.db", help="Path to local ref.db")
+    parser.add_argument("--db", default="data/codex/codex.db", help="Path to compiled codex DB")
     parser.add_argument("--seed", type=int, default=None, help="Seed for deterministic rolls")
     parser.add_argument("--rollouts", type=int, default=80, help="AI rollouts per action (0 = no sim)")
     parser.add_argument("--epsilon", type=float, default=0.02, help="AI exploration rate (0..1)")

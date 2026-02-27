@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "flute",
+  "name": "Flute",
+  "races": [],
+  "reference": {
+    "index": "flute",
+    "name": "Flute",
+    "url": "/api/2014/equipment/flute"
+  },
+  "type": "Musical Instruments",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/flute"
+}

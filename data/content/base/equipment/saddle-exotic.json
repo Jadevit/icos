@@ -1,0 +1,23 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 60,
+    "unit": "gp"
+  },
+  "desc": [
+    "An exotic saddle is required for riding any aquatic or flying mount."
+  ],
+  "equipment_category": {
+    "index": "mounts-and-vehicles",
+    "name": "Mounts and Vehicles",
+    "url": "/api/2014/equipment-categories/mounts-and-vehicles"
+  },
+  "index": "saddle-exotic",
+  "name": "Saddle, Exotic",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/saddle-exotic",
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "weight": 50
+}

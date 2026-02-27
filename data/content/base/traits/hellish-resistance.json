@@ -1,0 +1,18 @@
+{
+  "desc": [
+    "You have resistance to fire damage."
+  ],
+  "index": "hellish-resistance",
+  "name": "Hellish Resistance",
+  "proficiencies": [],
+  "races": [
+    {
+      "index": "tiefling",
+      "name": "Tiefling",
+      "url": "/api/2014/races/tiefling"
+    }
+  ],
+  "subraces": [],
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "url": "/api/2014/traits/hellish-resistance"
+}

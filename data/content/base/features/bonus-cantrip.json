@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/api/2014/classes/druid"
+  },
+  "desc": [
+    "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice."
+  ],
+  "index": "bonus-cantrip",
+  "level": 2,
+  "name": "Bonus Cantrip",
+  "prerequisites": [],
+  "subclass": {
+    "index": "land",
+    "name": "Land",
+    "url": "/api/2014/subclasses/land"
+  },
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/bonus-cantrip"
+}

@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Ring, uncommon (requires attunement)",
+    "While wearing this ring, you have resistance to cold damage. In addition, you and everything you wear and carry are unharmed by temperatures as low as -50 degrees Fahrenheit."
+  ],
+  "equipment_category": {
+    "index": "ring",
+    "name": "Ring",
+    "url": "/api/2014/equipment-categories/ring"
+  },
+  "index": "ring-of-warmth",
+  "name": "Ring of Warmth",
+  "rarity": {
+    "name": "Uncommon"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/ring-of-warmth",
+  "variant": false,
+  "variants": []
+}

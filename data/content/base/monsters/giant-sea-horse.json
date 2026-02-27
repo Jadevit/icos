@@ -1,0 +1,75 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_dice": "1d6+1",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.",
+      "name": "Ram"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 0.5,
+  "charisma": 5,
+  "condition_immunities": [],
+  "constitution": 11,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "desc": "Like their smaller kin, giant sea horses are shy, colorful fish with elongated bodies and curled tails. Aquatic elves train them as mounts.",
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "3d10",
+  "hit_points": 16,
+  "hit_points_roll": "3d10",
+  "image": "/api/images/monsters/giant-sea-horse.png",
+  "index": "giant-sea-horse",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Sea Horse",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "If the sea horse moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+      "name": "Charge"
+    },
+    {
+      "damage": [],
+      "desc": "The sea horse can breathe only underwater.",
+      "name": "Water Breathing"
+    }
+  ],
+  "speed": {
+    "swim": "40 ft.",
+    "walk": "0 ft."
+  },
+  "strength": 12,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-sea-horse",
+  "wisdom": 12,
+  "xp": 100
+}

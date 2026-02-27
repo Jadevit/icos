@@ -1,0 +1,88 @@
+{
+  "area_of_effect": {
+    "size": 10,
+    "type": "sphere"
+  },
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": false,
+  "damage": {
+    "damage_at_slot_level": {
+      "2": "3d8",
+      "3": "4d8",
+      "4": "5d8",
+      "5": "6d8",
+      "6": "7d8",
+      "7": "8d8",
+      "8": "9d8",
+      "9": "10d8"
+    },
+    "damage_type": {
+      "index": "thunder",
+      "name": "Thunder",
+      "url": "/api/2014/damage-types/thunder"
+    }
+  },
+  "dc": {
+    "dc_success": "half",
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    }
+  },
+  "desc": [
+    "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.",
+    "A non-magical item that is not worn or carried also suffers damage if it is in the area of the spell."
+  ],
+  "duration": "Instantaneous",
+  "higher_level": [
+    "When you cast this spell using a 3 or higher level spell slot, the damage of the spell increases by 1d8 for each level of higher spell slot 2."
+  ],
+  "index": "shatter",
+  "level": 2,
+  "material": "A burst of mica.",
+  "name": "Shatter",
+  "range": "60 feet",
+  "ritual": false,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/shatter"
+}

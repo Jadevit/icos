@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/api/2014/classes/paladin"
+  },
+  "desc": [
+    "By 3rd level, the divine magic flowing through you makes you immune to disease."
+  ],
+  "index": "divine-health",
+  "level": 3,
+  "name": "Divine Health",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/divine-health"
+}

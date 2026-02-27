@@ -1,0 +1,14 @@
+{
+  "ability_score": {
+    "index": "int",
+    "name": "INT",
+    "url": "/api/2014/ability-scores/int"
+  },
+  "desc": [
+    "Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles."
+  ],
+  "index": "nature",
+  "name": "Nature",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "url": "/api/2014/skills/nature"
+}

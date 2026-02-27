@@ -1,0 +1,27 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "desc": [
+    "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+  ],
+  "equipment_category": {
+    "index": "adventuring-gear",
+    "name": "Adventuring Gear",
+    "url": "/api/2014/equipment-categories/adventuring-gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "Kits",
+    "url": "/api/2014/equipment-categories/kits"
+  },
+  "index": "mess-kit",
+  "name": "Mess Kit",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/mess-kit",
+  "weight": 1
+}

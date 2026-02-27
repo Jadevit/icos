@@ -1,0 +1,18 @@
+{
+  "desc": [
+    "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+  ],
+  "index": "artificers-lore",
+  "name": "Artificer's Lore",
+  "proficiencies": [],
+  "races": [],
+  "subraces": [
+    {
+      "index": "rock-gnome",
+      "name": "Rock Gnome",
+      "url": "/api/2014/subraces/rock-gnome"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "url": "/api/2014/traits/artificers-lore"
+}

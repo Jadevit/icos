@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "morningstars",
+  "name": "Morningstars",
+  "races": [],
+  "reference": {
+    "index": "morningstar",
+    "name": "Morningstar",
+    "url": "/api/2014/equipment/morningstar"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/morningstars"
+}

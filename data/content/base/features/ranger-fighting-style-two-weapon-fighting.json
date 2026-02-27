@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/api/2014/classes/ranger"
+  },
+  "desc": [
+    "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+  ],
+  "index": "ranger-fighting-style-two-weapon-fighting",
+  "level": 2,
+  "name": "Fighting Style: Two-Weapon Fighting",
+  "parent": {
+    "index": "ranger-fighting-style",
+    "name": "Fighting Style",
+    "url": "/api/2014/features/ranger-fighting-style"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "url": "/api/2014/features/ranger-fighting-style-two-weapon-fighting"
+}

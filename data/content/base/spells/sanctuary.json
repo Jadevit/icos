@@ -1,0 +1,47 @@
+{
+  "casting_time": "1 bonus action",
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": false,
+  "desc": [
+    "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.",
+    "If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends."
+  ],
+  "duration": "1 minute",
+  "higher_level": [],
+  "index": "sanctuary",
+  "level": 1,
+  "material": "A small silver mirror.",
+  "name": "Sanctuary",
+  "range": "30 feet",
+  "ritual": false,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "devotion",
+      "name": "Devotion",
+      "url": "/api/2014/subclasses/devotion"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/sanctuary"
+}

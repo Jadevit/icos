@@ -1,0 +1,53 @@
+{
+  "casting_time": "1 action",
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    }
+  ],
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "concentration": true,
+  "desc": [
+    "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw."
+  ],
+  "duration": "Up to 1 minute",
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+  ],
+  "index": "bless",
+  "level": 1,
+  "material": "A sprinkling of holy water.",
+  "name": "Bless",
+  "range": "30 feet",
+  "ritual": false,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment"
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "life",
+      "name": "Life",
+      "url": "/api/2014/subclasses/life"
+    }
+  ],
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "url": "/api/2014/spells/bless"
+}

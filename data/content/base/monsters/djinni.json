@@ -1,0 +1,292 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Scimitar",
+          "count": "3",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The djinni makes three scimitar attacks.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_dice": "2d6+5",
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          }
+        },
+        {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "damage_dice": "1d6",
+                "damage_type": {
+                  "index": "lightning",
+                  "name": "Lightning",
+                  "url": "/api/2014/damage-types/lightning"
+                },
+                "option_type": "damage"
+              },
+              {
+                "damage_dice": "1d6",
+                "damage_type": {
+                  "index": "thunder",
+                  "name": "Thunder",
+                  "url": "/api/2014/damage-types/thunder"
+                },
+                "option_type": "damage"
+              }
+            ]
+          },
+          "type": "damage"
+        }
+      ],
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage plus 3 (1d6) lightning or thunder damage (djinni's choice).",
+      "name": "Scimitar"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "dc": {
+        "dc_type": {
+          "index": "str",
+          "name": "STR",
+          "url": "/api/2014/ability-scores/str"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "desc": "A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be restrained by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.\nA creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.",
+      "name": "Create Whirlwind"
+    }
+  ],
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "challenge_rating": 11,
+  "charisma": 20,
+  "condition_immunities": [],
+  "constitution": 22,
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "14d10",
+  "hit_points": 161,
+  "hit_points_roll": "14d10+84",
+  "image": "/api/images/monsters/djinni.png",
+  "index": "djinni",
+  "intelligence": 15,
+  "languages": "Auran",
+  "legendary_actions": [],
+  "name": "Djinni",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      },
+      "value": 6
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      },
+      "value": 7
+    },
+    {
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      },
+      "value": 9
+    }
+  ],
+  "proficiency_bonus": 4,
+  "reactions": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 13
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying.",
+      "name": "Elemental Demise"
+    },
+    {
+      "damage": [],
+      "desc": "The djinni's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\nAt will: detect evil and good, detect magic, thunderwave\n3/day each: create food and water (can create wine instead of water), tongues, wind walk\n1/day each: conjure elemental (air elemental only), creation, gaseous form, invisibility, major image, plane shift",
+      "name": "Innate Spellcasting",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "dc": 17,
+        "modifier": 9,
+        "spells": [
+          {
+            "level": 1,
+            "name": "Detect Evil and Good",
+            "url": "/api/2014/spells/detect-evil-and-good",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Detect Magic",
+            "url": "/api/2014/spells/detect-magic",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 1,
+            "name": "Thunderwave",
+            "url": "/api/2014/spells/thunderwave",
+            "usage": {
+              "rest_types": [],
+              "type": "at will"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Create Food and Water",
+            "notes": "Can create wine instead of water",
+            "url": "/api/2014/spells/create-food-and-water",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Tongues",
+            "url": "/api/2014/spells/tongues",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 6,
+            "name": "Wind Walk",
+            "url": "/api/2014/spells/wind-walk",
+            "usage": {
+              "rest_types": [],
+              "times": 3,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Conjure Elemental",
+            "notes": "Air Elemental Only",
+            "url": "/api/2014/spells/conjure-elemental",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 5,
+            "name": "Creation",
+            "url": "/api/2014/spells/creation",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Gaseous Form",
+            "url": "/api/2014/spells/gaseous-form",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 2,
+            "name": "Invisibility",
+            "url": "/api/2014/spells/invisibility",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 3,
+            "name": "Major Image",
+            "url": "/api/2014/spells/major-image",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          },
+          {
+            "level": 7,
+            "name": "Plane Shift",
+            "url": "/api/2014/spells/plane-shift",
+            "usage": {
+              "rest_types": [],
+              "times": 1,
+              "type": "per day"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "speed": {
+    "fly": "90 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 21,
+  "type": "elemental",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/djinni",
+  "wisdom": 16,
+  "xp": 7200
+}

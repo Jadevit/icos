@@ -1,0 +1,110 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_dice": "2d6+3",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +5 to hit, reach 15 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage. If the target is a creature, it is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the octopus can't use its tentacles on another target.",
+      "name": "Tentacles"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.",
+      "name": "Ink Cloud",
+      "usage": {
+        "rest_types": [
+          "short",
+          "long"
+        ],
+        "type": "recharge after rest"
+      }
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "challenge_rating": 1,
+  "charisma": 4,
+  "condition_immunities": [],
+  "constitution": 13,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 13,
+  "forms": [],
+  "hit_dice": "8d10",
+  "hit_points": 52,
+  "hit_points_roll": "8d10+8",
+  "image": "/api/images/monsters/giant-octopus.png",
+  "index": "giant-octopus",
+  "intelligence": 4,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Giant Octopus",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 4
+    },
+    {
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      },
+      "value": 5
+    }
+  ],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "While out of water, the octopus can hold its breath for 1 hour.",
+      "name": "Hold Breath"
+    },
+    {
+      "damage": [],
+      "desc": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
+      "name": "Underwater Camouflage"
+    },
+    {
+      "damage": [],
+      "desc": "The octopus can breathe only underwater.",
+      "name": "Water Breathing"
+    }
+  ],
+  "speed": {
+    "swim": "60 ft.",
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "type": "beast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "url": "/api/2014/monsters/giant-octopus",
+  "wisdom": 10,
+  "xp": 200
+}

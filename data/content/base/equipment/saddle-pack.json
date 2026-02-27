@@ -1,0 +1,21 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "mounts-and-vehicles",
+    "name": "Mounts and Vehicles",
+    "url": "/api/2014/equipment-categories/mounts-and-vehicles"
+  },
+  "index": "saddle-pack",
+  "name": "Saddle, Pack",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/saddle-pack",
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "weight": 15
+}

@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "painters-supplies",
+  "name": "Painter's Supplies",
+  "races": [],
+  "reference": {
+    "index": "painters-supplies",
+    "name": "Painter's Supplies",
+    "url": "/api/2014/equipment/painters-supplies"
+  },
+  "type": "Artisan's Tools",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/painters-supplies"
+}

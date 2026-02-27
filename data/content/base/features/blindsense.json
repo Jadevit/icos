@@ -1,0 +1,16 @@
+{
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/api/2014/classes/rogue"
+  },
+  "desc": [
+    "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you."
+  ],
+  "index": "blindsense",
+  "level": 14,
+  "name": "Blindsense",
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/blindsense"
+}

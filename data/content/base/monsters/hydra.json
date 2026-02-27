@@ -1,0 +1,107 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "Number of Heads",
+          "type": "melee"
+        }
+      ],
+      "damage": [],
+      "desc": "The hydra makes as many bite attacks as it has heads.",
+      "multiattack_type": "actions",
+      "name": "Multiattack"
+    },
+    {
+      "actions": [],
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_dice": "1d10+5",
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 10 (1d10 + 5) piercing damage.",
+      "name": "Bite"
+    }
+  ],
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "challenge_rating": 8,
+  "charisma": 7,
+  "condition_immunities": [],
+  "constitution": 20,
+  "damage_immunities": [],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 12,
+  "forms": [],
+  "hit_dice": "15d12",
+  "hit_points": 172,
+  "hit_points_roll": "15d12+75",
+  "image": "/api/images/monsters/hydra.png",
+  "index": "hydra",
+  "intelligence": 2,
+  "languages": "",
+  "legendary_actions": [],
+  "name": "Hydra",
+  "proficiencies": [
+    {
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      },
+      "value": 6
+    }
+  ],
+  "proficiency_bonus": 3,
+  "reactions": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 16
+  },
+  "size": "Huge",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The hydra can hold its breath for 1 hour.",
+      "name": "Hold Breath"
+    },
+    {
+      "damage": [],
+      "desc": "The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.\nWhenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.\nAt the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way.",
+      "name": "Multiple Heads"
+    },
+    {
+      "damage": [],
+      "desc": "For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks.",
+      "name": "Reactive Heads"
+    },
+    {
+      "damage": [],
+      "desc": "While the hydra sleeps, at least one of its heads is awake.",
+      "name": "Wakeful"
+    }
+  ],
+  "speed": {
+    "swim": "30 ft.",
+    "walk": "30 ft."
+  },
+  "strength": 20,
+  "type": "monstrosity",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/hydra",
+  "wisdom": 10,
+  "xp": 3900
+}

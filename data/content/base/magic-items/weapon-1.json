@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Weapon (any), uncommon",
+    "You have a +1 bonus to attack and damage rolls made with this magic weapon."
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "weapon-1",
+  "name": "Weapon, +1",
+  "rarity": {
+    "name": "Uncommon"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/weapon-1",
+  "variant": true,
+  "variants": []
+}

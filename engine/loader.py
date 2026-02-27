@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import sqlite3
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional
 
 from .models import AttackProfile, Combatant
 
@@ -14,101 +14,19 @@ JsonDict = Dict[str, Any]
 @dataclass
 class DbLoader:
     """
-    Local DB loader for SRD-ish entities.
+    Loader for the compiled codex DB.
 
-    Design goals:
-    - No internet required
-    - DB schema can vary slightly (we detect where the JSON payload lives)
-    - Loader returns *engine runtime* objects (Combatant, etc.)
+    Expected schema (stable):
+      - entities(id TEXT PRIMARY KEY, endpoint TEXT, api_index TEXT, name TEXT, json TEXT, ...)
+      - index on (endpoint, api_index)
+
+    This loader is intentionally strict: if the DB doesn't match the codex schema,
+    we want to fail fast and fix the pipeline—not silently guess.
     """
     db_path: str
 
-    # Detected mapping (cached on this loader instance)
-    _table: Optional[str] = None
-    _json_col: Optional[str] = None
-    _endpoint_col: Optional[str] = None
-    _api_index_col: Optional[str] = None
-    _id_col: Optional[str] = None
-
     def _connect(self) -> sqlite3.Connection:
-        # Default sqlite3 settings are fine here; keep it simple.
         return sqlite3.connect(self.db_path)
-
-    def _list_tables(self, conn: sqlite3.Connection) -> List[str]:
-        cur = conn.cursor()
-        cur.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")
-        return [r[0] for r in cur.fetchall()]
-
-    def _table_columns(self, conn: sqlite3.Connection, table: str) -> List[str]:
-        cur = conn.cursor()
-        cur.execute(f"PRAGMA table_info({table})")
-        return [r[1] for r in cur.fetchall()]
-
-    @staticmethod
-    def _pick_json_col(cols: Sequence[str]) -> Optional[str]:
-        preferred = ("json", "data", "payload", "blob")
-        lower_map = {c.lower(): c for c in cols}
-
-        for key in preferred:
-            if key in lower_map:
-                return lower_map[key]
-
-        for c in cols:
-            lc = c.lower()
-            if "json" in lc or "data" in lc:
-                return c
-
-        return None
-
-    @staticmethod
-    def _find_col(cols: Sequence[str], names: Sequence[str]) -> Optional[str]:
-        lower_map = {c.lower(): c for c in cols}
-        for n in names:
-            if n in lower_map:
-                return lower_map[n]
-        return None
-
-    def _detect_storage(self, conn: sqlite3.Connection) -> None:
-        tables = self._list_tables(conn)
-        if not tables:
-            raise RuntimeError("No tables found in DB.")
-
-        best: Optional[Tuple[int, str, str, Optional[str], Optional[str], Optional[str]]] = None
-        # score, table, json_col, endpoint_col, api_index_col, id_col
-
-        for t in tables:
-            cols = self._table_columns(conn, t)
-            json_col = self._pick_json_col(cols)
-            if not json_col:
-                continue
-
-            endpoint_col = self._find_col(cols, ("endpoint", "category", "resource"))
-            api_index_col = self._find_col(cols, ("api_index", "index", "slug", "key", "name_index"))
-            id_col = self._find_col(cols, ("id", "uid", "entity_id"))
-
-            score = 3  # has json/data col
-            if endpoint_col:
-                score += 3
-            if api_index_col:
-                score += 3
-            if id_col:
-                score += 2
-            if t.lower() in ("entity", "entities"):
-                score += 1
-
-            candidate = (score, t, json_col, endpoint_col, api_index_col, id_col)
-            if best is None or candidate[0] > best[0]:
-                best = candidate
-
-        if best is None:
-            raise RuntimeError("Could not detect JSON storage table. Expected a table with a json/data column.")
-
-        _, self._table, self._json_col, self._endpoint_col, self._api_index_col, self._id_col = best
-
-    def _ensure_detected(self, conn: sqlite3.Connection) -> None:
-        # Detection is cached on the instance; only runs once per DbLoader.
-        if self._table is None or self._json_col is None:
-            self._detect_storage(conn)
 
     @staticmethod
     def _loads_json(value: Any) -> JsonDict:
@@ -118,57 +36,46 @@ class DbLoader:
             return json.loads(value)
         raise TypeError(f"Unsupported JSON column type: {type(value)}")
 
-    def get_entity_json(self, endpoint: str, api_index: str) -> JsonDict:
+    def _assert_schema(self, conn: sqlite3.Connection) -> None:
+        cur = conn.cursor()
+        cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='entities'")
+        if cur.fetchone() is None:
+            raise RuntimeError("Invalid codex DB: missing required table 'entities'.")
+
+        cur.execute("PRAGMA table_info(entities)")
+        cols = {row[1] for row in cur.fetchall()}  # row[1] = column name
+        required = {"id", "endpoint", "api_index", "json"}
+        missing = required - cols
+        if missing:
+            raise RuntimeError(f"Invalid codex DB: entities table missing columns: {sorted(missing)}")
+
+    def get_json_by_id(self, entity_id: str) -> JsonDict:
         with self._connect() as conn:
-            self._ensure_detected(conn)
-            assert self._table and self._json_col
-
+            self._assert_schema(conn)
             cur = conn.cursor()
+            cur.execute("SELECT json FROM entities WHERE id = ? LIMIT 1", (entity_id,))
+            row = cur.fetchone()
+            if not row or row[0] is None:
+                raise KeyError(f"Entity not found: {entity_id!r}")
+            return self._loads_json(row[0])
 
-            # Attempt 1: endpoint + api_index style
-            if self._endpoint_col and self._api_index_col:
+    def get_entity_json(self, endpoint: str, api_index: str) -> JsonDict:
+        entity_id = f"{endpoint}:{api_index}"
+        try:
+            return self.get_json_by_id(entity_id)
+        except KeyError:
+            # fallback: query by endpoint/index (same result, helps debugging if ids differ)
+            with self._connect() as conn:
+                self._assert_schema(conn)
+                cur = conn.cursor()
                 cur.execute(
-                    f"""
-                    SELECT {self._json_col}
-                    FROM {self._table}
-                    WHERE {self._endpoint_col} = ? AND {self._api_index_col} = ?
-                    LIMIT 1
-                    """,
+                    "SELECT json FROM entities WHERE endpoint = ? AND api_index = ? LIMIT 1",
                     (endpoint, api_index),
                 )
                 row = cur.fetchone()
-                if row and row[0] is not None:
-                    return self._loads_json(row[0])
-
-            # Attempt 2: id-style like "monsters:goblin"
-            if self._id_col:
-                id_variants = (
-                    f"{endpoint}:{api_index}",
-                    f"/api/{endpoint}/{api_index}",
-                    f"{endpoint}/{api_index}",
-                    api_index,
-                )
-                placeholders = ",".join("?" for _ in id_variants)
-                cur.execute(
-                    f"""
-                    SELECT {self._json_col}
-                    FROM {self._table}
-                    WHERE {self._id_col} IN ({placeholders})
-                    LIMIT 1
-                    """,
-                    list(id_variants),
-                )
-                row = cur.fetchone()
-                if row and row[0] is not None:
-                    return self._loads_json(row[0])
-
-            tables = self._list_tables(conn)
-            raise KeyError(
-                f"Entity not found for endpoint={endpoint!r}, api_index={api_index!r}. "
-                f"(Detected table={self._table!r}, json_col={self._json_col!r}, "
-                f"endpoint_col={self._endpoint_col!r}, api_index_col={self._api_index_col!r}, id_col={self._id_col!r}; "
-                f"tables={tables})"
-            )
+                if not row or row[0] is None:
+                    raise KeyError(f"Entity not found: endpoint={endpoint!r}, api_index={api_index!r}")
+                return self._loads_json(row[0])
 
     @staticmethod
     def _parse_ac(raw: Any, name: str) -> int:
@@ -198,7 +105,6 @@ class DbLoader:
             if not isinstance(dmg_list, list) or not dmg_list:
                 continue
 
-            # take first valid damage entry that has dice
             dmg0 = None
             for entry in dmg_list:
                 if isinstance(entry, dict) and isinstance(entry.get("damage_dice"), str) and entry["damage_dice"].strip():
@@ -232,11 +138,6 @@ class DbLoader:
         heals_remaining: int = 0,
         heal_dice: str = "1d8+2",
     ) -> Combatant:
-        """
-        Load a monster from the DB and convert it into a runtime Combatant.
-
-        Overrides are for rapid combat testing and do not modify DB content.
-        """
         raw = self.get_entity_json("monsters", api_index)
 
         name = str(raw["name"])

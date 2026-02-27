@@ -1,0 +1,40 @@
+{
+  "category_range": "Simple Melee",
+  "contents": [],
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "Bludgeoning",
+      "url": "/api/2014/damage-types/bludgeoning"
+    }
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "Weapon",
+    "url": "/api/2014/equipment-categories/weapon"
+  },
+  "index": "greatclub",
+  "name": "Greatclub",
+  "properties": [
+    {
+      "index": "two-handed",
+      "name": "Two-Handed",
+      "url": "/api/2014/weapon-properties/two-handed"
+    }
+  ],
+  "range": {
+    "normal": 5
+  },
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/greatclub",
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "weight": 10
+}

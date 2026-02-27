@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to lightning damage while wearing this citrine ring."
+  ],
+  "equipment_category": {
+    "index": "ring",
+    "name": "Ring",
+    "url": "/api/2014/equipment-categories/ring"
+  },
+  "index": "ring-of-resistance-lightning",
+  "name": "Ring of Lightning Resistance",
+  "rarity": {
+    "name": "Rare"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/ring-of-resistance-lightning",
+  "variant": true,
+  "variants": []
+}

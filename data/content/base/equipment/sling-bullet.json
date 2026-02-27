@@ -1,0 +1,26 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 4,
+    "unit": "cp"
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "adventuring-gear",
+    "name": "Adventuring Gear",
+    "url": "/api/2014/equipment-categories/adventuring-gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "Ammunition",
+    "url": "/api/2014/equipment-categories/ammunition"
+  },
+  "index": "sling-bullet",
+  "name": "Sling bullet",
+  "properties": [],
+  "quantity": 20,
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/sling-bullet",
+  "weight": 1.5
+}

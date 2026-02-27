@@ -1,0 +1,20 @@
+{
+  "desc": [
+    "Potion, uncommon",
+    "When you drink this potion, you gain resistance to lightning damage for 1 hour."
+  ],
+  "equipment_category": {
+    "index": "potion",
+    "name": "Potion",
+    "url": "/api/2014/equipment-categories/potion"
+  },
+  "index": "potion-of-resistance-lightning",
+  "name": "Potion of Lightning Resistance",
+  "rarity": {
+    "name": "Uncommon"
+  },
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "url": "/api/2014/magic-items/potion-of-resistance-lightning",
+  "variant": true,
+  "variants": []
+}

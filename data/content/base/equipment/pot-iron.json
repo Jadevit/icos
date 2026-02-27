@@ -1,0 +1,25 @@
+{
+  "contents": [],
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "desc": [],
+  "equipment_category": {
+    "index": "adventuring-gear",
+    "name": "Adventuring Gear",
+    "url": "/api/2014/equipment-categories/adventuring-gear"
+  },
+  "gear_category": {
+    "index": "standard-gear",
+    "name": "Standard Gear",
+    "url": "/api/2014/equipment-categories/standard-gear"
+  },
+  "index": "pot-iron",
+  "name": "Pot, iron",
+  "properties": [],
+  "special": [],
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "url": "/api/2014/equipment/pot-iron",
+  "weight": 10
+}

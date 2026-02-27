@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "studded-leather-armor",
+  "name": "Studded Leather Armor",
+  "races": [],
+  "reference": {
+    "index": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "url": "/api/2014/equipment/studded-leather-armor"
+  },
+  "type": "Armor",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/studded-leather-armor"
+}

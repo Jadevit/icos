@@ -1,0 +1,21 @@
+{
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/api/2014/classes/warlock"
+  },
+  "desc": [
+    "You can read all writing."
+  ],
+  "index": "eldritch-invocation-eyes-of-the-rune-keeper",
+  "level": 2,
+  "name": "Eldritch Invocation: Eyes of the Rune Keeper",
+  "parent": {
+    "index": "eldritch-invocations",
+    "name": "Eldritch Invocations",
+    "url": "/api/2014/features/eldritch-invocations"
+  },
+  "prerequisites": [],
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "url": "/api/2014/features/eldritch-invocation-eyes-of-the-rune-keeper"
+}

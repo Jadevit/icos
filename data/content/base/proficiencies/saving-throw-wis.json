@@ -1,0 +1,40 @@
+{
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "index": "saving-throw-wis",
+  "name": "Saving Throw: WIS",
+  "races": [],
+  "reference": {
+    "index": "wis",
+    "name": "WIS",
+    "url": "/api/2014/ability-scores/wis"
+  },
+  "type": "Saving Throws",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/saving-throw-wis"
+}

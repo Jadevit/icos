@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "index": "whips",
+  "name": "Whips",
+  "races": [],
+  "reference": {
+    "index": "whip",
+    "name": "Whip",
+    "url": "/api/2014/equipment/whip"
+  },
+  "type": "Weapons",
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "url": "/api/2014/proficiencies/whips"
+}

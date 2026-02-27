@@ -1,0 +1,90 @@
+{
+  "actions": [
+    {
+      "actions": [],
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_dice": "2d8+4",
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          }
+        },
+        {
+          "damage_dice": "2d6",
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          }
+        }
+      ],
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage.",
+      "name": "Hooves"
+    },
+    {
+      "actions": [],
+      "damage": [],
+      "desc": "The nightmare and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa.",
+      "name": "Ethereal Stride"
+    }
+  ],
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "challenge_rating": 3,
+  "charisma": 15,
+  "condition_immunities": [],
+  "constitution": 16,
+  "damage_immunities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_vulnerabilities": [],
+  "dexterity": 15,
+  "forms": [],
+  "hit_dice": "8d10",
+  "hit_points": 68,
+  "hit_points_roll": "8d10+24",
+  "image": "/api/images/monsters/nightmare.png",
+  "index": "nightmare",
+  "intelligence": 10,
+  "languages": "understands Abyssal, Common, and Infernal but can't speak",
+  "legendary_actions": [],
+  "name": "Nightmare",
+  "proficiencies": [],
+  "proficiency_bonus": 2,
+  "reactions": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "size": "Large",
+  "special_abilities": [
+    {
+      "damage": [],
+      "desc": "The nightmare can grant resistance to fire damage to anyone riding it.",
+      "name": "Confer Fire Resistance"
+    },
+    {
+      "damage": [],
+      "desc": "The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+      "name": "Illumination"
+    }
+  ],
+  "speed": {
+    "fly": "90 ft.",
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "type": "fiend",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "url": "/api/2014/monsters/nightmare",
+  "wisdom": 13,
+  "xp": 700
+}

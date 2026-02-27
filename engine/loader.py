@@ -13,9 +13,17 @@ JsonDict = Dict[str, Any]
 
 @dataclass
 class DbLoader:
+    """
+    Local DB loader for SRD-ish entities.
+
+    Design goals:
+    - No internet required
+    - DB schema can vary slightly (we detect where the JSON payload lives)
+    - Loader returns *engine runtime* objects (Combatant, etc.)
+    """
     db_path: str
 
-    # Detected mapping
+    # Detected mapping (cached on this loader instance)
     _table: Optional[str] = None
     _json_col: Optional[str] = None
     _endpoint_col: Optional[str] = None
@@ -23,6 +31,7 @@ class DbLoader:
     _id_col: Optional[str] = None
 
     def _connect(self) -> sqlite3.Connection:
+        # Default sqlite3 settings are fine here; keep it simple.
         return sqlite3.connect(self.db_path)
 
     def _list_tables(self, conn: sqlite3.Connection) -> List[str]:
@@ -60,14 +69,6 @@ class DbLoader:
         return None
 
     def _detect_storage(self, conn: sqlite3.Connection) -> None:
-        """
-        Find the table/columns that hold SRD-ish JSON blobs.
-        Supports schemas like:
-          - entity(endpoint, api_index, json)
-          - entities(endpoint, index, data/json)
-          - records(id, json)
-          - anything with a JSON/text column plus an identifier scheme
-        """
         tables = self._list_tables(conn)
         if not tables:
             raise RuntimeError("No tables found in DB.")
@@ -77,7 +78,6 @@ class DbLoader:
 
         for t in tables:
             cols = self._table_columns(conn, t)
-
             json_col = self._pick_json_col(cols)
             if not json_col:
                 continue
@@ -106,6 +106,7 @@ class DbLoader:
         _, self._table, self._json_col, self._endpoint_col, self._api_index_col, self._id_col = best
 
     def _ensure_detected(self, conn: sqlite3.Connection) -> None:
+        # Detection is cached on the instance; only runs once per DbLoader.
         if self._table is None or self._json_col is None:
             self._detect_storage(conn)
 
@@ -161,10 +162,12 @@ class DbLoader:
                 if row and row[0] is not None:
                     return self._loads_json(row[0])
 
+            tables = self._list_tables(conn)
             raise KeyError(
-                f"Entity not found in DB for endpoint={endpoint!r}, api_index={api_index!r}. "
+                f"Entity not found for endpoint={endpoint!r}, api_index={api_index!r}. "
                 f"(Detected table={self._table!r}, json_col={self._json_col!r}, "
-                f"endpoint_col={self._endpoint_col!r}, api_index_col={self._api_index_col!r}, id_col={self._id_col!r})"
+                f"endpoint_col={self._endpoint_col!r}, api_index_col={self._api_index_col!r}, id_col={self._id_col!r}; "
+                f"tables={tables})"
             )
 
     @staticmethod
@@ -182,21 +185,8 @@ class DbLoader:
 
         raise ValueError(f"Missing/invalid armor_class for {name!r}: {raw!r}")
 
-    def load_monster_combatant(
-        self,
-        api_index: str,
-        *,
-        team: str = "enemies",
-        instance_id: Optional[str] = None,
-    ) -> Combatant:
-        raw = self.get_entity_json("monsters", api_index)
-
-        name = str(raw["name"])
-        ac = self._parse_ac(raw.get("armor_class"), name=name)
-
-        max_hp = int(raw["hit_points"])
-        dex = int(raw["dexterity"])
-
+    @staticmethod
+    def _extract_attacks(raw: JsonDict) -> List[AttackProfile]:
         attacks: List[AttackProfile] = []
         for a in raw.get("actions", []):
             if not isinstance(a, dict):
@@ -208,26 +198,57 @@ class DbLoader:
             if not isinstance(dmg_list, list) or not dmg_list:
                 continue
 
-            dmg0 = dmg_list[0]
-            if not isinstance(dmg0, dict):
+            # take first valid damage entry that has dice
+            dmg0 = None
+            for entry in dmg_list:
+                if isinstance(entry, dict) and isinstance(entry.get("damage_dice"), str) and entry["damage_dice"].strip():
+                    dmg0 = entry
+                    break
+            if dmg0 is None:
                 continue
 
-            damage_dice = dmg0.get("damage_dice")
-            if not isinstance(damage_dice, str) or not damage_dice.strip():
-                continue
-
+            damage_dice = dmg0["damage_dice"].strip()
             damage_type = (dmg0.get("damage_type") or {}).get("name", "Unknown")
-            damage_type_str = str(damage_type)
 
             attacks.append(
                 AttackProfile(
                     name=str(a.get("name", "Attack")),
                     attack_bonus=int(a["attack_bonus"]),
-                    damage_dice=damage_dice.strip(),
-                    damage_type=damage_type_str,
+                    damage_dice=damage_dice,
+                    damage_type=str(damage_type),
                 )
             )
 
+        return attacks
+
+    def load_monster_combatant(
+        self,
+        api_index: str,
+        *,
+        team: str = "enemies",
+        instance_id: Optional[str] = None,
+        max_hp_override: Optional[int] = None,
+        ac_override: Optional[int] = None,
+        heals_remaining: int = 0,
+        heal_dice: str = "1d8+2",
+    ) -> Combatant:
+        """
+        Load a monster from the DB and convert it into a runtime Combatant.
+
+        Overrides are for rapid combat testing and do not modify DB content.
+        """
+        raw = self.get_entity_json("monsters", api_index)
+
+        name = str(raw["name"])
+        ac = ac_override if ac_override is not None else self._parse_ac(raw.get("armor_class"), name=name)
+
+        max_hp = int(raw["hit_points"])
+        if max_hp_override is not None:
+            max_hp = int(max_hp_override)
+
+        dex = int(raw["dexterity"])
+
+        attacks = self._extract_attacks(raw)
         if not attacks:
             raise ValueError(f"Monster {name!r} has no usable attacks in DB payload.")
 
@@ -243,4 +264,6 @@ class DbLoader:
             hp=max_hp,
             dex=dex,
             attacks=attacks,
+            heals_remaining=heals_remaining,
+            heal_dice=heal_dice,
         )

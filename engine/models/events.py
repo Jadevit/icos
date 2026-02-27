@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, Literal, Optional
+from typing import Mapping, Literal, Optional
 
 EventType = Literal[
     "initiative",
@@ -18,8 +18,12 @@ EventType = Literal[
 
 @dataclass(frozen=True)
 class Event:
+    """
+    Immutable record of a factual outcome produced by the engine.
+    This is what you log/stream to UI/AI later.
+    """
     type: EventType
     actor: Optional[str] = None
     target: Optional[str] = None
     message: str = ""
-    data: Dict[str, object] = field(default_factory=dict)
+    data: Mapping[str, object] = field(default_factory=dict)

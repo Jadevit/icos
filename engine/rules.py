@@ -11,6 +11,11 @@ from .state import CombatState
 
 @dataclass
 class RulesEngine:
+    """
+    Deterministic mechanics authority.
+
+    Controllers declare actions. RulesEngine resolves them into events and state mutation.
+    """
     dice: Dice
 
     def roll_initiative(self, combatants: List[Combatant]) -> Tuple[List[str], List[Event]]:
@@ -29,31 +34,38 @@ class RulesEngine:
                 )
             )
 
-        rolls.sort(key=lambda x: x[0], reverse=True)
+        # High to low; tie-break by dex_mod then name for stability
+        rolls.sort(key=lambda x: (x[0], x[1], x[3]), reverse=True)
         order = [cid for _, _, cid, _ in rolls]
         return order, events
 
     def resolve_action(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
-        if action.type == "attack":
-            return self._resolve_attack(state, action)
-        if action.type == "defend":
-            return self._resolve_defend(state, action)
-        if action.type == "heal":
-            return self._resolve_heal(state, action)
-        if action.type == "wait":
-            return self._resolve_wait(state, action)
-        raise ValueError(f"Unsupported action type: {action.type!r}")
+        match action.type:
+            case "attack":
+                return self._resolve_attack(state, action)
+            case "defend":
+                return self._resolve_defend(state, action)
+            case "heal":
+                return self._resolve_heal(state, action)
+            case "wait":
+                return self._resolve_wait(state, action)
+            case _:
+                raise ValueError(f"Unsupported action type: {action.type!r}")
 
     def _resolve_defend(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
         actor = state.get(action.actor_id)
         if not actor.alive:
             return []
+
         actor.flags.add("defending")
         return [
             Event(
                 type="turn_start",
                 actor=actor.id,
-                message=f"{actor.name} takes a defensive stance (attacks against them have disadvantage until their next turn).",
+                message=(
+                    f"{actor.name} takes a defensive stance "
+                    "(attacks against them have disadvantage until their next turn)."
+                ),
                 data={"flag_added": "defending"},
             )
         ]
@@ -63,20 +75,39 @@ class RulesEngine:
         if not actor.alive:
             return []
 
-        # v1: simple healing dice, customizable via action.data if you want later
-        heal_dice = str(action.data.get("heal_dice", "1d8+2"))
+        if actor.heals_remaining <= 0:
+            return [
+                Event(
+                    type="turn_start",
+                    actor=actor.id,
+                    message=f"{actor.name} tries to heal but has no heals remaining.",
+                    data={"heals_remaining": actor.heals_remaining},
+                )
+            ]
+
+        heal_dice = str(action.data.get("heal_dice", actor.heal_dice))
         roll = self.dice.roll(heal_dice)
 
         before = actor.hp
         actor.hp = min(actor.max_hp, actor.hp + roll.total)
         healed = actor.hp - before
+        actor.heals_remaining -= 1
 
         return [
             Event(
-                type="damage",  # later you might add "heal" event type; keeping minimal now
+                type="damage",  # keeping event types minimal for now
                 actor=actor.id,
-                message=f"{actor.name} heals for {healed} (rolled {heal_dice} => {roll.total}). HP {before} -> {actor.hp}",
-                data={"heal": healed, "hp_before": before, "hp_after": actor.hp, "heal_dice": heal_dice},
+                message=(
+                    f"{actor.name} heals for {healed} (rolled {heal_dice} => {roll.total}). "
+                    f"HP {before} -> {actor.hp} | heals left: {actor.heals_remaining}"
+                ),
+                data={
+                    "heal": healed,
+                    "hp_before": before,
+                    "hp_after": actor.hp,
+                    "heal_dice": heal_dice,
+                    "heals_remaining": actor.heals_remaining,
+                },
             )
         ]
 
@@ -84,13 +115,7 @@ class RulesEngine:
         actor = state.get(action.actor_id)
         if not actor.alive:
             return []
-        return [
-            Event(
-                type="turn_start",
-                actor=actor.id,
-                message=f"{actor.name} waits.",
-            )
-        ]
+        return [Event(type="turn_start", actor=actor.id, message=f"{actor.name} waits.")]
 
     def _resolve_attack(self, state: CombatState, action: ActionDeclaration) -> List[Event]:
         events: List[Event] = []
@@ -112,9 +137,9 @@ class RulesEngine:
         d20, underlying = self.dice.d20_with_adv_state(adv_state)
         total_to_hit = d20 + atk.attack_bonus
 
+        rolls_str = ", ".join(map(str, underlying))
         attack_msg = (
-            f"{attacker.name} uses {atk.name}: "
-            f"d20({', '.join(map(str, underlying))}) -> {d20} + {atk.attack_bonus} = {total_to_hit} "
+            f"{attacker.name} uses {atk.name}: d20({rolls_str}) -> {d20} + {atk.attack_bonus} = {total_to_hit} "
             f"vs AC {defender.ac}"
         )
         if adv_state == "dis":
@@ -139,7 +164,6 @@ class RulesEngine:
 
         is_crit = d20 == 20
         hit = is_crit or (total_to_hit >= defender.ac)
-
         if not hit:
             events.append(
                 Event(
@@ -162,28 +186,20 @@ class RulesEngine:
             )
         )
 
-        if is_crit:
-            dmg1 = self.dice.roll(atk.damage_dice)
-            dmg2 = self.dice.roll(atk.damage_dice)
-            dmg_total = dmg1.total + dmg2.total
-            detail = f"{atk.damage_dice} crit => {dmg1.total} + {dmg2.total} = {dmg_total}"
-        else:
-            dmg = self.dice.roll(atk.damage_dice)
-            dmg_total = dmg.total
-            detail = f"{atk.damage_dice} => {dmg_total}"
+        dmg_total, detail = self._roll_damage(atk.damage_dice, is_crit)
 
         before = defender.hp
         defender.hp = max(0, defender.hp - dmg_total)
 
-        damage_msg = (
-            f"{defender.name} takes {dmg_total} {atk.damage_type} damage ({detail}). " f"HP {before} -> {defender.hp}"
-        )
         events.append(
             Event(
                 type="damage",
                 actor=attacker.id,
                 target=defender.id,
-                message=damage_msg,
+                message=(
+                    f"{defender.name} takes {dmg_total} {atk.damage_type} damage ({detail}). "
+                    f"HP {before} -> {defender.hp}"
+                ),
                 data={
                     "amount": dmg_total,
                     "damage_type": atk.damage_type,
@@ -204,3 +220,18 @@ class RulesEngine:
             )
 
         return events
+
+    def _roll_damage(self, dice_notation: str, is_crit: bool) -> Tuple[int, str]:
+        """
+        Returns (damage_total, detail_string).
+        Kept private to RulesEngine so damage behavior stays consistent.
+        """
+        if is_crit:
+            dmg1 = self.dice.roll(dice_notation)
+            dmg2 = self.dice.roll(dice_notation)
+            total = dmg1.total + dmg2.total
+            detail = f"{dice_notation} crit => {dmg1.total} + {dmg2.total} = {total}"
+            return total, detail
+
+        dmg = self.dice.roll(dice_notation)
+        return dmg.total, f"{dice_notation} => {dmg.total}"

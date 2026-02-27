@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# engine/content/bundles.py
 from __future__ import annotations
 
 import argparse

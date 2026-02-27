@@ -8,7 +8,7 @@ from typing import Callable, Optional
 
 from ...dice import Dice
 from ...models import ActionDeclaration, Combatant
-from ...rules import RulesEngine
+from ..combat.resolution import RulesEngine
 from ...state import CombatState
 from ..actions.registry import ActionRegistry
 from .interface import CombatController

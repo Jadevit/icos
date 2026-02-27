@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# engine/content/codex.py
 from __future__ import annotations
 
 import argparse
@@ -11,7 +11,7 @@ from typing import Any, Dict, List, Tuple
 Json = Dict[str, Any]
 
 
-def read_codex_manifest(path: Path) -> List[str]:
+def read_codex_manifest(path: Path) -> List[Path]:
     """
     Returns list of pack roots (paths) in load order (low -> high priority).
     """
@@ -19,10 +19,10 @@ def read_codex_manifest(path: Path) -> List[str]:
     enabled = data.get("enabled", [])
     if not isinstance(enabled, list):
         raise ValueError("codex manifest 'enabled' must be a list")
-    roots: List[str] = []
+    roots: List[Path] = []
     for item in enabled:
         if isinstance(item, dict) and isinstance(item.get("path"), str):
-            roots.append(item["path"])
+            roots.append(Path(item["path"]))
     if not roots:
         raise ValueError("codex manifest has no enabled pack paths")
     return roots

@@ -1,14 +1,10 @@
-# run.py
 from __future__ import annotations
 
 import argparse
 from typing import List
 
-from engine.dice import Dice
-from engine.loader import DbLoader
+from engine import IcosEngine
 from engine.models import ActionDeclaration, AttackProfile, Combatant
-from engine.session import CombatSession
-from engine.systems.actions.registry import ActionRegistry
 from engine.systems.ai.policies import PlannerConfig, PlannerController, PlayerController
 
 
@@ -34,20 +30,26 @@ def prompt_cli(state, actor: Combatant, legal: List[ActionDeclaration]) -> Actio
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--db", default="data/codex/codex.db", help="Path to compiled codex DB")
-    parser.add_argument("--seed", type=int, default=None, help="Seed for deterministic rolls")
-    parser.add_argument("--rollouts", type=int, default=80, help="AI rollouts per action (0 = no sim)")
-    parser.add_argument("--epsilon", type=float, default=0.02, help="AI exploration rate (0..1)")
+    parser.add_argument("--seed", type=int, default=None)
+    parser.add_argument("--rollouts", type=int, default=80)
+    parser.add_argument("--epsilon", type=float, default=0.02)
+    parser.add_argument("--no-build", action="store_true", help="Skip ensure_codex() (dev only)")
     args = parser.parse_args()
 
-    dice = Dice(seed=args.seed) if args.seed is not None else Dice()
-    loader = DbLoader(db_path=args.db)
+    engine = IcosEngine(seed=args.seed)
+    if not args.no_build:
+        engine.ensure_codex()
 
-    # Enemy from DB
-    gob1 = loader.load_monster_combatant("goblin", team="enemies", instance_id="enemy:goblin_1")
-    gob1.heals_remaining = 0  # goblin doesn't heal (for now)
+    # Build combatants
+    gob1 = engine.spawn_monster(
+        "goblin",
+        team="enemies",
+        instance_id="enemy:goblin_1",
+        max_hp_override=20,
+        heals_remaining=1,
+        heal_dice="1d6+1",
+    )
 
-    # Hardcoded PC (combat-focused phase; no character creation yet)
     hero1 = Combatant(
         id="party:hero_1",
         name="Hero 1",
@@ -61,25 +63,23 @@ def main() -> None:
         heal_dice="1d8+2",
     )
 
-    registry = ActionRegistry()
-
-    player = PlayerController(registry=registry, prompt=prompt_cli)
+    # Controllers
+    player = PlayerController(registry=engine.registry, prompt=prompt_cli)
     enemy_ai = PlannerController(
-        registry=registry,
+        registry=engine.registry,
         config=PlannerConfig(rollouts=args.rollouts, epsilon=args.epsilon, seed=args.seed),
     )
-
-    controllers = {
-        hero1.id: player,
-        gob1.id: enemy_ai,
-    }
 
     def print_event(e):
         if e.message:
             print(e.message, flush=True)
 
-    session = CombatSession(dice=dice)
-    session.run([hero1, gob1], controllers=controllers, on_event=print_event)
+    # Encounter builder
+    enc = engine.encounter(on_event=print_event)
+    enc.add(hero1, controller=player)
+    enc.add(gob1, controller=enemy_ai)
+
+    engine.run_encounter(enc)
 
 
 if __name__ == "__main__":

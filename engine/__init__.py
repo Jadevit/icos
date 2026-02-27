@@ -2,5 +2,6 @@
 from __future__ import annotations
 
 from .core import IcosEngine
+from .encounter import Encounter
 
-__all__ = ["IcosEngine"]
+__all__ = ["IcosEngine", "Encounter"]

@@ -14,13 +14,11 @@ class Combatant:
     Runtime combatant state (mutable during an encounter).
 
     This is NOT a full character sheet.
-    It's the minimum "combat-facing" representation we need right now.
-
     team:
       - used for victory conditions and target filtering
       - 1v1 is just two combatants on different teams; no special casing
     flags:
-      - temporary status markers (we'll replace/augment with a real effects system later)
+      - temporary status markers
     """
     id: str
     name: str

@@ -6,7 +6,7 @@ from typing import Callable, List, Mapping, Optional
 
 from .dice import Dice
 from .models import ActionDeclaration, Combatant, Event
-from .rules import RulesEngine
+from .systems.combat.resolution import RulesEngine
 from .state import CombatState
 from .systems.ai.interface import CombatController
 

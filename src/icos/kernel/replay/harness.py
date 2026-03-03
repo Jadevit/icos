@@ -4,13 +4,13 @@ from dataclasses import dataclass
 from typing import Generic, List, TypeVar
 
 from icos.kernel.contracts import EventRecordV1, event_record_from_event
-from icos.kernel.core.actor import Actor
 from icos.kernel.core.session import EncounterLoop
+from icos.kernel.core.types import ActorLike
 
 from .formats import ReplayFileV1
 from .replayer import run_replay
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 
 
 @dataclass(frozen=True)

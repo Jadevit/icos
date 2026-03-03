@@ -1,5 +1,5 @@
 """Deterministic kernel used by Icos gameplay systems."""
 
-from .api import TactEngine
+from .api import KernelEngine
 
-__all__ = ["TactEngine"]
+__all__ = ["KernelEngine"]

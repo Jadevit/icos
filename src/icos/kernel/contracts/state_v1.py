@@ -3,14 +3,14 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Generic, TypeVar
 
-from icos.kernel.core.actor import Actor
 from icos.kernel.core.state import EncounterState
+from icos.kernel.core.types import ActorLike
 
 from .common import JsonValue, to_json_value
 
 STATE_SCHEMA_V1 = "icos.state.v1"
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 
 
 @dataclass(frozen=True)

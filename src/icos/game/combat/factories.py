@@ -3,11 +3,11 @@ from __future__ import annotations
 from typing import Optional
 
 from icos.content.defs.creature import MonsterDefinition
-from icos.game.runtime.actor import Combatant
-from icos.game.runtime.instances import instantiate_combatant, monster_to_template
+from icos.game.runtime.actor import ActorBlueprint
+from icos.game.runtime.instances import instantiate_actor_blueprint, monster_to_template
 
 
-def monster_to_combatant(
+def monster_to_actor_blueprint(
     monster: MonsterDefinition,
     *,
     team: str = "enemies",
@@ -16,9 +16,9 @@ def monster_to_combatant(
     ac_override: Optional[int] = None,
     heals_remaining: int = 0,
     heal_dice: str = "1d8+2",
-) -> Combatant:
+) -> ActorBlueprint:
     template = monster_to_template(monster, team=team)
-    return instantiate_combatant(
+    return instantiate_actor_blueprint(
         template,
         instance_id=instance_id,
         team=team,
@@ -27,3 +27,7 @@ def monster_to_combatant(
         heals_remaining=heals_remaining,
         heal_dice=heal_dice,
     )
+
+
+# Backward-compatible alias (deprecated naming).
+monster_to_combatant = monster_to_actor_blueprint

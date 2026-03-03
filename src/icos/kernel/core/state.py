@@ -3,21 +3,22 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict, Generic, List, TypeVar
 
-from .actor import Actor
+from .types import ActorLike
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 
 
 @dataclass
 class EncounterState(Generic[TActor]):
     """
-    Generic encounter state owned by Tact.
-    Games define what 'over' means and how actions mutate state.
+    Generic encounter state owned by the kernel runner.
+    Gameplay layers define what "over" means and how actions mutate state.
     """
     actors: List[TActor]
     round_num: int = 1
     turn_index: int = 0
     turn_order: List[str] = field(default_factory=list)
+    data: Dict[str, object] = field(default_factory=dict)
 
     _by_id: Dict[str, TActor] = field(init=False, repr=False)
 
@@ -36,6 +37,9 @@ class EncounterState(Generic[TActor]):
         if not self.turn_order:
             raise ValueError("turn_order not set.")
         return self.turn_order[self.turn_index]
+
+    def actor_ids(self) -> List[str]:
+        return [a.id for a in self.actors]
 
     def advance_turn(self) -> None:
         if not self.turn_order:

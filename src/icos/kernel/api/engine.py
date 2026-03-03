@@ -3,16 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable, Generic, List, Mapping, Optional, TypeVar
 
-from icos.kernel.core.actor import Actor
 from icos.kernel.core.session import EncounterController, EncounterLoop, EncounterSession
+from icos.kernel.core.types import ActorLike
 from icos.kernel.events.types import Event
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 EventSink = Callable[[Event], None]
 
 
 @dataclass
-class TactEngine(Generic[TActor]):
+class KernelEngine(Generic[TActor]):
     """
     Stable public facade for running encounters.
     """

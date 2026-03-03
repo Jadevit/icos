@@ -1,11 +1,11 @@
 from .actions import ActionRequest
-from .actor import Actor
 from .session import EncounterController, EncounterLoop, EncounterSession
 from .state import EncounterState
+from .types import ActorLike
 
 __all__ = [
     "ActionRequest",
-    "Actor",
+    "ActorLike",
     "EncounterController",
     "EncounterLoop",
     "EncounterSession",

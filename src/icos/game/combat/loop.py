@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
 
 from icos.kernel.core.actions import ActionRequest
@@ -9,56 +9,59 @@ from icos.kernel.core.state import EncounterState
 from icos.kernel.events.types import Event
 
 from icos.game.rules.dice import Dice
-from icos.game.runtime.actor import Combatant
+from icos.game.runtime.actor import ActorBlueprint
+from icos.game.effects import AbilityDefinition
 
-from .rules import RulesEngine
+from .runtime import CombatEcsRuntime
 
 
 @dataclass
-class CombatLoop(EncounterLoop[Combatant]):
-    """Combat implementation of tact's EncounterLoop protocol."""
+class CombatLoop(EncounterLoop[ActorBlueprint]):
+    """ECS-based combat loop implementation."""
 
     dice: Dice
+    runtime: CombatEcsRuntime = field(default_factory=CombatEcsRuntime)
 
-    def __post_init__(self) -> None:
-        self.rules = RulesEngine(self.dice)
+    def init_encounter(self, state: EncounterState[ActorBlueprint]) -> List[Event]:
+        return self.runtime.bootstrap(state, dice=self.dice)
 
-    def init_encounter(self, state: EncounterState[Combatant]) -> List[Event]:
-        order, events = self.rules.roll_initiative(state.actors)
-        state.turn_order = order
+    def before_turn(self, state: EncounterState[ActorBlueprint], actor_id: str) -> List[Event]:
+        return self.runtime.before_turn(state, actor_id, dice=self.dice)
 
-        names = " -> ".join(state.get(cid).name for cid in order)
-        events.append(Event(type="combat_start", message=f"Initiative order: {names}"))
-        return events
+    def resolve_action(self, state: EncounterState[ActorBlueprint], action: ActionRequest) -> List[Event]:
+        return self.runtime.resolve_action(state, action, dice=self.dice)
 
-    def before_turn(self, state: EncounterState[Combatant], actor_id: str) -> List[Event]:
-        actor = state.get(actor_id)
-        events: List[Event] = []
-        actor.flags.discard("defending")
-        for cond in actor.tick_conditions():
-            events.append(
-                Event(
-                    type="condition_expired",
-                    actor=actor.id,
-                    message=f"{actor.name} is no longer {cond}.",
-                    data={"condition": cond},
-                )
-            )
-        return events
+    def is_over(self, state: EncounterState[ActorBlueprint]) -> bool:
+        return self.runtime.is_over(state)
 
-    def resolve_action(self, state: EncounterState[Combatant], action: ActionRequest) -> List[Event]:
-        return self.rules.resolve_action(state, action)
+    def outcome(self, state: EncounterState[ActorBlueprint]) -> Optional[str]:
+        return self.runtime.outcome(state)
 
-    def is_over(self, state: EncounterState[Combatant]) -> bool:
-        return len({a.team for a in state.actors if a.alive}) <= 1
+    def finalize(self, state: EncounterState[ActorBlueprint]) -> List[Event]:
+        return []
 
-    def outcome(self, state: EncounterState[Combatant]) -> Optional[str]:
-        alive_teams = {a.team for a in state.actors if a.alive}
-        if len(alive_teams) == 1:
-            return next(iter(alive_teams))
-        return None
+    # --- Optional hooks consumed by EncounterSession for ECS state updates ---
 
-    def finalize(self, state: EncounterState[Combatant]) -> List[Event]:
-        winner = self.outcome(state)
-        msg = f"Combat ends. Winner team: {winner}" if winner else "Combat ends. No winner."
-        return [Event(type="combat_end", message=msg)]
+    def apply_event(self, state: EncounterState[ActorBlueprint], event: Event) -> List[Event]:
+        return self.runtime.apply_event(state, event)
+
+    def actor_name(self, state: EncounterState[ActorBlueprint], actor_id: str) -> str:
+        return self.runtime.actor_name(state, actor_id)
+
+    def actor_is_alive(self, state: EncounterState[ActorBlueprint], actor_id: str) -> bool:
+        return self.runtime.actor_is_alive(state, actor_id)
+
+    def actor_ids(self, state: EncounterState[ActorBlueprint]) -> list[str]:
+        return self.runtime.actor_ids(state)
+
+    def state_summary(self, state: EncounterState[ActorBlueprint]) -> dict[str, object]:
+        return self.runtime.state_summary(state)
+
+    def advance_turn(self, state: EncounterState[ActorBlueprint]) -> List[Event]:
+        return self.runtime.advance_turn(state, dice=self.dice)
+
+    def set_ability_catalog(self, catalog: dict[str, AbilityDefinition]) -> None:
+        self.runtime.ability_catalog = dict(catalog)
+
+    def action_intent(self, state: EncounterState[ActorBlueprint], action: ActionRequest) -> dict[str, object]:
+        return self.runtime.action_intent(state, action)

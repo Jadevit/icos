@@ -15,12 +15,13 @@ from icos.content.defs.creature import MonsterDefinition
 from icos.content.defs.entity import GenericEntityDefinition
 from icos.content.defs.item import EquipmentDefinition
 from icos.content.defs.spell import SpellDefinition
-from icos.game.runtime.actor import AttackProfile, Combatant
+from icos.game.runtime.actor import AttackProfile, ActorBlueprint
 from icos.game.runtime.instances import equipment_to_equipped_item
 from icos.game.runtime.party import EncounterPlan
+from icos.game.systems import actor_snapshot
 from icos.game.combat.actions import ActionRegistry
 from icos.game.combat.controllers import PlannerConfig, PlannerController, PlayerController
-from icos.game.combat.factories import monster_to_combatant
+from icos.game.combat.factories import monster_to_actor_blueprint
 from icos.game.combat.loop import CombatLoop
 
 from .context import DevContext
@@ -85,23 +86,37 @@ def install_builtin_commands(registry: CommandRegistry) -> None:
     registry.register("play", "Start immediate playable battle: play [monster_api_index]", _cmd_play)
     registry.register("enc", "Encounter commands: enc new|add|run [replay=...]|reset|list", _cmd_enc)
     registry.register("pace", "Set combat text pace: pace [off|fast|normal|slow|cinematic|seconds]", _cmd_pace)
+    registry.register("events", "Toggle event output: events on|off|status", _cmd_events)
+    registry.register("/events", "Toggle event output: /events on|off|status", _cmd_events)
     registry.register("hp", "HP commands: hp set <actor_id> <value>", _cmd_hp)
     registry.register("cond", "Condition commands: cond set|clear|list ...", _cmd_cond)
     registry.register("equip", "Equip commands: equip <actor_id> <equipment_api_index> | equip list <actor_id>", _cmd_equip)
 
 
 def _prompt_cli(
-    state: EncounterState[Combatant],
-    actor: Combatant,
+    state: EncounterState[ActorBlueprint],
+    actor: object,
     legal: List[ActionRequest],
 ) -> ActionRequest:
-    heals = f"{actor.heals_remaining} heals left" if actor.heals_remaining > 0 else "no heals"
-    print(f"\n{actor.name} ({actor.id}) HP {actor.hp}/{actor.max_hp} | {heals}", flush=True)
+    actor_id = str(getattr(actor, "id"))
+    actor_name = str(getattr(actor, "name"))
+    actor_hp = int(getattr(actor, "hp"))
+    actor_max_hp = int(getattr(actor, "max_hp"))
+    heals_remaining = int(getattr(actor, "heals_remaining", 0))
+    heals = f"{heals_remaining} heals left" if heals_remaining > 0 else "no heals"
+    print(f"\n{actor_name} ({actor_id}) HP {actor_hp}/{actor_max_hp} | {heals}", flush=True)
 
     for idx, action in enumerate(legal):
         if action.action_id == "attack" and action.targets:
-            target = state.get(action.targets[0]).name
+            target = _actor_name_from_state(state, str(action.targets[0]))
             print(f"{idx}) attack -> {target}", flush=True)
+        elif action.action_id == "use_ability":
+            ability_id = str(action.data.get("ability_id", "ability"))
+            if action.targets:
+                target = _actor_name_from_state(state, str(action.targets[0]))
+                print(f"{idx}) use_ability {ability_id} -> {target}", flush=True)
+            else:
+                print(f"{idx}) use_ability {ability_id}", flush=True)
         else:
             print(f"{idx}) {action.action_id}", flush=True)
 
@@ -247,7 +262,7 @@ def _cmd_enc(ctx: DevContext, args: List[str]) -> str:
             cond = ",".join(f"{k}:{v}" for k, v in sorted(actor.conditions.items())) or "-"
             lines.append(
                 f"  {actor.id:<18} {actor.name:<18} team={actor.team} "
-                f"hp={actor.hp}/{actor.max_hp} ac={actor.effective_ac} "
+                f"hp={actor.hp}/{actor.max_hp} ac={_effective_ac(actor)} "
                 f"heals={actor.heals_remaining} cond={cond}"
             )
         return "\n".join(lines)
@@ -315,7 +330,7 @@ def _cmd_hp(ctx: DevContext, args: List[str]) -> str:
         return f"No actor with id {actor_id!r}."
 
     before = actor.hp
-    actor.set_hp(value)
+    _set_actor_hp(actor, value)
     return f"{actor.id} HP {before} -> {actor.hp}"
 
 
@@ -344,6 +359,23 @@ def _cmd_pace(ctx: DevContext, args: List[str]) -> str:
     return f"Pace set to {_pace_label(delay)} ({delay:.2f}s/event)."
 
 
+def _cmd_events(ctx: DevContext, args: List[str]) -> str:
+    if not args:
+        return f"Event output: {'on' if ctx.verbose_events else 'off'}"
+
+    token = args[0].strip().lower()
+    if token in {"on", "true", "1"}:
+        ctx.verbose_events = True
+    elif token in {"off", "false", "0"}:
+        ctx.verbose_events = False
+    elif token in {"status", "show"}:
+        return f"Event output: {'on' if ctx.verbose_events else 'off'}"
+    else:
+        return "Usage: events on|off|status"
+
+    return f"Event output: {'on' if ctx.verbose_events else 'off'}"
+
+
 def _cmd_cond(ctx: DevContext, args: List[str]) -> str:
     if not args:
         return "Usage: cond set <actor_id> <name> [turns] | cond clear <actor_id> <name> | cond list <actor_id>"
@@ -359,8 +391,11 @@ def _cmd_cond(ctx: DevContext, args: List[str]) -> str:
             return f"No actor with id {args[1]!r}."
         turns = _parse_int(args[3]) if len(args) >= 4 else 2
         turns = max(1, turns or 2)
-        actor.add_condition(args[2], turns)
-        return f"{actor.id} condition set: {args[2].lower()} ({turns} turns)"
+        cond = args[2].strip().lower()
+        if not cond:
+            return "Condition name cannot be empty."
+        actor.conditions[cond] = max(actor.conditions.get(cond, 0), turns)
+        return f"{actor.id} condition set: {cond} ({turns} turns)"
 
     if sub == "clear":
         if len(args) < 3:
@@ -368,8 +403,10 @@ def _cmd_cond(ctx: DevContext, args: List[str]) -> str:
         actor = _find_actor(ctx, args[1])
         if actor is None:
             return f"No actor with id {args[1]!r}."
-        actor.clear_condition(args[2])
-        return f"{actor.id} condition cleared: {args[2].lower()}"
+        cond = args[2].strip().lower()
+        if cond:
+            actor.conditions.pop(cond, None)
+        return f"{actor.id} condition cleared: {cond}"
 
     if sub == "list":
         if len(args) < 2:
@@ -406,7 +443,7 @@ def _cmd_equip(ctx: DevContext, args: List[str]) -> str:
                 f"  {item.api_index:<22} {item.name} "
                 f"(ac+{m.ac_bonus} atk+{m.attack_bonus} dmg+{m.damage_bonus} heal+{m.heal_bonus})"
             )
-        lines.append(f"  effective_ac={actor.effective_ac}")
+        lines.append(f"  effective_ac={_effective_ac(actor)}")
         return "\n".join(lines)
 
     if len(args) < 2:
@@ -418,22 +455,22 @@ def _cmd_equip(ctx: DevContext, args: List[str]) -> str:
 
     equipment = ctx.engine.get_equipment(args[1])
     equipped = equipment_to_equipped_item(equipment)
-    actor.equip_item(equipped)
+    actor.inventory.equip(equipped)
 
     mods = equipped.modifiers
     return (
         f"{actor.id} equipped {equipment.name} "
         f"(ac+{mods.ac_bonus} atk+{mods.attack_bonus} dmg+{mods.damage_bonus} heal+{mods.heal_bonus}). "
-        f"effective_ac={actor.effective_ac}"
+        f"effective_ac={_effective_ac(actor)}"
     )
 
 
-def _add_default_player(ctx: DevContext, *, name: str = "Hero") -> Combatant:
+def _add_default_player(ctx: DevContext, *, name: str = "Hero") -> ActorBlueprint:
     if ctx.encounter is None:
         raise RuntimeError("No encounter initialized")
 
     cid = f"party:{name.lower()}"
-    hero = Combatant(
+    hero = ActorBlueprint(
         id=cid,
         name=name,
         team="party",
@@ -449,6 +486,7 @@ def _add_default_player(ctx: DevContext, *, name: str = "Hero") -> Combatant:
                 damage_type="Slashing",
             )
         ],
+        abilities=["second-wind"],
         heals_remaining=3,
         heal_dice="1d8+2",
     )
@@ -466,7 +504,7 @@ def _add_monster(
     hp: int | None = None,
     ac: int | None = None,
     heals: int | None = None,
-) -> Combatant:
+) -> ActorBlueprint:
     if ctx.encounter is None:
         raise RuntimeError("No encounter initialized")
 
@@ -474,7 +512,7 @@ def _add_monster(
     if heals is None:
         heals = _default_enemy_heals(monster_def) if team == "enemies" else 0
 
-    monster = monster_to_combatant(
+    monster = monster_to_actor_blueprint(
         monster_def,
         team=team,
         instance_id=f"{team}:{api_index}_{len(ctx.encounter.actors) + 1}",
@@ -497,11 +535,13 @@ def _run_encounter(ctx: DevContext, *, replay_out: str | None = None) -> None:
         raise RuntimeError("No active encounter")
 
     def print_event(event: Event) -> None:
-        if event.message:
-            print(event.message, flush=True)
-            delay = _event_delay_for(ctx, event)
-            if delay > 0.0:
-                time.sleep(delay)
+        if not ctx.verbose_events:
+            return
+
+        print(_format_event_debug(event), flush=True)
+        delay = _event_delay_for(ctx, event)
+        if delay > 0.0:
+            time.sleep(delay)
 
     ctx.encounter.on_event = print_event
 
@@ -599,7 +639,7 @@ def _format_entity_summary(entity: object) -> str:
     return repr(entity)
 
 
-def _find_actor(ctx: DevContext, actor_id: str) -> Combatant | None:
+def _find_actor(ctx: DevContext, actor_id: str) -> ActorBlueprint | None:
     if ctx.encounter is None:
         return None
     return next((a for a in ctx.encounter.actors if a.id == actor_id), None)
@@ -630,9 +670,34 @@ def _event_delay_for(ctx: DevContext, event: Event) -> float:
     t = event.type
     if t in ("encounter.started", "encounter.ended", "combat_start", "combat_end", "turn.started", "turn_start"):
         return base * 1.35
-    if t in ("attack_roll", "hit", "miss", "damage", "heal", "down", "defend"):
+    if t in (
+        "attack_roll",
+        "hit",
+        "miss",
+        "damage",
+        "heal",
+        "down",
+        "defend",
+        "attack.started",
+        "ability.used",
+        "check.rolled",
+        "damage.applied",
+        "heal.applied",
+        "hp.changed",
+        "entity.died",
+    ):
         return base * 1.0
     return base * 0.75
+
+
+def _format_event_debug(event: Event) -> str:
+    payload = {
+        "type": event.type,
+        "actor_id": event.actor,
+        "target_id": event.target,
+        "data": dict(event.data),
+    }
+    return json.dumps(payload, sort_keys=True)
 
 
 def _pace_label(delay: float) -> str:
@@ -640,6 +705,29 @@ def _pace_label(delay: float) -> str:
         if abs(delay - value) < 1e-6:
             return name
     return "custom"
+
+
+def _set_actor_hp(actor: ActorBlueprint, value: int) -> None:
+    actor.hp = max(0, min(actor.max_hp, int(value)))
+    actor.alive = actor.hp > 0
+
+
+def _effective_ac(actor: ActorBlueprint) -> int:
+    return max(1, int(actor.ac) + int(actor.inventory.modifiers.ac_bonus))
+
+
+def _actor_name_from_state(state: EncounterState[ActorBlueprint], actor_id: str) -> str:
+    world = state.data.get("ecs_world")
+    if world is not None:
+        try:
+            return actor_snapshot(world, actor_id).name
+        except Exception:
+            pass
+
+    try:
+        return state.get(actor_id).name
+    except Exception:
+        return actor_id
 
 
 def _parse_kv(parts: List[str]) -> dict[str, str]:

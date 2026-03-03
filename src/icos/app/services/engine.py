@@ -4,9 +4,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Generic, List, Mapping, Optional, TypeVar
 
-from icos.kernel.api.engine import TactEngine
-from icos.kernel.core.actor import Actor
+from icos.kernel.api.engine import KernelEngine
 from icos.kernel.core.session import EncounterController, EncounterLoop
+from icos.kernel.core.types import ActorLike
 from icos.kernel.events.types import Event
 from icos.kernel.replay import ReplayFileV1, build_replay, write_replay
 
@@ -21,6 +21,7 @@ from icos.content.defs.item import EquipmentDefinition
 from icos.content.defs.spell import SpellDefinition
 from icos.game.rules.dice import Dice
 from icos.game.runtime.party import EncounterPlan
+from icos.game.effects import AbilityDefinition, ability_from_feature
 
 from icos.content.bundles import bundle_pack
 from icos.content.codex import (
@@ -30,7 +31,7 @@ from icos.content.codex import (
     read_codex_manifest,
 )
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 EventSink = Callable[[Event], None]
 
 
@@ -46,7 +47,7 @@ class GameEngine(Generic[TActor]):
     loader: CodexLoader = field(init=False)
     db: CodexDb = field(init=False)
     content: ContentStore = field(init=False)
-    tact: TactEngine[TActor] = field(default_factory=TactEngine)
+    kernel: KernelEngine[TActor] = field(default_factory=KernelEngine)
 
     def __post_init__(self) -> None:
         self.dice = Dice(seed=self.seed) if self.seed is not None else Dice()
@@ -156,7 +157,8 @@ class GameEngine(Generic[TActor]):
         replay_out: str | Path | None = None,
         replay_metadata: Optional[dict[str, Any]] = None,
     ) -> List[Event]:
-        events = self.tact.run(
+        self._inject_ability_catalog(loop)
+        events = self.kernel.run(
             loop=loop,
             actors=actors,
             controllers=controllers,
@@ -183,3 +185,30 @@ class GameEngine(Generic[TActor]):
         metadata: Optional[dict[str, Any]] = None,
     ) -> ReplayFileV1:
         return build_replay(actors=actors, events=events, metadata=metadata)
+
+    def _inject_ability_catalog(self, loop: EncounterLoop[TActor]) -> None:
+        setter = getattr(loop, "set_ability_catalog", None)
+        if not callable(setter):
+            return
+        setter(self._build_ability_catalog())
+
+    def _build_ability_catalog(self) -> dict[str, AbilityDefinition]:
+        out: dict[str, AbilityDefinition] = {}
+        try:
+            features = self.content.list_compiled("features")
+        except Exception:
+            return out
+
+        for entry in features:
+            if not isinstance(entry, GenericEntityDefinition):
+                continue
+            try:
+                ability = ability_from_feature(entry)
+            except Exception:
+                continue
+            if ability is None:
+                continue
+            out[entry.api_index] = ability
+            out[entry.id] = ability
+
+        return out

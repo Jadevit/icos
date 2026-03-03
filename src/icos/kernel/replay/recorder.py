@@ -14,12 +14,12 @@ from icos.kernel.contracts import (
     to_json_value,
 )
 from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.actor import Actor
+from icos.kernel.core.types import ActorLike
 from icos.kernel.events.types import ACTION_VALIDATED, Event
 
 from .formats import REPLAY_SCHEMA_V1, ReplayFileV1
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 
 
 def extract_validated_actions(events: Iterable[Event]) -> list[ActionRecordV1]:

@@ -7,8 +7,10 @@ from typing import Mapping, Sequence
 @dataclass(frozen=True)
 class ActionRequest:
     """
-    Generic declared intent. Tact does not interpret "attack" or "heal".
-    The game defines action ids and payload schema.
+    Generic declared intent.
+
+    The kernel does not interpret domain actions like "attack" or "heal";
+    gameplay systems define action ids and payload schema.
 
     Examples (Icos-level):
       action_id="attack", targets=["enemy:goblin_1"], data={"attack_index": 0}

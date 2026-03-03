@@ -3,11 +3,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from icos.content.defs.creature import MonsterDefinition
-from icos.game.runtime.actor import AttackProfile, Combatant
+from icos.game.runtime.actor import AttackProfile, ActorBlueprint
 
 
 @dataclass(frozen=True)
-class CombatantTemplate:
+class ActorTemplate:
     """Runtime-ready combat template detached from codex schema details."""
 
     source_id: str
@@ -21,13 +21,13 @@ class CombatantTemplate:
     attacks: tuple[AttackProfile, ...] = field(default_factory=tuple)
 
 
-def monster_to_template(monster: MonsterDefinition, *, team: str = "enemies") -> CombatantTemplate:
+def monster_to_template(monster: MonsterDefinition, *, team: str = "enemies") -> ActorTemplate:
     ac = monster.armor_class[0].value if monster.armor_class else 10
     attacks = _extract_attacks(monster)
     if not attacks:
         raise ValueError(f"Monster {monster.name!r} has no usable attacks.")
 
-    return CombatantTemplate(
+    return ActorTemplate(
         source_id=monster.id,
         api_index=monster.api_index,
         name=monster.name,
@@ -39,8 +39,8 @@ def monster_to_template(monster: MonsterDefinition, *, team: str = "enemies") ->
     )
 
 
-def instantiate_combatant(
-    template: CombatantTemplate,
+def instantiate_actor_blueprint(
+    template: ActorTemplate,
     *,
     instance_id: str | None = None,
     team: str | None = None,
@@ -48,7 +48,7 @@ def instantiate_combatant(
     ac_override: int | None = None,
     heals_remaining: int = 0,
     heal_dice: str = "1d8+2",
-) -> Combatant:
+) -> ActorBlueprint:
     assigned_team = team if team is not None else template.team
     cid = instance_id if instance_id is not None else f"{assigned_team}:{template.api_index}"
 
@@ -58,7 +58,7 @@ def instantiate_combatant(
     ac = template.ac if ac_override is None else int(ac_override)
     ac = max(1, ac)
 
-    return Combatant(
+    return ActorBlueprint(
         id=cid,
         name=template.name,
         team=assigned_team,
@@ -94,3 +94,8 @@ def _extract_attacks(monster: MonsterDefinition) -> list[AttackProfile]:
         )
 
     return attacks
+
+
+# Backward-compatible aliases (deprecated naming).
+CombatantTemplate = ActorTemplate
+instantiate_combatant = instantiate_actor_blueprint

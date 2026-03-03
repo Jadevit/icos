@@ -15,10 +15,10 @@ TURN_STARTED = "turn.started"
 TURN_ENDED = "turn.ended"
 TURN_SKIPPED = "turn.skipped"
 
-ACTION_REQUESTED = "action.requested"   # controller produced an ActionRequest
-ACTION_VALIDATED = "action.validated"   # loop accepted/normalized it
-ACTION_RESOLVED = "action.resolved"     # loop produced outcomes/events
-ACTION_APPLIED = "action.applied"       # loop mutated state (if it distinguishes resolve/apply)
+ACTION_REQUESTED = "action.requested"
+ACTION_VALIDATED = "action.validated"
+ACTION_RESOLVED = "action.resolved"
+ACTION_APPLIED = "action.applied"
 
 
 @dataclass(frozen=True)

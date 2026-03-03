@@ -6,14 +6,14 @@ from dataclasses import dataclass
 from typing import Deque, Generic, List, Mapping, TypeVar
 
 from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.actor import Actor
 from icos.kernel.core.session import EncounterController, EncounterLoop, EncounterSession
 from icos.kernel.core.state import EncounterState
+from icos.kernel.core.types import ActorLike
 from icos.kernel.events.types import Event
 
 from .formats import ReplayFileV1
 
-TActor = TypeVar("TActor", bound=Actor)
+TActor = TypeVar("TActor", bound=ActorLike)
 
 
 class ReplayMismatchError(RuntimeError):

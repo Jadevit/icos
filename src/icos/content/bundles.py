@@ -124,6 +124,7 @@ def bundle_pack(pack_root: Path, out_db: Path) -> str:
 
         for f in files:
             raw = json.loads(f.path.read_text(encoding="utf-8"))
+            validate_entity_schema(endpoint=f.endpoint, raw=raw, path=f.path)
             name = raw.get("name") if isinstance(raw.get("name"), str) else None
             entity_id = f"{f.endpoint}:{f.api_index}"
 
@@ -147,6 +148,52 @@ def bundle_pack(pack_root: Path, out_db: Path) -> str:
         conn.close()
 
     return content_hash
+
+
+def validate_entity_schema(*, endpoint: str, raw: Any, path: Path) -> None:
+    if not isinstance(raw, dict):
+        raise ValueError(f"{path}: entity JSON must be an object.")
+
+    name = raw.get("name")
+    if name is not None and not isinstance(name, str):
+        raise ValueError(f"{path}: 'name' must be a string when provided.")
+
+    if endpoint == "features":
+        _validate_feature_effect_schema(raw=raw, path=path)
+
+
+def _validate_feature_effect_schema(*, raw: Json, path: Path) -> None:
+    effects = raw.get("effects")
+    if effects is None:
+        return
+    if not isinstance(effects, list):
+        raise ValueError(f"{path}: feature field 'effects' must be a list when provided.")
+
+    for idx, effect in enumerate(effects):
+        _validate_effect_schema(effect=effect, path=path, label=f"effects[{idx}]")
+
+
+def _validate_effect_schema(*, effect: Any, path: Path, label: str) -> None:
+    if not isinstance(effect, dict):
+        raise ValueError(f"{path}: {label} must be an object.")
+
+    effect_type = effect.get("type")
+    if not isinstance(effect_type, str) or not effect_type.strip():
+        raise ValueError(f"{path}: {label}.type must be a non-empty string.")
+
+    if "on_success" in effect:
+        branch = effect["on_success"]
+        if not isinstance(branch, list):
+            raise ValueError(f"{path}: {label}.on_success must be a list.")
+        for i, nested in enumerate(branch):
+            _validate_effect_schema(effect=nested, path=path, label=f"{label}.on_success[{i}]")
+
+    if "on_failure" in effect:
+        branch = effect["on_failure"]
+        if not isinstance(branch, list):
+            raise ValueError(f"{path}: {label}.on_failure must be a list.")
+        for i, nested in enumerate(branch):
+            _validate_effect_schema(effect=nested, path=path, label=f"{label}.on_failure[{i}]")
 
 
 def default_bundle_name(pack_root: Path) -> str:

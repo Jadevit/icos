@@ -2,12 +2,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Generic, List, Mapping, Optional, TypeVar
+from typing import Any, Callable, Generic, List, Mapping, Optional, TypeVar
 
 from icos.kernel.api.engine import TactEngine
 from icos.kernel.core.actor import Actor
 from icos.kernel.core.session import EncounterController, EncounterLoop
 from icos.kernel.events.types import Event
+from icos.kernel.replay import ReplayFileV1, build_replay, write_replay
 
 from icos.content.loader import CodexLoader
 from icos.content.paths import ContentPaths
@@ -152,11 +153,33 @@ class GameEngine(Generic[TActor]):
         controllers: Mapping[str, EncounterController[TActor]],
         max_rounds: int = 50,
         on_event: Optional[EventSink] = None,
+        replay_out: str | Path | None = None,
+        replay_metadata: Optional[dict[str, Any]] = None,
     ) -> List[Event]:
-        return self.tact.run(
+        events = self.tact.run(
             loop=loop,
             actors=actors,
             controllers=controllers,
             max_rounds=max_rounds,
             on_event=on_event,
         )
+        if replay_out is not None:
+            metadata: dict[str, Any] = {
+                "seed": self.seed,
+                "max_rounds": max_rounds,
+                "loop": type(loop).__name__,
+            }
+            if replay_metadata:
+                metadata.update(replay_metadata)
+            replay = self.build_replay(actors=actors, events=events, metadata=metadata)
+            write_replay(replay_out, replay)
+        return events
+
+    def build_replay(
+        self,
+        *,
+        actors: List[TActor],
+        events: List[Event],
+        metadata: Optional[dict[str, Any]] = None,
+    ) -> ReplayFileV1:
+        return build_replay(actors=actors, events=events, metadata=metadata)

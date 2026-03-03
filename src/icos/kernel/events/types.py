@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Mapping, Optional
 
+EVENT_SCHEMA_V1 = "icos.event.v1"
+
 
 # --- Canonical engine lifecycle events ------------------------------------
 ENCOUNTER_STARTED = "encounter.started"
@@ -11,6 +13,7 @@ ROUND_STARTED = "round.started"
 ROUND_ENDED = "round.ended"
 TURN_STARTED = "turn.started"
 TURN_ENDED = "turn.ended"
+TURN_SKIPPED = "turn.skipped"
 
 ACTION_REQUESTED = "action.requested"   # controller produced an ActionRequest
 ACTION_VALIDATED = "action.validated"   # loop accepted/normalized it

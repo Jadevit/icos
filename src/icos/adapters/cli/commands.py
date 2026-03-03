@@ -83,7 +83,7 @@ def install_builtin_commands(registry: CommandRegistry) -> None:
     registry.register("find", "Search ids/names: find <text> [limit]", _cmd_find)
 
     registry.register("play", "Start immediate playable battle: play [monster_api_index]", _cmd_play)
-    registry.register("enc", "Encounter commands: enc new|add|run|reset|list", _cmd_enc)
+    registry.register("enc", "Encounter commands: enc new|add|run [replay=...]|reset|list", _cmd_enc)
     registry.register("pace", "Set combat text pace: pace [off|fast|normal|slow|cinematic|seconds]", _cmd_pace)
     registry.register("hp", "HP commands: hp set <actor_id> <value>", _cmd_hp)
     registry.register("cond", "Condition commands: cond set|clear|list ...", _cmd_cond)
@@ -226,7 +226,7 @@ def _cmd_play(ctx: DevContext, args: List[str]) -> str:
 
 def _cmd_enc(ctx: DevContext, args: List[str]) -> str:
     if not args:
-        return "Usage: enc new|add|run|reset|list"
+        return "Usage: enc new|add|run [replay=<path>]|reset|list"
 
     sub = args[0]
 
@@ -291,8 +291,10 @@ def _cmd_enc(ctx: DevContext, args: List[str]) -> str:
     if sub == "run":
         if ctx.encounter is None:
             return "No active encounter. Run: enc new"
-        _run_encounter(ctx)
-        return "Encounter finished."
+        kv = _parse_kv(args[1:])
+        replay_out = kv.get("replay")
+        _run_encounter(ctx, replay_out=replay_out)
+        return f"Encounter finished.{f' Replay saved: {replay_out}' if replay_out else ''}"
 
     return f"Unknown enc subcommand: {sub!r}"
 
@@ -490,7 +492,7 @@ def _add_monster(
     return monster
 
 
-def _run_encounter(ctx: DevContext) -> None:
+def _run_encounter(ctx: DevContext, *, replay_out: str | None = None) -> None:
     if ctx.encounter is None:
         raise RuntimeError("No active encounter")
 
@@ -510,6 +512,7 @@ def _run_encounter(ctx: DevContext) -> None:
         controllers=ctx.encounter.controllers,
         max_rounds=ctx.encounter.max_rounds,
         on_event=ctx.encounter.on_event,
+        replay_out=replay_out,
     )
 
 

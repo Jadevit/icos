@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from icos.kernel.events.types import (
+from icos.tact.events.types import (
     ACTION_APPLIED,
     ACTION_REQUESTED,
     ACTION_RESOLVED,

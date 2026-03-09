@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import List
 
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 
 @dataclass

@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any, Iterable, TypeVar
 
-from icos.kernel.contracts import (
+from icos.tact.contracts import (
     ActionRecordV1,
     EventRecordV1,
     StateRecordV1,
@@ -13,9 +13,9 @@ from icos.kernel.contracts import (
     state_record_from_actors,
     to_json_value,
 )
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.types import ActorLike
-from icos.kernel.events.types import ACTION_VALIDATED, Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.types import ActorLike
+from icos.tact.events.types import ACTION_VALIDATED, Event
 
 from .formats import REPLAY_SCHEMA_V1, ReplayFileV1
 

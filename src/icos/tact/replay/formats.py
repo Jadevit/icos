@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from icos.kernel.contracts import ActionRecordV1, EventRecordV1, StateRecordV1
-from icos.kernel.contracts.common import JsonValue
+from icos.tact.contracts import ActionRecordV1, EventRecordV1, StateRecordV1
+from icos.tact.contracts.common import JsonValue
 
 REPLAY_SCHEMA_V1 = "icos.replay.v1"
 

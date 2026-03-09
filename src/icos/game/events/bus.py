@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 
 @dataclass

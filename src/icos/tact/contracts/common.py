@@ -35,3 +35,15 @@ def to_json_value(value: Any) -> JsonValue:
         return to_json_value(vars(value))
 
     return str(value)
+
+
+def to_json_dict(value: Any) -> dict[str, JsonValue]:
+    """
+    Convert any value into a JSON-safe dictionary payload.
+
+    Dataclasses are flattened via ``asdict``; non-dicts are wrapped into ``{"value": ...}``.
+    """
+    raw = to_json_value(value)
+    if isinstance(raw, dict):
+        return raw
+    return {"value": raw}

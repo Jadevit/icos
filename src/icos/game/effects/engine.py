@@ -16,7 +16,7 @@ from icos.game.events import (
     EventBus,
 )
 from icos.game.rules.dice import Dice
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 from .ability import AbilityDefinition
 from .models import (

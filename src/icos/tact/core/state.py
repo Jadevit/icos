@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+"""Mutable runtime encounter state used by simulation systems."""
+
 from dataclasses import dataclass, field
 from typing import Dict, Generic, List, TypeVar
 

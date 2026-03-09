@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from icos.game.ecs import ECSRegistry
 from icos.game.events import CONDITION_TICKED, EventBus
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 
 def condition_tick_system(world: ECSRegistry, bus: EventBus, context: dict[str, object]) -> None:

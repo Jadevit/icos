@@ -3,9 +3,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable, Generic, List, Mapping, Optional, TypeVar
 
-from icos.kernel.core.session import EncounterController, EncounterLoop, EncounterSession
-from icos.kernel.core.types import ActorLike
-from icos.kernel.events.types import Event
+from icos.tact.core.session import EncounterController, EncounterLoop, EncounterSession
+from icos.tact.core.types import ActorLike
+from icos.tact.events.types import Event
 
 TActor = TypeVar("TActor", bound=ActorLike)
 EventSink = Callable[[Event], None]

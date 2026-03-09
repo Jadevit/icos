@@ -4,9 +4,9 @@ import random
 from dataclasses import dataclass, field
 from typing import Callable, Optional
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.session import EncounterController
-from icos.kernel.core.state import EncounterState
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.session import EncounterController
+from icos.tact.core.state import EncounterState
 
 from icos.game.events import EventBus
 from icos.game.runtime.actor import ActorBlueprint

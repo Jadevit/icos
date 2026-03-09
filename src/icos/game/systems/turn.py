@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from icos.game.ecs import ECSRegistry, EncounterComponent
 from icos.game.events import TURN_ADVANCED, TURN_CONTEXT_RESET, EventBus
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 
 def turn_start_system(world: ECSRegistry, bus: EventBus, context: dict[str, object]) -> None:

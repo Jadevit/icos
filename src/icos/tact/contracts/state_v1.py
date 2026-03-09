@@ -1,12 +1,14 @@
 from __future__ import annotations
 
+"""Versioned serialized encounter-state schema used for replay/contracts."""
+
 from dataclasses import dataclass, field
 from typing import Generic, TypeVar
 
-from icos.kernel.core.state import EncounterState
-from icos.kernel.core.types import ActorLike
+from icos.tact.core.state import EncounterState
+from icos.tact.core.types import ActorLike
 
-from .common import JsonValue, to_json_value
+from .common import JsonValue, to_json_dict, to_json_value
 
 STATE_SCHEMA_V1 = "icos.state.v1"
 
@@ -23,14 +25,7 @@ class ActorStateV1:
     attrs: dict[str, JsonValue] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, JsonValue]:
-        return {
-            "id": self.id,
-            "name": self.name,
-            "team": self.team,
-            "alive": self.alive,
-            "flags": list(self.flags),
-            "attrs": self.attrs,
-        }
+        return to_json_dict(self)
 
 
 @dataclass(frozen=True)
@@ -42,13 +37,7 @@ class StateRecordV1(Generic[TActor]):
     actors: tuple[ActorStateV1, ...] = field(default_factory=tuple)
 
     def to_dict(self) -> dict[str, JsonValue]:
-        return {
-            "schema": self.schema,
-            "round": self.round,
-            "turn_index": self.turn_index,
-            "turn_order": list(self.turn_order),
-            "actors": [a.to_dict() for a in self.actors],
-        }
+        return to_json_dict(self)
 
 
 def actor_state_from_actor(actor: TActor) -> ActorStateV1:

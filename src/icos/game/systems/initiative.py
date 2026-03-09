@@ -4,7 +4,7 @@ from icos.content.defs.common import ability_mod
 from icos.game.ecs import ECSRegistry, StatsComponent
 from icos.game.events import INITIATIVE_ROLLED, TURN_ORDER_SET, EventBus
 from icos.game.rules.dice import Dice
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 from .common import actor_snapshot
 

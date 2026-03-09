@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.state import EncounterState
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.state import EncounterState
 
 from icos.game.runtime.actor import ActorBlueprint
 from icos.game.systems import actor_snapshot, living_enemies

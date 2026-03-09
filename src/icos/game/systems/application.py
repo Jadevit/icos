@@ -27,7 +27,7 @@ from icos.game.events import (
     TURN_CONTEXT_RESET,
     TURN_ORDER_SET,
 )
-from icos.kernel.events.types import Event
+from icos.tact.events.types import Event
 
 
 def apply_event_to_world(

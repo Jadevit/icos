@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.events.types import Event
 from icos.game.ecs import ECSRegistry
 from icos.game.events import AI_ACTION_SELECTED, EventBus
 

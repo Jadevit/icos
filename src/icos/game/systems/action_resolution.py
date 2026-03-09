@@ -12,8 +12,8 @@ from icos.game.effects import (
 )
 from icos.game.events import ATTACK_STARTED, EventBus
 from icos.game.rules.dice import Dice
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.events.types import Event
 
 from .common import actor_snapshot
 

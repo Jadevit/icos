@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from icos.kernel.events.types import EVENT_SCHEMA_V1, Event
+from icos.tact.events.types import EVENT_SCHEMA_V1, Event
 
-from .common import JsonValue, to_json_value
+from .common import JsonValue, to_json_dict
 
 
 @dataclass(frozen=True)
@@ -18,20 +18,11 @@ class EventRecordV1:
     data: dict[str, JsonValue] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, JsonValue]:
-        return {
-            "schema": self.schema,
-            "event_seq": self.event_seq,
-            "type": self.type,
-            "actor_id": self.actor_id,
-            "target_id": self.target_id,
-            "message": self.message,
-            "data": self.data,
-        }
+        return to_json_dict(self)
 
 
 def event_record_from_event(event: Event) -> EventRecordV1:
-    payload = to_json_value(dict(event.data))
-    data = payload if isinstance(payload, dict) else {"value": payload}
+    data = to_json_dict(dict(event.data))
 
     event_seq = data.get("event_seq", 0)
     try:

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from icos.kernel.core.actions import ActionRequest
+from icos.tact.core.actions import ActionRequest
 
-from .common import JsonValue, to_json_value
+from .common import JsonValue, to_json_dict
 
 ACTION_SCHEMA_V1 = "icos.action.v1"
 
@@ -21,16 +21,7 @@ class ActionRecordV1:
     data: dict[str, JsonValue] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, JsonValue]:
-        return {
-            "schema": self.schema,
-            "action_seq": self.action_seq,
-            "round": self.round,
-            "turn_index": self.turn_index,
-            "actor_id": self.actor_id,
-            "action_id": self.action_id,
-            "targets": list(self.targets),
-            "data": self.data,
-        }
+        return to_json_dict(self)
 
 
 def action_record_from_request(
@@ -40,8 +31,7 @@ def action_record_from_request(
     round_num: int,
     turn_index: int,
 ) -> ActionRecordV1:
-    payload = to_json_value(dict(action.data))
-    safe_data = payload if isinstance(payload, dict) else {}
+    safe_data = to_json_dict(dict(action.data))
 
     return ActionRecordV1(
         action_seq=action_seq,

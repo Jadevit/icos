@@ -28,9 +28,9 @@ from icos.game.systems import (
     turn_advance_system,
     turn_start_system,
 )
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.state import EncounterState
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.state import EncounterState
+from icos.tact.events.types import Event
 
 
 @dataclass

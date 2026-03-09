@@ -4,11 +4,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Generic, List, Mapping, Optional, TypeVar
 
-from icos.kernel.api.engine import KernelEngine
-from icos.kernel.core.session import EncounterController, EncounterLoop
-from icos.kernel.core.types import ActorLike
-from icos.kernel.events.types import Event
-from icos.kernel.replay import ReplayFileV1, build_replay, write_replay
+from icos.tact.api.engine import KernelEngine
+from icos.tact.core.session import EncounterController, EncounterLoop
+from icos.tact.core.types import ActorLike
+from icos.tact.events.types import Event
+from icos.tact.replay import ReplayFileV1, build_replay, write_replay
 
 from icos.content.loader import CodexLoader
 from icos.content.paths import ContentPaths

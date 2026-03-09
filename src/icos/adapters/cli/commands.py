@@ -3,12 +3,12 @@ from __future__ import annotations
 import json
 import sqlite3
 import time
-from dataclasses import dataclass, field
-from typing import Callable, Dict, List, Optional
+from typing import Dict, List, Optional
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.state import EncounterState
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.state import EncounterState
+from icos.tact.devtools import CommandRegistry, install_tact_commands
+from icos.tact.events.types import Event
 
 from icos.content.defs.condition import ConditionDefinition
 from icos.content.defs.creature import MonsterDefinition
@@ -26,7 +26,6 @@ from icos.game.combat.loop import CombatLoop
 
 from .context import DevContext
 
-CommandFn = Callable[[DevContext, List[str]], Optional[str]]
 DEFAULT_EVENT_DELAY_SECONDS = 0.35
 PACE_PRESETS: Dict[str, float] = {
     "off": 0.0,
@@ -36,46 +35,16 @@ PACE_PRESETS: Dict[str, float] = {
     "cinematic": 1.00,
 }
 
-
-@dataclass
-class Command:
-    name: str
-    help: str
-    fn: CommandFn
-
-
-@dataclass
-class CommandRegistry:
-    commands: Dict[str, Command] = field(default_factory=dict)
-
-    def register(self, name: str, help: str, fn: CommandFn) -> None:
-        self.commands[name] = Command(name=name, help=help, fn=fn)
-
-    def run(self, ctx: DevContext, argv: List[str]) -> Optional[str]:
-        if not argv:
-            return None
-        cmd = self.commands.get(argv[0])
-        if cmd is None:
-            return f"Unknown command: {argv[0]!r}. Try: help"
-        return cmd.fn(ctx, argv[1:])
-
-    def list_help(self) -> str:
-        lines = ["Commands:"]
-        for name in sorted(self.commands):
-            lines.append(f"  {name:<12} {self.commands[name].help}")
-        lines.append("")
-        lines.append("Quick flow:")
-        lines.append("  1) endpoints")
-        lines.append("  2) ls monsters 10")
-        lines.append("  3) load monsters berserker")
-        lines.append("  4) play goblin")
-        lines.append("  5) pace slow")
-        lines.append("  6) enc new / enc add ... / equip ... / cond ... / enc run")
-        return "\n".join(lines)
-
-
-def install_builtin_commands(registry: CommandRegistry) -> None:
-    registry.register("help", "Show command help + examples.", lambda _ctx, _args: registry.list_help())
+def install_builtin_commands(registry: CommandRegistry[DevContext]) -> None:
+    registry.quick_flow = [
+        "endpoints",
+        "ls monsters 10",
+        "load monsters berserker",
+        "play goblin",
+        "pace slow",
+        "enc new / enc add ... / equip ... / cond ... / enc run",
+    ]
+    install_tact_commands(registry)
 
     registry.register("ensure_codex", "Build bundles + codex if needed.", _cmd_ensure_codex)
     registry.register("endpoints", "List all DB endpoints with entity counts.", _cmd_endpoints)
@@ -86,8 +55,6 @@ def install_builtin_commands(registry: CommandRegistry) -> None:
     registry.register("play", "Start immediate playable battle: play [monster_api_index]", _cmd_play)
     registry.register("enc", "Encounter commands: enc new|add|run [replay=...]|reset|list", _cmd_enc)
     registry.register("pace", "Set combat text pace: pace [off|fast|normal|slow|cinematic|seconds]", _cmd_pace)
-    registry.register("events", "Toggle event output: events on|off|status", _cmd_events)
-    registry.register("/events", "Toggle event output: /events on|off|status", _cmd_events)
     registry.register("hp", "HP commands: hp set <actor_id> <value>", _cmd_hp)
     registry.register("cond", "Condition commands: cond set|clear|list ...", _cmd_cond)
     registry.register("equip", "Equip commands: equip <actor_id> <equipment_api_index> | equip list <actor_id>", _cmd_equip)
@@ -358,24 +325,6 @@ def _cmd_pace(ctx: DevContext, args: List[str]) -> str:
     ctx.vars["event_delay"] = delay
     return f"Pace set to {_pace_label(delay)} ({delay:.2f}s/event)."
 
-
-def _cmd_events(ctx: DevContext, args: List[str]) -> str:
-    if not args:
-        return f"Event output: {'on' if ctx.verbose_events else 'off'}"
-
-    token = args[0].strip().lower()
-    if token in {"on", "true", "1"}:
-        ctx.verbose_events = True
-    elif token in {"off", "false", "0"}:
-        ctx.verbose_events = False
-    elif token in {"status", "show"}:
-        return f"Event output: {'on' if ctx.verbose_events else 'off'}"
-    else:
-        return "Usage: events on|off|status"
-
-    return f"Event output: {'on' if ctx.verbose_events else 'off'}"
-
-
 def _cmd_cond(ctx: DevContext, args: List[str]) -> str:
     if not args:
         return "Usage: cond set <actor_id> <name> [turns] | cond clear <actor_id> <name> | cond list <actor_id>"
@@ -535,13 +484,21 @@ def _run_encounter(ctx: DevContext, *, replay_out: str | None = None) -> None:
         raise RuntimeError("No active encounter")
 
     def print_event(event: Event) -> None:
-        if not ctx.verbose_events:
-            return
+        printed = False
 
-        print(_format_event_debug(event), flush=True)
-        delay = _event_delay_for(ctx, event)
-        if delay > 0.0:
-            time.sleep(delay)
+        gameplay_line = _format_gameplay_text(ctx, event)
+        if gameplay_line:
+            print(gameplay_line, flush=True)
+            printed = True
+
+        if ctx.verbose_events:
+            print(_format_event_debug(event), flush=True)
+            printed = True
+
+        if printed:
+            delay = _event_delay_for(ctx, event)
+            if delay > 0.0:
+                time.sleep(delay)
 
     ctx.encounter.on_event = print_event
 
@@ -700,6 +657,92 @@ def _format_event_debug(event: Event) -> str:
     return json.dumps(payload, sort_keys=True)
 
 
+def _format_gameplay_text(ctx: DevContext, event: Event) -> str | None:
+    data = dict(event.data)
+    actor_id = event.actor if isinstance(event.actor, str) else _as_str(data.get("actor_id"))
+    target_id = event.target if isinstance(event.target, str) else _as_str(data.get("target_id"))
+    actor_name = _actor_label(ctx, actor_id)
+    target_name = _actor_label(ctx, target_id)
+
+    match event.type:
+        case "encounter.started":
+            return "Encounter begins."
+        case "initiative.rolled":
+            total = _as_int(data.get("total"), default=0)
+            return f"{actor_name} rolls initiative ({total})."
+        case "turn.order_set":
+            order = data.get("turn_order")
+            if isinstance(order, list) and order:
+                labels = " -> ".join(_actor_label(ctx, _as_str(v)) for v in order if _as_str(v))
+                if labels:
+                    return f"Turn order: {labels}"
+            return None
+        case "turn.started":
+            round_num = _as_int(data.get("round"), default=0)
+            return f"\nRound {round_num}: {actor_name}'s turn."
+        case "turn.skipped":
+            reason = _as_str(data.get("reason")) or "unavailable"
+            return f"{actor_name} is skipped ({reason})."
+        case "action.requested":
+            action_type = _as_str(data.get("action_type")) or "action"
+            targets = data.get("target_ids")
+            if isinstance(targets, list) and targets:
+                named_targets = ", ".join(_actor_label(ctx, _as_str(t)) for t in targets if _as_str(t))
+                if named_targets:
+                    return f"{actor_name} declares {action_type} -> {named_targets}."
+            return f"{actor_name} declares {action_type}."
+        case "action.validated":
+            notes = data.get("notes")
+            if isinstance(notes, list) and notes:
+                return f"Validation notes: {', '.join(str(n) for n in notes)}"
+            return None
+        case "check.rolled":
+            stat = _as_str(data.get("stat")) or "check"
+            total = _as_int(data.get("total"), default=0)
+            dc = _as_int(data.get("dc"), default=0)
+            success = bool(data.get("success", False))
+            critical = bool(data.get("critical", False))
+            if critical:
+                return f"{actor_name} lands a critical {stat} ({total} vs DC {dc})."
+            verdict = "succeeds" if success else "fails"
+            return f"{actor_name} {verdict} {stat} ({total} vs DC {dc})."
+        case "damage.applied":
+            amount = _as_int(data.get("amount"), default=0)
+            damage_type = _as_str(data.get("damage_type")) or "damage"
+            return f"{target_name} takes {amount} {damage_type.lower()} damage."
+        case "heal.applied":
+            amount = _as_int(data.get("amount"), default=0)
+            return f"{target_name} heals {amount} HP."
+        case "hp.changed":
+            before = _as_int(data.get("hp_before"), default=0)
+            after = _as_int(data.get("hp_after"), default=0)
+            return f"{target_name} HP: {before} -> {after}"
+        case "entity.died":
+            return f"{target_name} falls."
+        case "condition.applied":
+            condition = _as_str(data.get("condition")) or "condition"
+            duration = _as_int(data.get("duration"), default=1)
+            return f"{target_name} gains {condition} ({duration} turns)."
+        case "condition.expired":
+            condition = _as_str(data.get("condition")) or "condition"
+            return f"{actor_name} is no longer {condition}."
+        case "movement.applied":
+            distance = _as_int(data.get("distance"), default=0)
+            return f"{target_name} moves {distance} ft."
+        case "heal.failed":
+            return f"{actor_name} cannot heal right now."
+        case "action.resolved":
+            result = _as_str(data.get("result")) or "resolved"
+            return f"{actor_name} action result: {result}."
+        case "encounter.ended":
+            outcome = _as_str(data.get("outcome"))
+            if outcome:
+                return f"Encounter ends. Winner: {outcome}."
+            return "Encounter ends."
+        case _:
+            return None
+
+
 def _pace_label(delay: float) -> str:
     for name, value in PACE_PRESETS.items():
         if abs(delay - value) < 1e-6:
@@ -730,6 +773,20 @@ def _actor_name_from_state(state: EncounterState[ActorBlueprint], actor_id: str)
         return actor_id
 
 
+def _actor_label(ctx: DevContext, actor_id: str | None) -> str:
+    if not actor_id:
+        return "Unknown"
+    if ctx.encounter is None:
+        return actor_id
+    actor = next((a for a in ctx.encounter.actors if a.id == actor_id), None)
+    if actor is None:
+        return actor_id
+    duplicate_name = sum(1 for a in ctx.encounter.actors if a.name == actor.name) > 1
+    if duplicate_name:
+        return f"{actor.name} ({actor_id})"
+    return actor.name
+
+
 def _parse_kv(parts: List[str]) -> dict[str, str]:
     out: dict[str, str] = {}
     for part in parts:
@@ -746,3 +803,18 @@ def _parse_int(value: Optional[str]) -> Optional[int]:
         return int(value)
     except ValueError:
         return None
+
+
+def _as_int(value: object, *, default: int) -> int:
+    try:
+        return int(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return default
+
+
+def _as_str(value: object) -> str:
+    if isinstance(value, str):
+        return value
+    if value is None:
+        return ""
+    return str(value)

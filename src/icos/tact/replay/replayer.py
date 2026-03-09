@@ -5,11 +5,11 @@ from copy import deepcopy
 from dataclasses import dataclass
 from typing import Deque, Generic, List, Mapping, TypeVar
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.session import EncounterController, EncounterLoop, EncounterSession
-from icos.kernel.core.state import EncounterState
-from icos.kernel.core.types import ActorLike
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.session import EncounterController, EncounterLoop, EncounterSession
+from icos.tact.core.state import EncounterState
+from icos.tact.core.types import ActorLike
+from icos.tact.events.types import Event
 
 from .formats import ReplayFileV1
 

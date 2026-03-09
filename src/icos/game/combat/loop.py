@@ -3,10 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from icos.kernel.core.actions import ActionRequest
-from icos.kernel.core.session import EncounterLoop
-from icos.kernel.core.state import EncounterState
-from icos.kernel.events.types import Event
+from icos.tact.core.actions import ActionRequest
+from icos.tact.core.session import EncounterLoop
+from icos.tact.core.state import EncounterState
+from icos.tact.events.types import Event
 
 from icos.game.rules.dice import Dice
 from icos.game.runtime.actor import ActorBlueprint
